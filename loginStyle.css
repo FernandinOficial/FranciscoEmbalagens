@@ -1,0 +1,132 @@
+@media screen and (min-width: 600px) {
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-decoration-color: black;
+    box-sizing: border-box;
+}
+body {
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);}
+
+.d1 {
+    margin-top: 200px;
+    padding: 30px;
+    margin-left: 540px;
+    background: linear-gradient(45deg, rgba(0,255,222,1) 0%, rgba(49,217,45,1) 100%);
+    width: max-content;
+    height: max-content;
+    border-radius: 20px;
+    align-items: center;
+    border: 4px solid black;
+    scale: 1.8;
+}
+.form1 {
+    text-align: center;
+}
+.label1 {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.usuario {
+    background-color: rgb(211, 207, 207);
+    text-align: center;
+    border-radius: 5px;
+    width: 130px;
+    height: 20px;
+    background-image: url('images/usuario.png');
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: 1px;
+}
+.usuario:hover {
+    transform: scale(1.1);
+    transition: 500ms;
+}
+.p1 {
+    font-size: 23px;
+}
+.email {
+    background-color: rgb(211, 207, 207);
+    text-align: center;
+    border-radius: 5px;
+    width: 130px;
+    height: 20px;
+    background-image: url('images/email.png');
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position-x: 17px;
+    background-position-y: 1px;
+}
+.email:hover {
+    transform: scale(1.1);
+    transition: 500ms;
+}
+.senha {
+    background-color: rgb(211, 207, 207);
+    text-align: center;
+    border-radius: 5px;
+    width: 130px;
+    height: 20px;
+    background-image: url();
+    background-repeat: no-repeat;
+}
+.senha:hover {
+    transform: scale(1.1);
+    transition: 500ms;
+}
+.entrar {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(238, 63, 9);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 130px;
+    transform: scale(1);
+    border: none;
+    cursor: pointer;
+}
+.entrar:hover {
+    transform: scale(1.1);
+    transition: 500ms;
+    background-color: rgb(5, 255, 26);
+}
+
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        text-decoration-color: black;
+        box-sizing: border-box;
+    }
+    .d1 {
+        margin-top: 750px;
+        margin-left: 420px;
+        padding: 30px;
+        background: linear-gradient(45deg, rgba(0,255,222,1) 0%, rgba(49,217,45,1) 100%);
+        border-radius: 20px;
+        border: 4px solid black;
+        scale: 3.8;
+    }
+    .usuario {
+        scale: 1.2;
+    }
+    .email {
+        scale: 1.2;
+    }
+    .senha {
+        scale: 1.2;
+    }
+    .entrar {
+        scale: 1.2;
+    }
+
+}

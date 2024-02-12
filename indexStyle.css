@@ -1,0 +1,465 @@
+@media screen and (min-width: 600px) {
+* {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(226, 221, 221);
+    position: absolute;
+    text-decoration: none;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+.logo {
+    position: fixed;
+    padding: 3px;
+    top: -5px;
+    left: -5px;
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-color: rgb(205, 199, 199);
+    scale: 0.8;
+    cursor: none;
+    z-index: 10;
+}
+.logo:hover {
+    transition: 500ms;
+}
+
+.pesquisar {
+    position: fixed;
+    top: 80px;
+    left: 320px;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 8px;
+    background-color: rgb(205, 199, 199);
+    scale: 1.2;
+    z-index: 10;
+}
+
+
+.lupa {
+    position: fixed;
+    top: 80px;
+    left: 600px;
+    width: 20px;
+    height: 20px;
+    background-image: url(images/lupa.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+    background-color: rgb(118, 179, 139);
+    border: 1px solid rgb(76, 176, 76);
+    border-radius: 20px;
+    scale: 2.35;
+    cursor: pointer;
+    z-index: 10;
+}
+.lupa:hover {
+    transition: 500ms;
+    background-color: rgb(79, 211, 79);
+    border: 1px solid rgb(79, 211, 79);
+    border-radius: 20px;
+}
+
+
+#inicio {
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    font-weight: bold;
+    background-color: rgb(205, 199, 199);
+    z-index: 10;
+}
+
+.button__indice1 {
+    top: 65px;
+    left: 730px;
+    background-color: rgb(205, 199, 199);
+    color: black;
+    scale: 2;
+    z-index: 10;
+}
+.button__indice2 {
+    top: 65px;
+    left: 895px;
+    background-color: rgb(205, 199, 199);
+    color: black;
+    scale: 2;
+    z-index: 10;
+}
+.button__indice3 {
+    top: 30px;
+    left: 1080px;
+    background-color: rgb(205, 199, 199);
+    color: black;
+    scale: 2;
+    z-index: 10;
+}
+.button__indice4 {
+    top: 100px;
+    left: 1080px;
+    background-color: rgb(205, 199, 199);
+    color: black;
+    scale: 2;
+    z-index: 10;
+}
+
+.button__login {
+    position: fixed;
+    top: 10%;
+    left: 93%;
+    width: 10px;
+    height: 10px;
+    background-image: url(images/usuario.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+    background-color: rgb(205, 199, 199);
+    border-radius: 20px;
+    scale: 5;
+    cursor: pointer;
+    z-index: 10;
+}
+.button__login:hover {
+    transition: 500ms;
+    scale: 6;
+}
+
+.button__indice1:hover {
+    transition: 500ms;
+    transform: scale(1.2);
+    color: goldenrod;
+}
+.button__indice2:hover {
+    transition: 500ms;
+    transform: scale(1.2);
+    color: goldenrod;
+}
+.button__indice3:hover {
+    transition: 500ms;
+    transform: scale(1.2);
+    color: goldenrod;
+}
+.button__indice4:hover {
+    transition: 500ms;
+    transform: scale(1.2);
+    color: goldenrod;
+}
+
+.menu {
+    top: 150px;
+    width: 151px;
+    height: 150px;
+    background-color: rgb(194, 189, 189);
+}
+
+
+
+
+#cont__mk {
+    border-radius: 20px;
+    animation-name: moveToLeft;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation: normal;
+    margin: 0 auto;
+    
+}
+
+.mk1 {
+    top: 330px;
+    left: 130px;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: 5px solid black;
+    scale: 1.1;
+    
+}
+.mk2 {
+    top: 330px;
+    left: 540px;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: 5px solid black;
+    scale: 1.1;
+}
+.mk3 {
+    top: 330px;
+    left: 950px;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: 5px solid black;
+    scale: 1.1;
+}
+.mk1:hover {
+    transition: 500ms;
+    transform: scale(1.1);
+    border-color: goldenrod;
+}
+.mk2:hover {
+    transition: 500ms;
+    transform: scale(1.1);
+    border-color: goldenrod;
+}
+.mk3:hover {
+    transition: 500ms;
+    transform: scale(1.1);
+    border-color: goldenrod;
+}
+
+
+
+
+
+.button__1 {
+    position: fixed;
+    top: 88%;
+    left: 85%;
+    width: 20px;
+    height: 20px;
+    background-image: url(images/logoZap.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+    background-color: rgb(20, 187, 78);
+    border: none;
+    border-radius: 20px;
+    scale: 3.5;
+}
+.button__1:hover {
+    transition: 500ms;
+    transform: rotate(360deg);
+}
+.button__2 {
+    position: fixed;
+    top: 88%;
+    left: 93%;
+    width: 20px;
+    height: 20px;
+    background-image: url(images/logoYoutube.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position-x: 50%;
+    background-position-y: 50.24%;
+    background-color: rgb(206, 17, 17);
+    border: none;
+    border-radius: 20px;
+    scale: 3.5;
+}
+.button__2:hover {
+    transition: 500ms;
+    transform: rotate(360deg);
+}
+
+
+.vazia {
+    top: 1000px;
+    left: 100px;
+    height: 1000px;
+}
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    * {
+        padding: 0;
+        margin: 0;
+        background-color: rgb(226, 221, 221);
+        position: absolute;
+        text-decoration: none;
+    }
+body {
+    width: 100%;
+    height: 100%;
+}
+
+    .logo {
+        position: fixed;
+        top: 150px;
+        left: 63%; /* Ajuste para o centro */
+        transform: translateX(-50%); /* Centraliza horizontalmente */
+        background-repeat: no-repeat;
+        background-size: 500px;
+        background-color: rgb(205, 199, 199);
+        scale: 2.5;
+        cursor: none;
+        z-index: 10;
+    }
+
+    .pesquisar {
+        position: fixed;
+        top: 530px;
+        left: 73%; /* Ajuste para o centro */
+        transform: translateX(-50%); /* Centraliza horizontalmente */
+        text-align: center;
+        width: 300px; /* Ajuste para uma largura relativa */
+        height: 30px;
+        border: none;
+        border-bottom: 2px solid black;
+        border-radius: 8px;
+        background-color: rgb(205, 199, 199);
+        scale: 3.5;
+        z-index: 10;
+    }
+
+    .lupa {
+        position: fixed;
+        top: 530px;
+        left: 95%; /* Ajuste para o centro */
+        transform: translateX(-50%); /* Centraliza horizontalmente */
+        width: 20px;
+        height: 20px;
+        background-image: url(images/lupa.png);
+        background-repeat: no-repeat;
+        background-size: 10px;
+        background-position: center;
+        background-color: rgb(118, 179, 139);
+        border: 1px solid rgb(76, 176, 76);
+        border-radius: 20px;
+        scale: 7;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    #inicio {
+        position: fixed;
+        width: 100%;
+        height: 450px;
+        font-weight: bold;
+        background-color: rgb(205, 199, 199);
+        z-index: 10;
+    }
+    .button__indice1 {
+        top: 700px;
+        left: 200px;
+        background-color: rgb(226, 221, 221);
+        color: black;
+        scale: 4.5;
+        z-index: 20;
+    }
+    .button__indice2 {
+        top: 700px;
+        left: 600px;
+        background-color: rgb(226, 221, 221);
+        color: black;
+        scale: 4.5;
+        z-index: 20;
+    }
+    .button__indice3 {
+        top: 700px;
+        left: 1000px;
+        background-color: rgb(226, 221, 221);
+        color: black;
+        scale: 4.5;
+        z-index: 20;
+    }
+    .button__indice4 {
+        top: 700px;
+        left: 1350px;
+        background-color: rgb(226, 221, 221);
+        color: black;
+        scale: 4.5;
+        z-index: 20;
+    }
+    
+    .button__indice1:hover, .button__2:hover, .button__3:hover, .button__4:hover {
+        transition: 500ms;
+        transform: scale(1.2);
+        color: goldenrod;
+    }
+    .button__login {
+        position: fixed;
+        top: 5%;
+        left: 88%;
+        width: 10px;
+        height: 10px;
+        background-image: url(images/usuario.png);
+        background-repeat: no-repeat;
+        background-size: 10px;
+        background-position: center;
+        background-color: rgb(205, 199, 199);
+        border-radius: 20px;
+        scale: 15;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    /* Ajuste os estilos dos botões de índice conforme necessário */
+
+    #cont__mk {
+        top: 1000px;
+        border-radius: 20px;
+        animation-name: moveToLeft;
+        animation-duration: 10s;
+        animation-delay: 2s;
+        animation: normal;
+    }
+
+    .mk1 {
+        top: 230px;
+        left: 550px;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        border: 5px solid black;
+        scale: 3;
+        
+    }
+    .mk2 {
+        opacity: 0;
+        top: 230px;
+        left: 950px;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        border: 5px solid black;
+        scale: 3;
+    }
+    .mk3 {
+        opacity: 0;
+        top: 230px;
+        left: 950px;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        border: 5px solid black;
+        scale: 3;
+    }
+    /* Ajuste os estilos das divs .mk1, .mk2, .mk3 conforme necessário */
+
+    .button__1 {
+        position: fixed;
+        top: 93%;
+        left: 65%;
+        width: 20px;
+        height: 20px;
+        scale: 10;
+    }
+    .button__2 {
+        position: fixed;
+        top: 93%;
+        left: 85%;
+        width: 20px;
+        height: 20px;
+        scale: 10;
+    }
+    .button__1:hover, .button__2:hover {
+        transition: 500ms;
+        transform: rotate(360deg);
+    }
+    /* Ajuste os estilos dos botões conforme necessário */
+}
