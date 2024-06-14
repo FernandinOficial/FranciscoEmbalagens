@@ -6,6 +6,9 @@
     <title>Home - Francisco Embalagens</title>
 </head>
 <body>
-    <p>Hello World !</p>
+    <header></header>
+    <nav></nav>
+    <main></main>
+    <footer></footer>
 </body>
 </html>
