@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style/style.css" type="text/css">
 </head>
 <body>
-    hear
+    <header></header>
     <nav></nav>
     <main></main>
     <footer></footer>
