@@ -9,17 +9,16 @@
 </head>
 
 <body>
-    <header>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil fuga, animi inventore, praesentium odit
-            sed nisi, aperiam tempora vero ipsum nobis quisquam ad nam? Consequuntur neque nam obcaecati quas!
-        </p>
-    </header>
     <nav>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil fuga, animi inventore, praesentium odit
-            sed nisi, aperiam tempora vero ipsum nobis quisquam ad nam? Consequuntur neque nam obcaecati quas!
-        </p>    
+        <ul id="nav-button">
+            <li>
+                <ul>
+                    Nav
+                </ul>
+            </li>
+        </ul>
+        <input type="text"> 
+        <button>pesquisar</button>   
     </nav>
     <main>
         <p>
