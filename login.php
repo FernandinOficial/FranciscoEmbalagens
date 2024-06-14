@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="shortcut icon" href="multimidia/images/cadeado.png" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css" type="text/css">
     <style>
         * {
@@ -30,6 +31,12 @@
             border-radius: 10px;
             box-shadow: 5px 2px 2px #333;
         }
+
+        input {
+            border-radius: 15px;
+            background-color: #CACACA;
+        }
+        
     </style>
 </head>
 
@@ -41,19 +48,15 @@
         <div class="title">
             <h1>Faça seu login</h1>
         </div>
-        <form action="">
-            <label for=""></label><br>
-            <input type="text" name="nome" placeholder="Nome">
+        <form action="autenticar.php">
+            <label for="email">Email</label><br>
+            <input type="email" name="email" placeholder="Email"><br><br>
 
-            <label for=""></label><br>
-            <input type="email" name="email" placeholder="Email">
+            <label for="password">Password</label><br>
+            <input type="password" name="password" placeholder="Password"><br><br>
 
-            <label for=""></label><br>
-            <input type="password" name="senha" placeholder="Senha">
-
-            <label for=""></label><br>
-            <input type="password" name="repitasenha" placeholder="Repita sua senha">
-            <br><br>
+            <label for="reapeat">Repeat Password</label><br>
+            <input type="password" name="repeat" placeholder="Repeat"><br><br>
             <input type="submit" value="Enviar">
         </form>
     </main>
