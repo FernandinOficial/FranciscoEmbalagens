@@ -7,32 +7,55 @@
     <title>Login</title>
     <link rel="stylesheet" href="style/style.css" type="text/css">
     <style>
-        *{
+        * {
             padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .title {
+            border-radius: 25px 25px 0 0;
+            box-shadow: 8px 5px 5px #333;
+            background-color: #D9D9D9;
+            border-bottom: 2px solid #333;
+        }
+
+        form {
+            border-radius: 0 0 25px 25px;
+            box-shadow: 8px 5px 5px #333;
             background-color: #D9D9D9;
         }
-        #title{
-            box-shadow: 8px 5px 5px #333;
-            background-color: #fff;
-        }
-        form{
-            box-shadow: 8px 5px 5px #333;
-            background-color: #fff;
+
+        img {
+            background-color: #D9D9D9;
+            border-radius: 10px;
+            box-shadow: 5px 2px 2px #333;
         }
     </style>
 </head>
 
 <body>
+    <header>
+        <img src="multimidia/images/icon/franciscoLogo_100x35.png" alt="">
+    </header>
     <main>
-        <div id="title">
+        <div class="title">
             <h1>Faça seu login</h1>
         </div>
-            <form action="">
-                <input type="text" name="nome" placeholder="Nome">
-                <input type="email" name="email" placeholder="Email">
-                <input type="password" name="senha" placeholder="Senha">
-                <input type="password" name="repitasenha" placeholder="Repita sua senha">
-            </form>
+        <form action="">
+            <label for=""></label><br>
+            <input type="text" name="nome" placeholder="Nome">
+
+            <label for=""></label><br>
+            <input type="email" name="email" placeholder="Email">
+
+            <label for=""></label><br>
+            <input type="password" name="senha" placeholder="Senha">
+
+            <label for=""></label><br>
+            <input type="password" name="repitasenha" placeholder="Repita sua senha">
+            <br><br>
+            <input type="submit" value="Enviar">
+        </form>
     </main>
 </body>
 
