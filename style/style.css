@@ -3,6 +3,7 @@
     padding: 0;
 }
 nav{
+    width: 100vw;
     height: 60px;
     background-color: #D9D9D9;
 }
