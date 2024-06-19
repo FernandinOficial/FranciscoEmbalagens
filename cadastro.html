@@ -42,14 +42,12 @@
             border-radius: 10px;
             background-color: #CACACA;
             padding: 10px;
-            font-size: 15px;
         }
         #submit {
             width: 205px;
             height: 50px;
             margin-left: auto;
             margin-right: auto;
-            font-size: 15px;
         }
     </style>
 </head>
@@ -60,19 +58,24 @@
     </header>
     <main>
         <div class="title">
-            <h1>Faça seu Login</h1>
+            <h1>Faça seu Cadastro</h1>
         </div>
         <form action="autenticar.php">
+            <label for="email">Nome</label><br>
+            <input type="text" name="nome" placeholder="Nome"><br><br>
+            
             <label for="email">Email</label><br>
             <input type="email" name="email" placeholder="Email"><br><br>
 
             <label for="password">Senha</label><br>
             <input type="password" name="password" placeholder="Password"><br><br>
 
+            <label for="reapeat">Repita a senha</label><br>
+            <input type="password" name="repeat" placeholder="Repeat"><br><br>
             <div id="submit">
                 <input type="submit" value="Enviar" id="submit">
             </div>
-            <h5>Não tem conta?<a href="cadastro.html">CADASTRO</a></h5>
+            <h5>Já possui uma conta?<a href="login.html">LOGIN</a></h5>
         </form>
     </main>
 </body>

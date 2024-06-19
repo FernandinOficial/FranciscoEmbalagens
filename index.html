@@ -7,6 +7,7 @@
     <title>Home - Francisco Embalagens</title>
     <link rel="shortcut icon" href="multimidia/images/icon.png " type="image/x-icon">
     <link rel="stylesheet" href="style/style.css" type="text/css">
+    <link rel="stylesheet" href="style/index.css" type="text/css">
 </head>
 
 <body>
@@ -14,18 +15,35 @@
         <ul id="nav-button">
             <li>
                 <ul>
-                    Nav
+                    <li><a href="login.html">Login</a></li>
                 </ul>
             </li>
         </ul>
-        <input type="text"> 
-        <button>pesquisar</button>   
+        <input type="text">
+        <button>pesquisar</button>
+        <div id="img">
+            <img src="multimidia/images/icon/franciscoLogo_100x35.png" alt="Logo do Francisco Embalagens">
+        </div>
     </nav>
     <main>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil fuga, animi inventore, praesentium odit
-            sed nisi, aperiam tempora vero ipsum nobis quisquam ad nam? Consequuntur neque nam obcaecati quas!
-        </p>
+        <div id="banner">
+
+            <div class="banner">
+                <img src="multimidia/marketing/1.png" alt="banner 1" id="banner">
+                <img src="multimidia/marketing/2.png" alt="banner 2" id="banner">
+                <img src="multimidia/marketing/3.png" alt="banner 3" id="banner">
+            </div>
+            <div class="banner-carrosel-input">
+                <input type="radio" class="radio-label" name="banner-input" id="banner-input-1" checked>
+                <input type="radio" class="radio-label" name="banner-input" id="banner-input-2">
+                <input type="radio" class="radio-label" name="banner-input" id="banner-input-3">
+            </div>
+            <div class="banner-carrosel">
+                <label for="banner-carrosel-item-1"></label>
+                <label for="banner-carrosel-item-2"></label>
+                <label for="banner-carrosel-item-3"></label>
+            </div>
+        </div>
     </main>
     <footer>
         <p>

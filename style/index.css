@@ -1,0 +1,33 @@
+#banner {
+    width: 100vw;
+    height: 40vw;
+    padding-top: 8%;
+    padding-bottom: 16%;
+}
+
+.banner {
+    display: inline-flex;  /*manter e display flex ou alinhado em reta x*/
+    overflow-x: scroll;  /*Barra de rolagem no carrosel*/
+}
+
+.banner img {
+    scroll-snap-type: x mandatory;  /* permite rolagem suave entre elementos */
+    scroll-behavior: smooth;  /* suaviza a rolagem */
+    cursor: grab;   /* vai mudar o cursor para indicar que é arrastável */
+}
+.radio-label {
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    transition: 500ms ease;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    left: 50%; /* mover o elemento 50% para a direita */
+}
+
+a {
+    text-decoration: none;
+}
