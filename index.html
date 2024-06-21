@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Francisco Embalagens</title>
+    <title>Home | Francisco Embalagens</title>
     <link rel="shortcut icon" href="multimidia/images/icon.png " type="image/x-icon">
     <link rel="stylesheet" href="style/style.css" type="text/css">
     <link rel="stylesheet" href="style/index.css" type="text/css">
@@ -21,49 +21,105 @@
             height: 20vh;
         }
 
-        .carousel-indicators {
-            position: absolute;
-            bottom: 10px;
-        }
-
         .carousel-indicators li {
+            /*São os botoes radio input*/
             width: 12px;
             height: 12px;
+            position: relative;
+            top: 55px;
+            /*onde se posiciona o input*/
             background-color: #bbb;
             border-radius: 50%;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
+            /*curta transição*/
             border: none;
         }
 
         .carousel-indicators .active {
+            /*São os botoes radio input apos ativos*/
             background-color: #717171;
             transform: scale(1.2);
         }
 
         .carousel-indicators li:hover {
+            /*São os botoes radio input apos passar o cursor por cima*/
             background-color: #555;
         }
 
-        .carousel-control {
-            font-size: 15px !important;  /*tamanho da seta*/
+
+        
+        /* Dropdown button */
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            /* Important for vertical align on mobile phones */
+            margin: 0;
+            /* Important for vertical align on mobile phones */
         }
-        .carousel-inner{}
+        /* Add a red background color to navbar links on hover */
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* Add a grey background color to dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
     </style>
 </head>
 
 <body>
     <nav>
-        <ul id="nav-button">
-            <li>
-                <ul>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-            </li>
-        </ul>
-        <input type="text">
-        <button>pesquisar</button>
-        <div id="img">
+        <div id="nav">
+
+            <div class="dropdown">
+                <button class="dropbtn"><img src="multimidia/images/icon/franciscoLogo_90x40.png">
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+
+            <div id="source">
+                <input type="text">
+                <button>pesquisar</button>
+            </div>
+            <!--Logo francisco-->
             <img src="multimidia/images/icon/franciscoLogo_100x35.png" alt="Logo do Francisco Embalagens">
         </div>
     </nav>
@@ -78,30 +134,26 @@
                     <li data-target="#myCarousel" data-slide-to="2"></li> <!--Tipo de radio para ir no banner-->
                 </ol>
 
-                <!-- Wrapper for slides -->
+                <!--Troca de banners -->
                 <div class="carousel-inner">
 
                     <div class="item active">
-                        <img src="multimidia/marketing/1.png" alt="banner 1" class="img-banner"
-                            style="width: 100vw;height: 20vh;">
-                        <div class="carousel-caption">
+                        <img src="multimidia/marketing/1.png" alt="banner 1" class="img-banner" style="height: 20vh;">
+                        <div class="carousel-caption"> <!--carrosel capturado-->
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="multimidia/marketing/2.png" alt="banner 2" class="img-banner"
-                            style="width: 100vw;height: 20vh;">
-                        <div class="carousel-caption">
+                        <img src="multimidia/marketing/2.png" alt="banner 2" class="img-banner" style="height: 20vh;">
+                        <div class="carousel-caption"> <!--carrosel capturado-->
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="multimidia/marketing/3.png" alt="banner 3" class="img-banner"
-                            style="width: 100vw;height: 20vh;">
-                        <div class="carousel-caption">
+                        <img src="multimidia/marketing/3.png" alt="banner 3" class="img-banner" style="height: 20vh;">
+                        <div class="carousel-caption"> <!--carrosel capturado-->
                         </div>
                     </div>
-
                 </div>
 
                 <!-- Left and right controles ou setas para passar o banner -->

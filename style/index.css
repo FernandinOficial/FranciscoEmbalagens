@@ -1,33 +1,38 @@
-#banner {
+*{
+    margin: 0;
+    padding: 0;
+}
+#nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+#source{
+    margin-right: 22px;
+}
+.nav-button{
+    list-style-type: none;
+    float: left;
+}
+.container{
+    padding-bottom: 50px;
+}
+.carousel-inner {
     width: 100vw;
-    height: 40vw;
-    padding-top: 8%;
-    padding-bottom: 16%;
+}
+.carousel-inner .item {
+    width: 100vw;
 }
 
-.banner {
-    display: inline-flex;  /*manter e display flex ou alinhado em reta x*/
-    overflow-x: scroll;  /*Barra de rolagem no carrosel*/
+.glyphicon-chevron-left{
+    font-size: 15px;    /*diminuir tamanho da seta de rolagem left*/
 }
-
-.banner img {
-    scroll-snap-type: x mandatory;  /* permite rolagem suave entre elementos */
-    scroll-behavior: smooth;  /* suaviza a rolagem */
-    cursor: grab;   /* vai mudar o cursor para indicar que é arrastável */
-}
-.radio-label {
-    cursor: pointer;
-    background-color: #ccc;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: inline-flex;
-    transition: 500ms ease;
-    position: relative;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    left: 50%; /* mover o elemento 50% para a direita */
+.glyphicon-chevron-right{
+    font-size: 15px;    /*diminuir tamanho da seta de rolagem right*/
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none;  /*links sem decoração*/ 
+    color: aqua;
 }
