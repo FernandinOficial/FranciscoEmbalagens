@@ -99,30 +99,9 @@
 
     </style>
 </head>
-
-<body>
-    <nav>
-        <div id="nav">
-
-            <div class="dropdown">
-                <button class="dropbtn"><img src="multimidia/images/icon/franciscoLogo_90x40.png">
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
-            </div>
-
-            <div id="source">
-                <input type="text">
-                <button>pesquisar</button>
-            </div>
-            <!--Logo francisco-->
-            <img src="multimidia/images/icon/franciscoLogo_100x35.png" alt="Logo do Francisco Embalagens">
-        </div>
-    </nav>
+    <?php 
+        require_once 'header.php';
+    ?>
     <main>
         <div class="container"> <!--container pai-->
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -168,12 +147,6 @@
             </div>
         </div>
     </main>
-    <footer>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil fuga, animi inventore, praesentium odit
-            sed nisi, aperiam tempora vero ipsum nobis quisquam ad nam? Consequuntur neque nam obcaecati quas!
-        </p>
-    </footer>
-</body>
-
-</html>
+    <?php
+        require_once 'footer.php';
+    ?>
