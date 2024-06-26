@@ -86,7 +86,6 @@
             display: block;
             text-align: left;
         }
-
         /* Add a grey background color to dropdown links on hover */
         .dropdown-content a:hover {
             background-color: #ddd;
