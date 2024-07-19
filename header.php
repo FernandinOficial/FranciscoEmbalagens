@@ -2,7 +2,6 @@
     <header>
         <nav>
             <div id="nav">
-
                 <div class="dropdown">
                     <button class="dropbtn"><img src="multimidia/images/icon/franciscoLogo_90x40.png">
                         <i class="fa fa-caret-down"></i>
@@ -12,11 +11,6 @@
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
                     </div>
-                </div>
-
-                <div id="source">
-                    <input type="text">
-                    <button>pesquisar</button>
                 </div>
                 <!--Logo francisco-->
                 <img src="multimidia/images/icon/franciscoLogo_100x35.png" alt="Logo do Francisco Embalagens">
