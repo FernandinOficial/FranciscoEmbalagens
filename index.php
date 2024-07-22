@@ -12,13 +12,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
+
         .container {
             margin-top: 10vh;
         }
 
         .img-banner {
             width: 100vw;
-            height: 20vh;
+            height: 30vh;
         }
 
         .carousel-indicators li {
@@ -47,122 +48,56 @@
             background-color: #555;
         }
 
-
-        
-        /* Dropdown button */
-        #nav{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .dropdown .dropbtn {
-            font-size: 16px;
-            border: none;
-            outline: none;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-            display: block;
-            justify-content: center;
-        }
-
-        /* Dropdown content (hidden por definição) */
-        .dropdown-content {
-            margin-top: 17px;
-            margin-left: -10px;
-            display: none;
-            align-items: center;
-            position: absolute;
-            background-color: #739E73;
-            height: 250px;
-            width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        /* Links inside the dropdown */
-        .dropdown-content a {
-            color: black;
-            background-color: #90BE90;
-            width: 123px;
-            margin-top: 10px;
-            padding: 12px 16px;
-            text-decoration: none;
-            justify-content: center;
-            display: block;
-            text-align: center;
-        }
-
-
-        /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        #log {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 12px;
-        }
-        #log .login{
-            color: #38C938;
-            background-color: #90BE90;
-        }
-        #log .logout{
-            color: #C41212;
-            background-color: #90BE90;
-        }
-
     </style>
 </head>
-    <?php 
-        require_once 'header.php';
-    ?>
-    <main>
-        <div class="container"> <!--container pai-->
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicadores -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <!--Tipo de radio para ir no banner-->
-                    <li data-target="#myCarousel" data-slide-to="1"></li> <!--Tipo de radio para ir no banner-->
-                    <li data-target="#myCarousel" data-slide-to="2"></li> <!--Tipo de radio para ir no banner-->
-                </ol>
+<?php
+require_once 'header.php';
+?>
+<main>
+    <div class="container"> <!--container pai-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicadores -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <!--Tipo de radio para ir no banner-->
+                <li data-target="#myCarousel" data-slide-to="1"></li> <!--Tipo de radio para ir no banner-->
+                <li data-target="#myCarousel" data-slide-to="2"></li> <!--Tipo de radio para ir no banner-->
+            </ol>
 
-                <!--Troca de banners -->
-                <div class="carousel-inner">
+            <!--Troca de banners -->
+            <div class="carousel-inner">
 
-                    <div class="item active">
-                        <img src="multimidia/marketing/1.png" alt="banner 1" class="img-banner" style="height: 20vh;">
-                        <div class="carousel-caption"> <!--carrosel capturado-->
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="multimidia/marketing/2.png" alt="banner 2" class="img-banner" style="height: 20vh;">
-                        <div class="carousel-caption"> <!--carrosel capturado-->
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="multimidia/marketing/3.png" alt="banner 3" class="img-banner" style="height: 20vh;">
-                        <div class="carousel-caption"> <!--carrosel capturado-->
-                        </div>
+                <div class="item active">
+                    <img src="multimidia/marketing/1.png" alt="banner 1" class="img-banner" style="height: 20vh;">
+                    <div class="carousel-caption"> <!--carrosel capturado-->
                     </div>
                 </div>
 
-                <!-- Left and right controles ou setas para passar o banner -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <div class="item">
+                    <img src="multimidia/marketing/2.png" alt="banner 2" class="img-banner" style="height: 20vh;">
+                    <div class="carousel-caption"> <!--carrosel capturado-->
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="multimidia/marketing/3.png" alt="banner 3" class="img-banner" style="height: 20vh;">
+                    <div class="carousel-caption"> <!--carrosel capturado-->
+                    </div>
+                </div>
             </div>
+
+            <!-- Left and right controles ou setas para passar o banner -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-    </main>
-    <?php
-        require_once 'footer.php';
-    ?>
+    </div>
+</main>
+<?php
+require_once 'footer.php';
+?>
