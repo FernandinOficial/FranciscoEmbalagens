@@ -50,50 +50,67 @@
 
         
         /* Dropdown button */
+        #nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         .dropdown .dropbtn {
             font-size: 16px;
             border: none;
             outline: none;
-            padding: 14px 16px;
             background-color: inherit;
             font-family: inherit;
-            /* Important for vertical align on mobile phones */
             margin: 0;
-            /* Important for vertical align on mobile phones */
-        }
-        /* Add a red background color to navbar links on hover */
-        .navbar a:hover,
-        .dropdown:hover .dropbtn {
-            background-color: red;
+            display: block;
+            justify-content: center;
         }
 
-        /* Dropdown content (hidden by default) */
+        /* Dropdown content (hidden por definição) */
         .dropdown-content {
+            margin-top: 17px;
+            margin-left: -10px;
             display: none;
+            align-items: center;
             position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
+            background-color: #739E73;
+            height: 250px;
+            width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
 
         /* Links inside the dropdown */
         .dropdown-content a {
-            float: none;
             color: black;
+            background-color: #90BE90;
+            width: 123px;
+            margin-top: 10px;
             padding: 12px 16px;
             text-decoration: none;
+            justify-content: center;
             display: block;
-            text-align: left;
+            text-align: center;
         }
-        /* Add a grey background color to dropdown links on hover */
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
+
 
         /* Show the dropdown menu on hover */
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+        #log {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+        }
+        #log .login{
+            color: #38C938;
+            background-color: #90BE90;
+        }
+        #log .logout{
+            color: #C41212;
+            background-color: #90BE90;
         }
 
     </style>
