@@ -5,88 +5,39 @@
         .inter {
             font-family: "Inter", sans-serif;
         }
-
-        /* Dropdown button */
-        #nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .dropdown .dropbtn {
-            font-size: 16px;
-            border: none;
-            outline: none;
-            background-color: inherit;
-            font-family: inherit;
+        *{
             margin: 0;
-            display: block;
-            justify-content: center;
+            padding: 0;
         }
-
-        /* Dropdown content (hidden por definição) */
-        .dropdown-content {
-            display: none;
-            margin-top: 17px;
-            background-color: #739E73;
-            height: 268px;
-            width: 160px;
-
-        }
-
-        /* Links inside the dropdown */
-        /* .dropdown-content a {
-            color: black;
-            background-color: #90BE90;
-            width: 123px;
-            margin-top: 10px;
-            padding: 12px 16px;
-            text-decoration: none;
-            justify-content: center;
-            display: block;
-            text-align: center;
-            border-radius: 50px;
-            font-family: "Inter";
-            letter-spacing: 1px;
-            font-weight: bold;
-        } */
-
-
-        /* Show the dropdown menu on hover */
-        /* .dropdown:hover .dropdown-content {
-        display: block;
-    } */
-
-
-        /* #log {
+        nav {
+            height: 170px;
+            background-color: #2F6427;
             display: flex;
-            justify-content: center;
+            justify-content: ;
             align-items: center;
-            font-size: 12px;
-            width: 127px;
+        }
+        nav #logo{
+            
+        }
+        /* Dropdown button */
+        #dropdown{
+            display: flex;
+        }
+        #dropdown img{
+            width: 120px;
+        }
+        .dropdown-content{
+            display: none;
         }
 
-        #log .login {
-            color: #38C938;
-            background-color: #739E73;
-        }
-
-        #log .logout {
-            color: #C41212;
-            background-color: #739E73;
-        }
-
-        a {
-            font-weight: bold;
-        } */
     </style>
-        <script defer src="js/script.js"></script>
+    <script defer src="js/script.js"></script> <!--defer indica que o js vai ser executado apos a compilaçõo do HTML-->
 </head>
 
 <body>
     <header>
-        <nav style="height:70px;background-color: #2F6427;">
-            <div id="nav">
+        <nav>
+            <div id="dropdown">
                 <button id="dropbtn">
                     <img src="multimidia/images/navButton_39x45.png">
                 </button>
@@ -105,7 +56,7 @@
                     </ul>
                 </div>
                 <!--Logo francisco-->
-                <img src="multimidia/images/icon/franciscoLogo_81x47.png" alt="Logo do Francisco Embalagens">
+                <img id="logo" src="multimidia/images/icon/franciscoLogo_81x47.png" alt="Logo do Francisco Embalagens">
             </div>
         </nav>
     </header>
