@@ -43,11 +43,6 @@
             transform: scale(1.2);
         }
 
-        .carousel-indicators li:hover {
-            /*São os botoes radio input apos passar o cursor por cima*/
-            background-color: #555;
-        }
-
     </style>
 </head>
 <?php

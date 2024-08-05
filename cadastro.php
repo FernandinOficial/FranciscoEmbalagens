@@ -14,9 +14,9 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        a {
-            text-decoration: none;
-            color: green;
+        #link_login {
+            text-decoration: underline;
+            color: #ACEFAC !important;
         }
 
         main {
@@ -35,14 +35,10 @@
             text-align: center;
         }
 
-        form div {
-            padding-top: 20px;
-        }
-
         input {
             border-radius: 30px;
             background-color: #fff;
-            width: 190px;
+            width: 220px;
             margin-left: 0;
             margin-right: 0;
             padding: 10px;
@@ -64,7 +60,7 @@
 
         h5 {
             float: left;
-            margin-left: 15px;
+            margin-left: 20px;
         }
 
         .user {
@@ -81,7 +77,7 @@
     ?>
     <main>
         <div class="title">
-            <img class="user" src="multimidia/images/iconMeuUsuario.png" alt="Ícone de usuário">
+            <img class="user" src="multimidia/images/iconMeuUsuario.png" alt="Ícone de usuário"><br><br><br>
         </div>
         <form action="autenticar.php">
 
@@ -106,8 +102,8 @@
 
             <div id="submit">
                 <input type="submit" value="Cadastrar" id="submit">
-            </div><br>
-            <h5>Já possui uma conta? Clique <a href="login.html">aqui</a></h5><br><br>
+            </div><br><br>
+            <h5>Já possui uma conta? Clique <a id="link_login" href="login.html">aqui</a></h5><br><br>
             </div>
         </form>
     </main>
