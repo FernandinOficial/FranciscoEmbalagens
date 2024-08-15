@@ -1,10 +1,20 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box; /* Adicionado para garantir que padding e border não afetem o tamanho dos elementos */
-        }
+<nav>
+    <div id="dropdown">
+        <div id="nav-bar">
+            <div class="dropdown-button">
+                <button id="dropbtn">mostrar
+                    <img src="multimidia/" alt="">
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="">OLÁ, (USER)</a></li>
+                        <li><a href="">PRODUTOS</a></li>
+                        <li><a href="">CONTATO</a></li>
+                        <li><a href="">SOBRE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="logo"><img src="" alt="Logo Francisco Embalagens"></div>
+        </div>
+    </div>
+</nav>
