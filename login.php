@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login | Francisco Embalagens</title>
     <link rel="shortcut icon" href="multimidia/images/cadeado.png" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css" type="text/css">
     <script defer src="script/script.js"></script>
