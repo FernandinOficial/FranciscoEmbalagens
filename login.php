@@ -15,10 +15,13 @@
     include_once 'header.php';
     ?>
     <main>
-        <form action="index.php" method="post">
-        <div>
-            
+        <div class="title_login">
+            <img class="user_login" src="multimidia/images/iconMeuUsuario.png" alt="Ícone de usuário">
         </div>
+        <form action="index.php" method="post">
+
+            <label for="pnome">Nome</label><br>
+
         </form>
     </main>
 </body>
