@@ -7,6 +7,7 @@
     <title>Login</title>
     <link rel="shortcut icon" href="multimidia/images/cadeado.png" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css" type="text/css">
+    <script defer src="script/script.js"></script>
 </head>
 
 <body>
@@ -20,10 +21,10 @@
         <form action="autenticar.php" method="post">
 
             <label for="name">Nome</label><br>
-            <input type="text" name="nome"><br><br>
+            <input type="text" name="name"><br><br>
 
-            <label for="snome">Sobrenome</label><br>
-            <input type="text" name="snome"><br><br>
+            <label for="lname">Sobrenome</label><br>
+            <input type="text" name="lname"><br><br>
 
             <label for="email">Email</label><br>
             <input type="email" name="email"><br><br>

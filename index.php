@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="multimidia/images/icon.png " type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <script defer src="script/script.js"></script>
+    <script defer src="script/carrossel.js"></script>
 </head>
 
 <body>
