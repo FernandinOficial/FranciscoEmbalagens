@@ -102,11 +102,20 @@ footer {
 }
 
 /* FORMULÁRIO LOGIN */
-#login_title{
+
+.login_icon{
     width: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* FORMULÁRIO CADASTRO */
+form {
+    border-radius: 25px 25px 25px 25px;
+    background-color: #739E73;
+    text-align: center;
+    height: 350px;
+}
 #link_login {
     text-decoration: underline;
     color: #ACEFAC !important;
@@ -116,28 +125,24 @@ footer {
     background-color: #739E73;
     text-align: center;
 }
-
-form {
-    border-radius: 0 0 25px 25px;
-    background-color: #739E73;
-    text-align: center;
-}
-
 input {
     border-radius: 30px;
     background-color: #CACACA;
     width: 220px;
+    margin-top: 15px;
     margin-left: 0;
     margin-right: 0;
     padding: 10px;
     font-size: 12px;
     border: none;
-    margin-top: 3px;
 }
-
-#submit input {
+.login_with{
+    margin-top: 15px;
+}
+input[type="submit"]{
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
     width: 200px;
     color: #ACEFAC;
     background-color: #2F6427;
@@ -145,12 +150,10 @@ input {
     font-size: 16px;
     border: none;
 }
-
 h5 {
     float: left;
     margin-left: 20px;
 }
-
 .user {
     margin-top: 10px;
     margin-bottom: 10px;

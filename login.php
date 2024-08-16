@@ -17,9 +17,9 @@
     <main>
         <form action="index.php" method="post">
             <div id="login_title">
-                <img class="login_title" src="multimidia/images/iconMeuUsuario.png" alt="Ícone de usuário">
+                <img class="login_icon" src="multimidia/images/iconMeuUsuario.png" alt="Ícone de usuário">
             </div>
-
+            <h2>LOGIN</h2>
             <label for="email">E-mail</label>
             <input type="email" name="email"><br>
 
@@ -28,7 +28,7 @@
 
             <div class="login_with">
                 <h5>Login with:</h5>
-                <img src=""" alt=" Ícone Google">
+                <img src="" alt=" Ícone Google">
                 <img src="" alt="Ícone Facebook"><br>
             </div>
 

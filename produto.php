@@ -11,11 +11,10 @@
     <?php 
         require_once "header.php";
     ?>
-    <h1>Produtos</h1>
-    <img src="multimidia/marketing/1.png">
-    <br><br>
-    <img src="multimidia/marketing/2.png">
-    <br><br>
-    <img src="multimidia/marketing/3.png">
+    <table border="1">
+        <th>Produtos
+            <td></td>
+        </th>
+    </table>
 </body>
 </html>
