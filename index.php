@@ -23,14 +23,14 @@
             </div>
         </div>
         <div id="itens">
-            <img src="" alt="Sacolas Personalizadas">
+            <img class="imgs-itens" src="multimidia/marketing/mk/1.png" alt="Sacolas Personalizadas">
             <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e design únicos.</p>
 
-            <img src="" alt="Anos de Serviço">
+            <img class="imgs-itens" src="multimidia/marketing/mk/1.png" alt="Anos de Serviço">
             <p>Há mais de cinco anos, nos dedicamos a satisfazer nossos clientes com produtos e serviços de alta
                 qualidade.</p>
 
-            <img src="" alt="Estilos e Compromisso ambiental">
+            <img class="imgs-itens" src="multimidia/marketing/mk/1.png" alt="Estilos e Compromisso ambiental">
             <p>Sacolas lindas e sustentáveis para levar onde e quando quiser. Estilo e responsabilidade ambiental unidos
                 para seu cotidiano.</p>
         </div>

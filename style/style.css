@@ -59,8 +59,8 @@ main {
 .carrossel {
     box-shadow: 2px 2px 4px black;
     overflow: hidden;
-    height: 200px;
     width: 320px;
+    height: 200px;
 }
 
 .container {
@@ -70,12 +70,18 @@ main {
 }
 .banner {
     object-fit: cover;
-    height: 200px;
     width: 320px;
+    height: 200px;
 }
 
 #itens {
 
+}
+.imgs-itens{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
 }
 
 /* RODAPE */
@@ -95,7 +101,58 @@ footer {
     margin-top: 25px;
 }
 
-/* FORMULÁRIO */
+/* FORMULÁRIO LOGIN */
 input {
     background-color: #CACACA;
+}
+
+/* FORMULÁRIO CADASTRO */
+#link_login {
+    text-decoration: underline;
+    color: #ACEFAC !important;
+}
+.title {
+    border-radius: 25px 25px 0 0;
+    background-color: #739E73;
+    text-align: center;
+}
+
+form {
+    border-radius: 0 0 25px 25px;
+    background-color: #739E73;
+    text-align: center;
+}
+
+input {
+    border-radius: 30px;
+    background-color: #fff;
+    width: 220px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+    font-size: 12px;
+    border: none;
+    margin-top: 3px;
+}
+
+#submit input {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    color: #ACEFAC;
+    background-color: #2F6427;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+}
+
+h5 {
+    float: left;
+    margin-left: 20px;
+}
+
+.user {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50px;
 }

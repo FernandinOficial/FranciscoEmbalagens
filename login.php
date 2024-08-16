@@ -14,6 +14,13 @@
     <?php
     include_once 'header.php';
     ?>
+    <main>
+        <form action="index.php" method="post">
+        <div>
+            
+        </div>
+        </form>
+    </main>
 </body>
 
 </html>

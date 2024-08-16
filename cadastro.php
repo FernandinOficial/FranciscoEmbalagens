@@ -7,68 +7,6 @@
     <title>Login</title>
     <link rel="shortcut icon" href="multimidia/images/cadeado.png" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css" type="text/css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        #link_login {
-            text-decoration: underline;
-            color: #ACEFAC !important;
-        }
-
-        main {
-            padding: 60px;
-        }
-
-        .title {
-            border-radius: 25px 25px 0 0;
-            background-color: #739E73;
-            text-align: center;
-        }
-
-        form {
-            border-radius: 0 0 25px 25px;
-            background-color: #739E73;
-            text-align: center;
-        }
-
-        input {
-            border-radius: 30px;
-            background-color: #fff;
-            width: 220px;
-            margin-left: 0;
-            margin-right: 0;
-            padding: 10px;
-            font-size: 12px;
-            border: none;
-            margin-top: 3px;
-        }
-
-        #submit input {
-            margin-left: auto;
-            margin-right: auto;
-            width: 200px;
-            color: #ACEFAC;
-            background-color: #2F6427;
-            font-weight: bold;
-            font-size: 16px;
-            border: none;
-        }
-
-        h5 {
-            float: left;
-            margin-left: 20px;
-        }
-
-        .user {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            width: 50px;
-        }
-    </style>
 </head>
 
 <body>
@@ -79,7 +17,7 @@
         <div class="title">
             <img class="user" src="multimidia/images/iconMeuUsuario.png" alt="Ícone de usuário"><br><br><br>
         </div>
-        <form action="autenticar.php">
+        <form action="autenticar.php" method="post">
 
             <label for="name">Nome</label><br>
             <input type="text" name="nome"><br><br>
