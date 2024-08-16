@@ -102,8 +102,8 @@ footer {
 }
 
 /* FORMULÁRIO LOGIN */
-input {
-    background-color: #CACACA;
+#login_title{
+    width: 50px;
 }
 
 /* FORMULÁRIO CADASTRO */
@@ -125,7 +125,7 @@ form {
 
 input {
     border-radius: 30px;
-    background-color: #fff;
+    background-color: #CACACA;
     width: 220px;
     margin-left: 0;
     margin-right: 0;

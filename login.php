@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="shortcut icon" href="multimidia/images/cadeado.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/index.css" type="text/css">
     <link rel="stylesheet" href="style/style.css" type="text/css">
     <script defer src="script/script.js"></script>
 </head>
@@ -16,26 +15,28 @@
     include_once 'header.php';
     ?>
     <main>
-        <div class="login_title">
-            <form action="index.php" method="post">
-                <img src="multimidia/images/iconMeuUsuario.png" alt="Ícone de usuário">
-        </div>
+        <form action="index.php" method="post">
+            <div id="login_title">
+                <img class="login_title" src="multimidia/images/iconMeuUsuario.png" alt="Ícone de usuário">
+            </div>
 
-        <label for="email">E-mail</label>
-        <input type="email" name="email"><br>
+            <label for="email">E-mail</label>
+            <input type="email" name="email"><br>
 
-        <label for="senha">Senha</label>
-        <input type="password" name="password"><br>
+            <label for="senha">Senha</label>
+            <input type="password" name="password"><br>
 
-        <h5>Login with:</h5>
-        <img src=""" alt=" Ícone Google">
-        <img src="" alt="Ícone Facebook"><br>
+            <div class="login_with">
+                <h5>Login with:</h5>
+                <img src=""" alt=" Ícone Google">
+                <img src="" alt="Ícone Facebook"><br>
+            </div>
 
-        <div class="submit_login">
-            <input type="submit" value="Entrar" id="login_submit"><br>
-        </div>
+            <div class="login_submit">
+                <input type="submit" value="Entrar" id="login_submit"><br>
+            </div>
 
-        <h5>Não tem uma conta? acesse <a href="cadastro.php"></h5>
+            <h5>Não tem uma conta? acesse <a href="cadastro.php">aqui</h5>
         </form>
     </main>
 </body>
