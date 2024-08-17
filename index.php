@@ -12,8 +12,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
     <script defer src="script/script.js"></script>
+    <style>
+        /* mudar a cor das setas para preta */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+        }
+
+        /* tamanho das setas do carrossel */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,7 +34,8 @@
     require_once 'header.php';
     ?>
     <main>
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <!-- CARROSSEL bootstrap -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="multimidia/marketing/mk/1.png" alt="First slide">
@@ -33,18 +47,18 @@
                     <img class="d-block w-100" src="multimidia/marketing/mk/3.png" alt="Third slide">
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+                <span class="visually-hidden">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+                <span class="visually-hidden">Next</span>
             </a>
         </div>
         <div id="itens">
             <img class="imgs-itens" src="multimidia/marketing/mk/1.png" alt="Sacolas Personalizadas">
-            <h4>DESIGNS UNICOS</h4>
+            <h4>DESIGNS ÚNICOS</h4>
             <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e designs únicos.</p>
 
             <img class="imgs-itens" src="multimidia/marketing/mk/1.png" alt="Anos de Serviço">
