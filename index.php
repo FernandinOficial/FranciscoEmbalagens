@@ -7,8 +7,13 @@
     <title>Home | Francisco Embalagens</title>
     <link rel="shortcut icon" href="multimidia/images/icon.png " type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
     <script defer src="script/script.js"></script>
-    <script defer src="script/carrossel.js"></script>
 </head>
 
 <body>
@@ -16,12 +21,26 @@
     require_once 'header.php';
     ?>
     <main>
-        <div class="carrossel">
-            <div class="container" id="img">
-                <img class="banner" src="multimidia/marketing/mk/1.png" alt="Banner 1">
-                <img class="banner" src="multimidia/marketing/mk/2.png" alt="Banner 2">
-                <img class="banner" src="multimidia/marketing/mk/3.png" alt="Banner 3">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="multimidia/marketing/mk/1.png" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="multimidia/marketing/mk/2.png" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="multimidia/marketing/mk/3.png" alt="Third slide">
+                </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
         <div id="itens">
             <img class="imgs-itens" src="multimidia/marketing/mk/1.png" alt="Sacolas Personalizadas">
