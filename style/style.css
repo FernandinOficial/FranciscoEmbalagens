@@ -8,40 +8,30 @@
 
 /* NAV-BAR */
 nav {
+    display: flex;
     width: 100vw;
     height: 60px;
     background-color: #D9D9D9;
-    z-index: 1;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo {
+    margin-left: 20px;  /*tentando colocar tudo para direita e menu para esquerda*/
 }
 
 ul {
     list-style-type: none;
 }
 
-#dropdown {
-    position: relative;
-    display: flex;
-    background-color: red;
+li {
+    text-align: center;
 }
 
-#nav-bar {
-    display: flex;
-    justify-content: space-around;
-}
-
-#dropdown-button {
-    background-color: #D9D9D9;
-}
-
-.dropdown-content {
-    display: none;
-    background-color: green;
-    color: white;
-    width: 150px;
-    margin-top: 15px;
-}
-
-a {
+li a {
     text-decoration: none;
     color: blue;
 }
@@ -68,16 +58,16 @@ main {
     transition: transform 0.5s ease-in-out;
     transform: translateX(0);
 }
+
 .banner {
     object-fit: cover;
     width: 320px;
     height: 200px;
 }
 
-#itens {
+#itens {}
 
-}
-.imgs-itens{
+.imgs-itens {
     display: flex;
     width: 100px;
     height: 100px;
@@ -89,12 +79,15 @@ footer {
     height: 200px;
     background-color: green;
 }
+
 .footer-img {
     float: left;
 }
-.contato p{
+
+.contato p {
     font-size: 15px;
 }
+
 .copy {
     display: flex;
     justify-content: flex-end;
@@ -103,7 +96,7 @@ footer {
 
 /* FORMULÁRIO LOGIN */
 
-.login_icon{
+.login_icon {
     width: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -116,15 +109,18 @@ form {
     text-align: center;
     height: 350px;
 }
+
 #link_login {
     text-decoration: underline;
     color: #ACEFAC !important;
 }
+
 .title {
     border-radius: 25px 25px 0 0;
     background-color: #739E73;
     text-align: center;
 }
+
 input {
     border-radius: 30px;
     background-color: #CACACA;
@@ -136,10 +132,12 @@ input {
     font-size: 12px;
     border: none;
 }
-.login_with{
+
+.login_with {
     margin-top: 15px;
 }
-input[type="submit"]{
+
+input[type="submit"] {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
@@ -150,10 +148,12 @@ input[type="submit"]{
     font-size: 16px;
     border: none;
 }
+
 h5 {
     float: left;
     margin-left: 20px;
 }
+
 .user {
     margin-top: 10px;
     margin-bottom: 10px;
