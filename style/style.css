@@ -1,4 +1,5 @@
 /* ESTRUTURA */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@
 }
 
 /* NAV-BAR */
+
 nav {
     display: flex;
     width: 100vw;
@@ -37,6 +39,7 @@ li a {
 }
 
 /* CONTEUDO */
+
 main {
     display: block;
     justify-content: center;
@@ -75,6 +78,7 @@ main {
 }
 
 /* RODAPE */
+
 footer {
     height: 200px;
     background-color: green;
@@ -86,12 +90,14 @@ footer {
 
 .contato p {
     font-size: 15px;
+    color: #ACEFAC;
 }
 
 .copy {
     display: flex;
     justify-content: flex-end;
     margin-top: 25px;
+    font-weight: bold;
 }
 
 /* FORMULÁRIO LOGIN */
@@ -103,6 +109,7 @@ footer {
 }
 
 /* FORMULÁRIO CADASTRO */
+
 form {
     border-radius: 25px 25px 25px 25px;
     background-color: #739E73;
@@ -123,7 +130,7 @@ form {
 
 input {
     border-radius: 30px;
-    background-color: #CACACA;
+    background-color: #fff;
     width: 220px;
     margin-top: 15px;
     margin-left: 0;

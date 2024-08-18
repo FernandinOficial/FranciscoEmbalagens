@@ -30,7 +30,7 @@
 
             <div class="login_with">
                 <h5>Login with:</h5>
-                <img src="" alt=" Ícone Google">
+                <img src="multimidia/images/icon_google.png" alt=" Ícone Google">
                 <img src="" alt="Ícone Facebook"><br>
             </div>
 
