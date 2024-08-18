@@ -102,67 +102,41 @@ footer {
 
 /* FORMULÁRIO LOGIN */
 
-.login_icon {
-    width: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 /* FORMULÁRIO CADASTRO */
 
-form {
-    border-radius: 25px 25px 25px 25px;
-    background-color: #739E73;
-    text-align: center;
-    height: 350px;
-}
+/* PRODUTO */
 
-#link_login {
-    text-decoration: underline;
-    color: #ACEFAC !important;
-}
-
-.title {
-    border-radius: 25px 25px 0 0;
-    background-color: #739E73;
-    text-align: center;
-}
-
-input {
-    border-radius: 30px;
-    background-color: #fff;
-    width: 220px;
-    margin-top: 15px;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 10px;
-    font-size: 12px;
-    border: none;
-}
-
-.login_with {
-    margin-top: 15px;
-}
-
-input[type="submit"] {
+table {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
-    width: 200px;
-    color: #ACEFAC;
+    margin-top: 100px;
+    box-sizing: border-box;
+    width: 85vw;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #343a40;
+    line-height: 1;
+}
+
+th, td {
+    padding: 16px 25px;
+    text-align: center;
+}
+
+th {
     background-color: #2F6427;
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
+    color: #ACEFAC;
+    width: 25%;
 }
 
-h5 {
-    float: left;
-    margin-left: 20px;
+tbody tr:nth-child(odd) {
+    background-color: #B2CBB2;
 }
 
-.user {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 50px;
+tbody tr:nth-child(even) {
+    background-color: #739E73;
 }

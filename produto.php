@@ -13,43 +13,6 @@
         crossorigin="anonymous"></script>
     <script defer src="script/script.js"></script>
 </head>
-<style>
-    table {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 100px;
-        box-sizing: border-box;
-        width: 85vw;
-        border-collapse: collapse;
-        font-size: 18px;
-    }
-
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        color: #343a40;
-        line-height: 1;
-    }
-
-    th,
-    td {
-        padding: 16px 25px;
-        text-align: center;
-    }
-
-    th {
-        background-color: #2F6427;
-        color: #ACEFAC;
-        width: 25%;
-    }
-
-    tbody tr:nth-child(odd) {
-        background-color: #B2CBB2;
-    }
-
-    tbody tr:nth-child(even) {
-        background-color: #739E73;
-    }
-</style>
 
 <body>
     <?php
@@ -58,8 +21,8 @@
 
     <table border="1">
         <tr>
-            <th>MODELOS</th>
-            <th>DIMENSÕES</th>
+            <th>Modelos</th>
+            <th>Dimensões</th>
         </tr>
         <tr>
             <td>P1</td>
