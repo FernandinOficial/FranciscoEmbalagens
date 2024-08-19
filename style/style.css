@@ -140,3 +140,7 @@ tbody tr:nth-child(odd) {
 tbody tr:nth-child(even) {
     background-color: #739E73;
 }
+#contato h3 {
+    font-weight: bold;
+    color: white;
+}

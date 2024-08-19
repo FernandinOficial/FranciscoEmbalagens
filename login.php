@@ -37,11 +37,20 @@
         padding: 25px;
     }
 
+    .title_user {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .title_user img {
         height: 60px;
         width: 60px;
-        margin-left: auto;
-        margin-right: auto;
+    }
+    .title_user h2 {
+        margin-top: 20px;
+        font-size: 25px;
     }
 
     .img_icons img {
@@ -58,10 +67,18 @@
         border-radius: 30px;
         border: none;
     }
+    .inputs label {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .inputs i {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 
     #input_submit {
         height: 36px;
-        width: 199px;
+        width: 200px;
         border-radius: 30px;
         border: none;
         background-color: #2F6427;
@@ -82,7 +99,7 @@
         <form action="index.php" method="post" id="form_login">
             <div class="title_user">
                 <img src="multimidia/images/usuario.png" alt="Logo de usuário">
-                <h2>Login</h2>
+                <h2>LOGIN</h2>
             </div><br>
 
             <div class="inputs">
