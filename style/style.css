@@ -11,22 +11,51 @@
 
 nav {
     display: flex;
+    justify-content: space-between; /* espaça os itens para os extremos */
+    align-items: center;
     width: 100vw;
     height: 60px;
-    background-color: #D9D9D9;
+    background-color: #2F6427;
+    padding: 0 20px; /* adiciona um pouco de espaço nas laterais */
 }
 
-.dropdown {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#btn-dropdown {
+    background-color: green;
+    border: none;
+    width: min-content;
+    padding: 0; /* remove padding ao redor do botão */
 }
+
+#btn-dropdown img {
+    margin: 0; /* remove margens ao redor da imagem */
+    padding: 0; /* remove padding ao redor da imagem */
+}
+
 #logo {
-    margin-left: 20px;  /*tentando colocar tudo para direita e menu para esquerda*/
+    margin: 0; /* remove margens extras */
+}
+
+#logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dropdown-menu {
+    margin-top: 0; /* sem margem inicialmente */
+    transform: translateY(0); /* sem deslocamento inicialmente */
+    transition: margin-top 0.3s ease, transform 0.3s ease; /* animação suave */
+    position: absolute; /* garante que a ul fica acima do conteúdo */
+    top: 100%; /* move a ul para logo abaixo do botão */
+    left: 0; /* alinhar à esquerda */
+    margin-top: 7px !important; /* Movido para baixo */
+    margin-left: -25px !important;  /* Arrastando para esquerda */
+    background-color: #739E73 !important;  /* Cor de fundo definido como important pois se nao recebe do bootstrap*/
 }
 
 ul {
     list-style-type: none;
+    padding: 0; /* remove padding do ul */
+    margin: 0; /* remove margin do ul */
 }
 
 li {
@@ -37,6 +66,7 @@ li a {
     text-decoration: none;
     color: blue;
 }
+
 
 /* CONTEUDO */
 
