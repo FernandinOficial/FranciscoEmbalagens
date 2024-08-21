@@ -41,8 +41,6 @@ nav {
 }
 
 .dropdown-menu {
-    margin-top: 0; /* sem margem inicialmente */
-    transform: translateY(0); /* sem deslocamento inicialmente */
     transition: margin-top 0.3s ease, transform 0.3s ease; /* animação suave */
     position: absolute; /* garante que a ul fica acima do conteúdo */
     top: 100%; /* move a ul para logo abaixo do botão */
