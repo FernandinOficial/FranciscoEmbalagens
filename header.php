@@ -5,13 +5,21 @@
             <img src="multimidia/images/navButton_39x45.png" alt="">
         </button>
         <ul class="dropdown-menu">
-            <li><button class="dropdown-item" type="button"><a href="">OLÁ, (USER)</a></button></li>
+            <li><button class="dropdown-item" type="button"><a href="login.php">OLÁ, (USER)</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="">PRODUTOS</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="">CONTATO</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="">SOBRE</a></button></li>
+            <div id="account">
+                <a href="login.php"><li class="account" id="login">LOGIN</li></a>
+                <a href="index.php"><li class="account" id="logout">LOGOUT</li></a>
+            </div>
         </ul>
     </div>
     <div id="logo">
-        <img src="multimidia/images/icon/franciscoLogo_100x35.png" alt="Logo Francisco Embalagens">
+        <a href="index.php"><img src="multimidia/images/icon/franciscoLogo_81x47.png"
+                alt="Logo Francisco Embalagens"></a>
     </div>
 </nav>
+<aside>
+    <a href="index.php"><img src="multimidia/images/home_35px.png" alt=""></a>
+</aside>

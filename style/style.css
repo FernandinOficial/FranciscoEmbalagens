@@ -7,8 +7,15 @@
     font-family: sans-serif;
 }
 
-/* NAV-BAR */
+/*FONTES*/
+.inter {
+    font-family: "Inter", sans-serif;   /* declarar esta fonte */
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+  }
 
+/* NAV-BAR */
 nav {
     display: flex;
     justify-content: space-between; /* espaça os itens para os extremos */
@@ -24,6 +31,7 @@ nav {
     border: none;
     width: min-content;
     padding: 0; /* remove padding ao redor do botão */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* sombra ao redor do botão */
 }
 
 #btn-dropdown img {
@@ -40,11 +48,12 @@ nav {
     height: auto;
 }
 
-.dropdown-menu {
+.dropdown-menu {    /* o display do menu navbar */
     transition: margin-top 0.3s ease, transform 0.3s ease; /* animação suave */
     position: absolute; /* garante que a ul fica acima do conteúdo */
     top: 100%; /* move a ul para logo abaixo do botão */
     left: 0; /* alinhar à esquerda */
+    border-radius: 0 0 15px 0 !important;
     margin-top: 7px !important; /* Movido para baixo */
     margin-left: -25px !important;  /* Arrastando para esquerda */
     background-color: #739E73 !important;  /* Cor de fundo definido como important pois se nao recebe do bootstrap*/
@@ -56,15 +65,57 @@ ul {
     margin: 0; /* remove margin do ul */
 }
 
-li {
+li {    /* onde vai modificar ao "redor" das letras/navegação */
     text-align: center;
+    background-color: #91bf91;
+    margin: 8px auto; /* Adiciona margem vertical para evitar que os fundos se encontrem */
+    border-radius: 18px;
+    width: 120px;
+    height: min-content;
 }
 
-li a {
+li a {  /* onde vai modificar as letras/navegação */
     text-decoration: none;
-    color: blue;
+    color: #000;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    padding-top: 10px;
+}
+#account{
+    margin-left: 35px;
+}
+.account{
+    display: inline-block;
+    width: min-content;
+    margin-left: 10px;
+    background-color: transparent;  /* Remove o fundo */
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+}
+#login{
+    color: #38C938;
+}
+#logout{
+    color: #C41212;
 }
 
+/*VOLTAR PARA PAGINA INICIAL*/
+aside {
+    width: 100vw; /* Largura total da tela */
+    margin-right: 0; /* Remove margem direita */
+    position: relative; /* Necessário para o posicionamento absoluto da imagem */
+}
+
+aside img {
+    position: absolute; /* Permite o posicionamento exato */
+    margin-top: 3px;
+    margin-right: 5px;
+    right: 0; /* Alinha a imagem à direita do aside */
+    top: 50%; /* Alinha a imagem verticalmente ao centro do aside */
+    z-index: 10; /* Garante que a imagem fique na frente de outros elementos, exceto o menu de navegação */
+}
 
 /* CONTEUDO */
 
