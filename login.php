@@ -21,82 +21,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
     </style>
 </head>
-<style>
-    #container {
-        width: 235px;
-        height: 380px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: #739E73;
-        border-radius: 30px;
-        box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
-        height: fit-content;
-        margin-top: 75px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #form_login {
-        padding: 25px;
-    }
-
-    .title_user {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .title_user img {
-        height: 60px;
-        width: 60px;
-    }
-
-    .title_user h2 {
-        margin-top: 20px;
-        font-size: 25px;
-    }
-
-    .img_icons img {
-        height: 38px;
-        width: 38px;
-        background-color: #fff;
-        padding: 4px;
-        border-radius: 30px;
-    }
-
-    .inputs input {
-        height: 36px;
-        width: 199px;
-        border-radius: 30px;
-        border: none;
-    }
-
-    .inputs label {
-        font-size: 15px;
-        font-weight: bold;
-    }
-
-    .inputs i {
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    #input_submit {
-        height: 36px;
-        width: 200px;
-        border-radius: 30px;
-        border: none;
-        background-color: #2F6427;
-        color: #ACEFAC;
-        font-weight: bold;
-    }
-
-    #a_login {
-        color: #ACEFAC;
-    }
-</style>
 
 <body>
     <?php
@@ -107,7 +31,7 @@
             <div class="title_user">
                 <img src="multimidia/images/usuario.png" alt="Logo de usuário">
                 <h2>LOGIN</h2>
-            </div><br>
+            </div>
 
             <div class="inputs">
                 <label for="email">E-mail</label><br>
@@ -119,7 +43,7 @@
                 <input type="password" id="password" name="password"><br><br><br>
 
                 <input type="submit" value="Entrar" id="input_submit">
-            </div><br><br>
+            </div><br>
 
             <div class="img_icons">
                 <a href="#"><img src="multimidia/images/google.png" alt="Ícone do google"></a>
@@ -129,6 +53,6 @@
             <a href="cadastro.php" id="a_login">Esqueceu a senha?</a>
         </form>
     </main>
-</body>
-
-</html>
+    <?php
+    require_once 'footer.php';
+    ?>

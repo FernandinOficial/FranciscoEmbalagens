@@ -21,62 +21,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
     </style>
 </head>
-<style>
-    #container {
-        width: 235px;
-        height: 380px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: #739E73;
-        border-radius: 30px;
-        box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
-        height: fit-content;
-        margin-top: 75px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #form_cadastro {
-        padding: 20px;
-    }
-
-    .title_cadastro img {
-        height: 60px;
-        width: 60px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .img_cadastro img {
-        height: 38px;
-        width: 38px;
-        background-color: #fff;
-        padding: 4px;
-        border-radius: 30px;
-    }
-
-    .inputs_cadastro input {
-        height: 36px;
-        width: 199px;
-        border-radius: 30px;
-        border: none;
-    }
-
-    #cadastro_submit {
-        height: 36px;
-        width: 199px;
-        border-radius: 30px;
-        border: none;
-        background-color: #2F6427;
-        color: #ACEFAC;
-        font-weight: bold;
-    }
-
-    #a_cadastro {
-        color: #ACEFAC;
-    }
-</style>
 
 <body>
     <?php
@@ -86,25 +30,25 @@
         <form action="index.php" method="post" id="form_cadastro">
             <div class="title_cadastro">
                 <img src="multimidia/images/usuario.png" alt="Logo de usuário">
-                <h2>Cadastrar-se</h2>
+                <h2>CADASTRO</h2>
             </div><br>
 
             <div class="inputs_cadastro">
                 <label for="name">Nome</label><br>
                 <i class="fa-solid fa-user"></i>
-                <input type="text" id="name" name="name"><br>
+                <input type="text" id="name" name="name"><br><br>
 
                 <label for="lastname">Sobrenome</label><br>
                 <i class="fa-solid fa-user"></i>
-                <input type="text" id="lastname" name="lastname"><br>
+                <input type="text" id="lastname" name="lastname"><br><br>
 
                 <label for="email">E-mail</label><br>
                 <i class="fa-solid fa-envelope"></i>
-                <input type="email" id="email" name="email"><br>
+                <input type="email" id="email" name="email"><br><br>
 
                 <label for="password">Senha</label><br>
                 <i class="fa-solid fa-key"></i>
-                <input type="password" id="password" name="password"><br><br>
+                <input type="password" id="password" name="password"><br><br><br>
 
                 <input type="submit" name="Cadastrar" id="cadastro_submit">
             </div><br>
@@ -112,13 +56,12 @@
             <div class="img_cadastro">
                 <a href="#"><img src="multimidia/images/google.png" alt="Ícone do google"></a>
                 <a href="#"><img src="multimidia/images/facebook.png" alt="Ícone do facebook"></a>
-            </div><br>
+            </div><br><br>
 
             <a href="login.php" id="a_cadastro">Já possui uma conta?</a>
         </form>
         </form>
     </main>
-</body>
-
-
-</html>
+    <?php
+    require_once 'footer.php';
+    ?>

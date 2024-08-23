@@ -1,4 +1,5 @@
 /* ESTRUTURA */
+/* MOBILE */
 
 * {
     margin: 0;
@@ -9,38 +10,47 @@
 
 /*FONTES*/
 .inter {
-    font-family: "Inter", sans-serif;   /* declarar esta fonte */
+    font-family: "Inter", sans-serif;
+    /* declarar esta fonte */
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
-  }
+}
 
 /* NAV-BAR */
 nav {
     display: flex;
-    justify-content: space-between; /* espaça os itens para os extremos */
+    justify-content: space-between;
+    /* espaça os itens para os extremos */
     align-items: center;
     width: 100vw;
     height: 60px;
     background-color: #2F6427;
-    padding: 0 20px; /* adiciona um pouco de espaço nas laterais */
+    padding: 0 20px;
+    /* adiciona um pouco de espaço nas laterais */
 }
 
 #btn-dropdown {
     background-color: green;
     border: none;
     width: min-content;
-    padding: 0; /* remove padding ao redor do botão */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* sombra ao redor do botão */
+    padding: 0;
+    /* remove padding ao redor do botão */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    /* sombra ao redor do botão */
 }
 
 #btn-dropdown img {
-    margin: 0; /* remove margens ao redor da imagem */
-    padding: 0; /* remove padding ao redor da imagem */
+    margin: 0;
+    /* remove margens ao redor da imagem */
+    padding: 0;
+    /* remove padding ao redor da imagem */
 }
 
 #logo {
-    margin: 0; /* remove margens extras */
+    margin: 0;
+    right: 10px;
+    /* remove margens extras */
 }
 
 #logo img {
@@ -48,33 +58,47 @@ nav {
     height: auto;
 }
 
-.dropdown-menu {    /* o display do menu navbar */
-    transition: margin-top 0.3s ease, transform 0.3s ease; /* animação suave */
-    position: absolute; /* garante que a ul fica acima do conteúdo */
-    top: 100%; /* move a ul para logo abaixo do botão */
-    left: 0; /* alinhar à esquerda */
+.dropdown-menu {
+    /* o display do menu navbar */
+    display: none; /* Esconde o menu dropdown inicialmente */
+    transition: margin-top 0.3s ease, transform 0.3s ease;
+    /* animação suave */
+    position: absolute;
+    /* garante que a ul fica acima do conteúdo */
+    top: 100%;
+    /* move a ul para logo abaixo do botão */
+    left: 0;
+    /* alinhar à esquerda */
     border-radius: 0 0 15px 0 !important;
-    margin-top: 7px !important; /* Movido para baixo */
-    margin-left: -25px !important;  /* Arrastando para esquerda */
-    background-color: #739E73 !important;  /* Cor de fundo definido como important pois se nao recebe do bootstrap*/
+    margin-top: 7px !important;
+    /* Movido para baixo */
+    margin-left: -25px !important;
+    /* Arrastando para esquerda */
+    background-color: #739E73 !important;
+    /* Cor de fundo definido como important pois se nao recebe do bootstrap*/
 }
 
 ul {
     list-style-type: none;
-    padding: 0; /* remove padding do ul */
-    margin: 0; /* remove margin do ul */
+    padding: 0;
+    /* remove padding do ul */
+    margin: 0;
+    /* remove margin do ul */
 }
 
-li {    /* onde vai modificar ao "redor" das letras/navegação */
+li {
+    /* onde vai modificar ao "redor" das letras/navegação */
     text-align: center;
     background-color: #91bf91;
-    margin: 8px auto; /* Adiciona margem vertical para evitar que os fundos se encontrem */
+    margin: 8px auto;
+    /* Adiciona margem vertical para evitar que os fundos se encontrem */
     border-radius: 18px;
     width: 120px;
     height: min-content;
 }
 
-li a {  /* onde vai modificar as letras/navegação */
+li a {
+    /* onde vai modificar as letras/navegação */
     text-decoration: none;
     color: #000;
     font-size: 14px;
@@ -82,43 +106,54 @@ li a {  /* onde vai modificar as letras/navegação */
     font-weight: 500;
     padding-top: 10px;
 }
-#account{
+
+#account {
     margin-left: 35px;
 }
-.account{
+
+.account {
     display: inline-block;
     width: min-content;
     margin-left: 10px;
-    background-color: transparent;  /* Remove o fundo */
+    background-color: transparent;
+    /* Remove o fundo */
     font-family: "Inter", sans-serif;
     font-size: 11px;
     font-weight: 500;
 }
-#login{
+
+#login {
     color: #38C938;
 }
-#logout{
+
+#logout {
     color: #C41212;
 }
 
 /*VOLTAR PARA PAGINA INICIAL*/
 aside {
-    width: 100vw; /* Largura total da tela */
-    margin-right: 0; /* Remove margem direita */
-    position: relative; /* Necessário para o posicionamento absoluto da imagem */
+    width: 100vw;
+    /* Largura total da tela */
+    margin-right: 0;
+    /* Remove margem direita */
+    position: relative;
+    /* Necessário para o posicionamento absoluto da imagem */
 }
 
 aside img {
-    position: absolute; /* Permite o posicionamento exato */
+    position: absolute;
+    /* Permite o posicionamento exato */
     margin-top: 3px;
     margin-right: 5px;
-    right: 0; /* Alinha a imagem à direita do aside */
-    top: 50%; /* Alinha a imagem verticalmente ao centro do aside */
-    z-index: 10; /* Garante que a imagem fique na frente de outros elementos, exceto o menu de navegação */
+    right: 0;
+    /* Alinha a imagem à direita do aside */
+    top: 50%;
+    /* Alinha a imagem verticalmente ao centro do aside */
+    z-index: 10;
+    /* Garante que a imagem fique na frente de outros elementos, exceto o menu de navegação */
 }
 
 /* CONTEUDO */
-
 main {
     display: block;
     justify-content: center;
@@ -150,17 +185,21 @@ main {
 #itens {}
 
 .imgs-itens {
-    display: flex; 
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
 }
 
 /* RODAPE */
-
 footer {
-    height: 200px;
+    height: 290px;
     background-color: green;
+    margin-top: 15vh;
+    padding-inline: 40px;
+}
+#footer-logo img{
+    
 }
 
 .footer-img {
@@ -180,11 +219,170 @@ footer {
 }
 
 /* FORMULÁRIO LOGIN */
+#container {
+    width: 235px;
+    height: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #739E73;
+    border-radius: 30px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    height: fit-content;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form_login {
+    padding: 25px;
+}
+
+.title_user {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_user img {
+    height: 60px;
+    width: 60px;
+}
+
+.title_user h2 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.img_icons img {
+    height: 38px;
+    width: 38px;
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 30px;
+}
+
+.inputs input {
+    height: 36px;
+    width: 199px;
+    border-radius: 30px;
+    border: none;
+}
+input {
+    padding-left: 35px;
+    padding-right: 15px;
+}
+input[type="submit"]{
+    padding-left: 0px;
+}
+.inputs label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.inputs i {
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 10px;
+    opacity: 0.5;
+}
+
+#input_submit {
+    height: 36px;
+    width: 200px;
+    border-radius: 30px;
+    border: none;
+    background-color: #2F6427;
+    color: #ACEFAC;
+    font-weight: bold;
+}
+
+#a_login {
+    color: #ACEFAC;
+}
 
 /* FORMULÁRIO CADASTRO */
+#container {
+    width: 235px;
+    height: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #739E73;
+    border-radius: 30px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    height: fit-content;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form_cadastro {
+    padding: 25px;
+}
+
+.title_cadastro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_cadastro img {
+    height: 60px;
+    width: 60px;
+}
+
+.title_cadastro h2 {
+    margin-top: 20px;
+    margin-bottom: -10px;
+    font-size: 25px;
+}
+
+.img_cadastro img {
+    height: 38px;
+    width: 38px;
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 30px;
+}
+
+.inputs_cadastro input {
+    height: 36px;
+    width: 199px;
+    border-radius: 30px;
+    border: none;
+}
+
+.inputs_cadastro label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.inputs_cadastro i {
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 10px;
+    opacity: 0.5
+}
+
+#cadastro_submit {
+    height: 36px;
+    width: 200px;
+    border-radius: 30px;
+    border: none;
+    background-color: #2F6427;
+    color: #ACEFAC;
+    font-weight: bold;
+}
+
+#a_cadastro {
+    color: #ACEFAC;
+}
 
 /* PRODUTO */
-
 table {
     margin-left: auto;
     margin-right: auto;
@@ -193,6 +391,7 @@ table {
     width: 85vw;
     border-collapse: collapse;
     font-size: 18px;
+    border: 1px solid rgb(16, 194, 31);
 }
 
 body {
@@ -201,9 +400,11 @@ body {
     line-height: 1;
 }
 
-th, td {
+th,
+td {
     padding: 16px 25px;
     text-align: center;
+    border: 1px solid black;
 }
 
 th {
@@ -219,7 +420,74 @@ tbody tr:nth-child(odd) {
 tbody tr:nth-child(even) {
     background-color: #739E73;
 }
+
 #contato h3 {
     font-weight: bold;
     color: white;
+}
+
+/* REMOVER O SCROLL HORIZONTAL */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* DESKTOP */
+@media (min-width: 650px) {
+    nav {
+        width: 100vw;
+        height: 100px;  /* Reduzi a altura da nav no desktop */
+    }
+    
+    #btn-dropdown {
+        display: none;  /* Remove o botão dropdown no desktop */
+    }
+    
+    ul.dropdown-menu {
+        display: flex;  /* Alinha os itens horizontalmente */
+        justify-content: initial;
+        position: relative;  /* Torna o dropdown menu relativo para evitar sumiço */
+        margin: 0;  /* Remove margens */
+        background-color: #739e73 !important;  /* Define a cor de fundo verde */
+        border-radius: 0 !important;  /* Remove bordas arredondadas */
+        box-shadow: none;  /* Remove a sombra */
+        border: none;
+        padding: 0;  /* Remove padding */
+        top: 0;  /* Garante que o menu fique no topo da área disponível */
+        margin-top: 68px !important;
+        width: 100vw;
+    }
+    
+    ul.dropdown-menu li {
+        display: inline-block;  /* Exibe os itens em linha */
+        margin: 0 10px;  /* Reduzi o espaçamento entre os itens */
+        background-color: transparent;  /* Remove o fundo dos itens */
+    }
+    
+    ul.dropdown-menu li a {
+        color: #000;  /* Altera a cor do texto */
+        font-size: 14px;  /* Reduzi o tamanho da fonte */
+        font-weight: 500;  /* Reduzi o peso da fonte */
+        padding: 5px 10px;  /* Reduzi o padding ao redor dos links */
+        text-transform: none;  /* Retirei o texto em maiúsculas */
+    }
+    
+    #account {
+        margin-left: 0;  /* Reseta a margem no desktop */
+        display: flex;   /* Exibe os botões de login/logout em linha */
+    }
+    
+    .account {
+        margin-left: 10px;  /* Reduzi o espaçamento entre os itens de conta */
+        background-color: transparent; /* Remove o fundo */
+        color: #000; /* Altera a cor do texto */
+        font-size: 12px; /* Reduzi o tamanho da fonte */
+        font-weight: normal; /* Normaliza o peso da fonte */
+    }
+
+    .carousel-item img {
+        height: 450px !important;
+        width: 100%;
+        object-fit: cover;  /* Faz com que a imagem cubra o contêiner sem distorcer */
+        object-position: center;  /* Centraliza a imagem dentro do contêiner */
+    }    
 }

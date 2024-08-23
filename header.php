@@ -5,7 +5,7 @@
             <img src="multimidia/images/navButton_39x45.png" alt="">
         </button>
         <ul class="dropdown-menu">
-            <li><button class="dropdown-item" type="button"><a href="login.php">OLÁ, (USER)</a></button></li>
+            <li><button class="dropdown-item" type="button"><a href="login.php"><?php echo 'OLÁ, (USER)';?></a></button></li>
             <li><button class="dropdown-item" type="button"><a href="">PRODUTOS</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="">CONTATO</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="">SOBRE</a></button></li>
@@ -20,6 +20,6 @@
                 alt="Logo Francisco Embalagens"></a>
     </div>
 </nav>
-<aside>
-    <a href="index.php"><img src="multimidia/images/home_35px.png" alt=""></a>
+<aside id="home">
+    <a class="home" href="index.php"><img src="multimidia/images/home_35px.png" alt="Home"></a>
 </aside>

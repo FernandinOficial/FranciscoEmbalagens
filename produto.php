@@ -49,6 +49,6 @@
             <td>32cm x 29cm | 12cm</td>
         </tr>
     </table>
-</body>
-
-</html>
+    <?php
+    require_once 'footer.php';
+    ?>
