@@ -221,7 +221,8 @@ footer {
 #footer-logo img{
     width: 200px;
     height: 120px;
-    margin-top: 15px;
+    display: block;
+    margin: 0 auto;
 }
 
 .footer-img {
