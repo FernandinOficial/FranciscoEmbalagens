@@ -28,6 +28,48 @@
             width: 20px;
             height: 20px;
         }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #E0FFB9;
+        }
+
+        #div_container {
+            display: block;
+        }
+
+        .div1 {
+            padding: 3%;
+            display: flex;
+            align-items: center;
+            float: left;
+            width: 95%;
+            margin-left: auto;
+        }
+
+        .div2 {
+            padding: 3%;
+            display: flex;
+            align-items: center;
+            float: right;
+            width: 95%;
+            margin-right: auto;
+        }
+
+        .div__img {
+            padding: 2%;
+            background-color: #D9D9D9;
+            border-radius: 58px;
+        }
+
+        .imagens {
+            display: flex;
+            align-items: end;
+        }
     </style>
 </head>
 
@@ -68,11 +110,13 @@
             <p>Há mais de cinco anos, nos dedicamos a satisfazer nossos clientes com produtos e serviços de alta
                 qualidade.</p>
 
-            <img class="imgs-itens" src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="Estilos e Compromisso ambiental">
+            <img class="imgs-itens" src="multimidia/marketing/mk/sacolasImagem3_350px.png"
+                alt="Estilos e Compromisso ambiental">
             <h4>ESTILO E COMPROMISSO AMBIENTAL</h4>
             <p>Sacolas lindas e sustentáveis para levar onde e quando quiser. Estilo e responsabilidade ambiental unidos
                 para seu cotidiano.</p>
         </div>
+
     </main>
     <?php
     require_once 'footer.php';

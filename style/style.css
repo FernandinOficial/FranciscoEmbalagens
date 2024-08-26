@@ -190,8 +190,8 @@ main {
 }
 
 #itens h4 {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 800;
     margin-top: 20px;
 }
 
@@ -201,6 +201,7 @@ main {
     font-size: 20px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: bold;
 }
 
 .imgs-itens {
@@ -213,12 +214,14 @@ main {
 /* RODAPE */
 footer {
     height: 290px;
-    background-color: green;
+    background-color: #2F6427;
     margin-top: 15vh;
     padding-inline: 40px;
 }
 #footer-logo img{
-
+    width: 200px;
+    height: 120px;
+    margin-top: 15px;
 }
 
 .footer-img {
@@ -473,7 +476,7 @@ tbody tr:nth-child(even) {
         padding: 0;  /* Remove padding */
         top: 0;  /* Garante que o menu fique no topo da área disponível */
         margin-top: 68px !important;
-        width: 100vw;
+        width: 110vw;
     }
 
     ul.dropdown-menu li {
@@ -504,7 +507,7 @@ tbody tr:nth-child(even) {
     }
 
     .carousel-item img {
-        height: 450px !important;
+        height: 600px !important;
         width: 100%;
         object-fit: cover;  /* Faz com que a imagem cubra o contêiner sem distorcer */
         object-position: center;  /* Centraliza a imagem dentro do contêiner */

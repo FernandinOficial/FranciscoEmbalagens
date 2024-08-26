@@ -6,7 +6,7 @@
         </button>
         <ul class="dropdown-menu">
             <li><button class="dropdown-item" type="button"><a href="login.php"><?php echo 'OLÁ, (USER)';?></a></button></li>
-            <li><button class="dropdown-item" type="button"><a href="">PRODUTOS</a></button></li>
+            <li><button class="dropdown-item" type="button"><a href="produto.php">PRODUTOS</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="">CONTATO</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="">SOBRE</a></button></li>
             <div id="account">

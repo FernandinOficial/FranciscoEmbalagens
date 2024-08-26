@@ -19,7 +19,7 @@
     require_once "header.php";
     ?>
 
-    <table border="1">
+    <table>
         <tr>
             <th>Modelos</th>
             <th>Dimensões</th>
