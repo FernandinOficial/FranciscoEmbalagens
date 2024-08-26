@@ -182,7 +182,26 @@ main {
     height: 200px;
 }
 
-#itens {}
+#itens {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+#itens h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#itens p {
+    width: 289px;
+    height: 95px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .imgs-itens {
     display: flex;
@@ -199,7 +218,7 @@ footer {
     padding-inline: 40px;
 }
 #footer-logo img{
-    
+
 }
 
 .footer-img {
@@ -437,11 +456,11 @@ tbody tr:nth-child(even) {
         width: 100vw;
         height: 100px;  /* Reduzi a altura da nav no desktop */
     }
-    
+
     #btn-dropdown {
         display: none;  /* Remove o botão dropdown no desktop */
     }
-    
+
     ul.dropdown-menu {
         display: flex;  /* Alinha os itens horizontalmente */
         justify-content: initial;
@@ -456,13 +475,13 @@ tbody tr:nth-child(even) {
         margin-top: 68px !important;
         width: 100vw;
     }
-    
+
     ul.dropdown-menu li {
         display: inline-block;  /* Exibe os itens em linha */
         margin: 0 10px;  /* Reduzi o espaçamento entre os itens */
         background-color: transparent;  /* Remove o fundo dos itens */
     }
-    
+
     ul.dropdown-menu li a {
         color: #000;  /* Altera a cor do texto */
         font-size: 14px;  /* Reduzi o tamanho da fonte */
@@ -470,12 +489,12 @@ tbody tr:nth-child(even) {
         padding: 5px 10px;  /* Reduzi o padding ao redor dos links */
         text-transform: none;  /* Retirei o texto em maiúsculas */
     }
-    
+
     #account {
         margin-left: 0;  /* Reseta a margem no desktop */
         display: flex;   /* Exibe os botões de login/logout em linha */
     }
-    
+
     .account {
         margin-left: 10px;  /* Reduzi o espaçamento entre os itens de conta */
         background-color: transparent; /* Remove o fundo */
@@ -489,5 +508,5 @@ tbody tr:nth-child(even) {
         width: 100%;
         object-fit: cover;  /* Faz com que a imagem cubra o contêiner sem distorcer */
         object-position: center;  /* Centraliza a imagem dentro do contêiner */
-    }    
+    }
 }
