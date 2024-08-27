@@ -56,7 +56,7 @@ nav {
 #logo img {
   position: absolute;
   margin-top: -25px;
-  margin-left: -80px;
+  left: 78%;
   max-width: 100%;
   height: auto;
 }
@@ -285,9 +285,8 @@ footer {
 }
 
 .title_user h2 {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 15px;
-  font-size: 25px;
 }
 
 .img_icons img {
@@ -464,7 +463,7 @@ tbody tr:nth-child(even) {
   position: fixed;
   width: 12vw;
   right: 3vw;
-  top: 80vh;
+  top: 85vh;
   transition: transform 0.5s ease;
   height: 40px;
   width: 40px;
@@ -478,7 +477,7 @@ tbody tr:nth-child(even) {
   position: fixed;
   width: 12vw;
   right: 3vw;
-  top: 70vh;
+  top: 75vh;
   transition: transform 0.5s ease;
   height: 40px;
   width: 40px;
@@ -527,7 +526,7 @@ tbody tr:nth-child(even) {
     position: absolute;
     top: 35px;
     right: 50%;
-    left: 95%;
+    left: 90%;
     z-index: 100;
   }
   ul.dropdown-menu {

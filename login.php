@@ -54,7 +54,7 @@
                 <a href="#"><img src="multimidia/images/facebook.png" alt="Ícone do facebook"></a>
             </div><br><br>
 
-            <a href="cadastro.php" id="a_login">Esqueceu a senha?</a>
+            <a href="cadastro.php" id="a_login">Não possui uma conta?</a>
         </form>
     </main>
     <?php

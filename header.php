@@ -25,6 +25,13 @@
         <a href="index.php"><img src="multimidia/images/icon/franciscoLogo_81x47.png"
                 alt="Logo Francisco Embalagens"></a>
     </div>
+
+    <aside class="aside_whats">
+        <a href="https://wa.me/19999989819"><img src="multimidia/images/whats.png" alt="WhatsApp"></a>
+    </aside>
+    <aside class="aside_gmail">
+        <a href="#"><img src="multimidia/images/gmail.png" alt="Gmail"></a>
+    </aside>
 </nav>
 <aside id="home">
     <a class="home" href="index.php"><img src="multimidia/images/home_35px.png" alt="Home"></a>
