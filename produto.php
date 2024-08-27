@@ -12,6 +12,11 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script defer src="script/script.js"></script>
+    <style>
+        body {
+            background-color: #E0FFB9;
+        }
+    </style>
 </head>
 
 <body>

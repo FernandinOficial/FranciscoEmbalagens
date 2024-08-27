@@ -49,13 +49,14 @@ nav {
 
 #logo {
   margin: 0;
-  right: 10px;
+  right: 100px;
   /* remove margens extras */
 }
 
 #logo img {
   position: absolute;
-  margin-left: 10px;
+  margin-top: -25px;
+  margin-left: -80px;
   max-width: 100%;
   height: auto;
 }
@@ -147,7 +148,7 @@ aside img {
   /* Permite o posicionamento exato */
   margin-top: 3px;
   margin-right: 5px;
-  right: 0;
+  right: 3%;
   /* Alinha a imagem à direita do aside */
   top: 50%;
   /* Alinha a imagem verticalmente ao centro do aside */
@@ -522,6 +523,13 @@ tbody tr:nth-child(even) {
     display: none; /* Remove o botão dropdown no desktop */
   }
 
+  #logo img {
+    position: absolute;
+    top: 35px;
+    right: 50%;
+    left: 95%;
+    z-index: 100;
+  }
   ul.dropdown-menu {
     display: flex; /* Alinha os itens horizontalmente */
     justify-content: initial;
