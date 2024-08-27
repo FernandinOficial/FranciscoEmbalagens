@@ -37,39 +37,6 @@
         body {
             background-color: #E0FFB9;
         }
-
-        #div_container {
-            display: block;
-        }
-
-        .div1 {
-            padding: 3%;
-            display: flex;
-            align-items: center;
-            float: left;
-            width: 95%;
-            margin-left: auto;
-        }
-
-        .div2 {
-            padding: 3%;
-            display: flex;
-            align-items: center;
-            float: right;
-            width: 95%;
-            margin-right: auto;
-        }
-
-        .div__img {
-            padding: 2%;
-            background-color: #D9D9D9;
-            border-radius: 58px;
-        }
-
-        .imagens {
-            display: flex;
-            align-items: end;
-        }
     </style>
 </head>
 
@@ -100,23 +67,33 @@
                 <span class="visually-hidden">Next</span>
             </a>
         </div>
+
         <div id="itens">
-            <img class="imgs-itens" src="multimidia/marketing/mk/sacolasImagem1_380px.png" alt="Sacolas Personalizadas">
-            <h4>DESIGNS ÚNICOS</h4>
-            <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e designs únicos.</p>
+            <img id="left" class="imgs-itens" src="multimidia/marketing/mk/sacolasImagem1_380px.png"
+                alt="Sacolas Personalizadas">
+            <div id="texto_right" class="texto_1">
+                <h4>DESIGNS ÚNICOS</h4>
+                <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e designs únicos.</p>
+            </div>
 
-            <img class="imgs-itens" src="multimidia/marketing/mk/sacolasImagem2_350px.png" alt="Anos de Serviço">
-            <h4>ANOS DE SERVIÇO</h4>
-            <p>Há mais de cinco anos, nos dedicamos a satisfazer nossos clientes com produtos e serviços de alta
-                qualidade.</p>
+            <img id="right" class="imgs-itens" src="multimidia/marketing/mk/sacolasImagem2_350px.png"
+                alt="Anos de Serviço">
+            <div id="texto_left" class="texto_2">
+                <h4>ANOS DE SERVIÇO</h4>
+                <p>Há mais de cinco anos, nos dedicamos a satisfazer nossos clientes com produtos e serviços de alta
+                    qualidade.</p>
+            </div>
 
-            <img class="imgs-itens" src="multimidia/marketing/mk/sacolasImagem3_350px.png"
+            <img id="left" class="imgs-itens" src="multimidia/marketing/mk/sacolasImagem3_350px.png"
                 alt="Estilos e Compromisso ambiental">
-            <h4>ESTILO E COMPROMISSO AMBIENTAL</h4>
-            <p>Sacolas lindas e sustentáveis para levar onde e quando quiser. Estilo e responsabilidade ambiental unidos
-                para seu cotidiano.</p>
+            <div id="texto_right" class="texto_3">
+                <h4>ESTILO E COMPROMISSO AMBIENTAL</h4>
+                <p>Sacolas lindas e sustentáveis para levar onde e quando quiser. Estilo e responsabilidade ambiental
+                    unidos
+                    para seu cotidiano.</p>
+            </div>
         </div>
-
+        
     </main>
     <?php
     require_once 'footer.php';
