@@ -287,6 +287,7 @@ footer {
 .title_user h2 {
   margin-top: 10px;
   margin-bottom: 15px;
+  font-weight: 900;
 }
 
 .img_icons img {
@@ -334,6 +335,8 @@ input[type="submit"] {
 
 #a_login {
   color: #acefac;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* FORMULÁRIO CADASTRO */
@@ -369,9 +372,9 @@ input[type="submit"] {
 }
 
 .title_cadastro h2 {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: -10px;
-  font-size: 25px;
+  font-weight: 900;
 }
 
 .img_cadastro img {
@@ -413,6 +416,8 @@ input[type="submit"] {
 
 #a_cadastro {
   color: #acefac;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* PRODUTO */
