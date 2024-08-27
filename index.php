@@ -93,7 +93,6 @@
                     para seu cotidiano.</p>
             </div>
         </div>
-        
     </main>
     <?php
     require_once 'footer.php';

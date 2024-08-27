@@ -53,8 +53,8 @@ nav {
   /* remove margens extras */
 }
 
-#logo a img {
-  position: absolute !important;
+#logo img {
+  position: absolute;
   margin-left: 10px;
   max-width: 100%;
   height: auto;
@@ -222,6 +222,7 @@ footer {
   margin-top: 15vh;
   padding-inline: 25px;
 }
+
 #footer-logo img {
   width: 200px;
   height: 120px;
@@ -454,15 +455,31 @@ tbody tr:nth-child(even) {
   color: white;
 }
 /* IMAGEM NO CANTO DA TELA */
-.aside img {
+.aside_whats img {
   position: fixed;
   width: 12vw;
   right: 3vw;
   top: 80vh;
   transition: transform 0.5s ease;
+  height: 40px;
+  width: 40px;
 }
 
-.aside img:hover {
+.aside_whats img:hover {
+  transform: rotateX(360deg);
+}
+
+.aside_gmail img {
+  position: fixed;
+  width: 12vw;
+  right: 3vw;
+  top: 70vh;
+  transition: transform 0.5s ease;
+  height: 40px;
+  width: 40px;
+}
+
+.aside_gmail img:hover {
   transform: rotateX(360deg);
 }
 

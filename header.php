@@ -5,13 +5,19 @@
             <img src="multimidia/images/navButton_39x45.png" alt="Botão de Navegação">
         </button>
         <ul class="dropdown-menu">
-            <li><button class="dropdown-item" type="button"><a href="login.php"><?php echo 'OLÁ, (USER)';?></a></button></li>
+            <li><button class="dropdown-item" type="button"><a
+                        href="login.php"><?php echo 'OLÁ, (USER)'; ?></a></button>
+            </li>
             <li><button class="dropdown-item" type="button"><a href="produto.php">PRODUTOS</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="">CONTATO</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="">SOBRE</a></button></li>
             <div id="account">
-                <a href="login.php"><li class="account" id="login">LOGIN</li></a>
-                <a href="index.php"><li class="account" id="logout">LOGOUT</li></a>
+                <a href="login.php">
+                    <li class="account" id="login">LOGIN</li>
+                </a>
+                <a href="index.php">
+                    <li class="account" id="logout">LOGOUT</li>
+                </a>
             </div>
         </ul>
     </div>
