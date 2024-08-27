@@ -217,7 +217,7 @@ main {
 
 /* RODAPE */
 footer {
-  height: 290px;
+  height: 380px;
   background-color: #2f6427;
   margin-top: 15vh;
   padding-inline: 25px;
@@ -231,12 +231,16 @@ footer {
   padding-top: 10px;
 }
 
+.contato div img {
+  width: 40px;
+}
+
 .footer-img {
   float: left;
 }
 
 .contato p {
-  font-size: 15px;
+  font-size: 20px;
   color: #acefac;
 }
 
