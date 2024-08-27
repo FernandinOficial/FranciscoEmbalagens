@@ -10,7 +10,16 @@
 //     }
 // });
 
-//POPUP SOBRE
+// POPUP SOBRE
 function togglePopup() {
   document.getElementById("popup-1").classList.toggle("active");
+
+  // Desfocar o main quando o popup estiver ativo
+  const mainElement = document.querySelector("main");
+  
+  if (document.getElementById("popup-1").classList.contains("active")) {
+    mainElement.style.filter = "blur(5px)";
+  } else {
+    mainElement.style.filter = "none";
+  }
 }

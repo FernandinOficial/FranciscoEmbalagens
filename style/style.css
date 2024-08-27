@@ -56,7 +56,7 @@ nav {
 #logo img {
   position: absolute;
   margin-top: -25px;
-  left: 78%;
+  left: 75%;
   max-width: 100%;
   height: auto;
 }
@@ -109,9 +109,21 @@ li a {
   font-weight: 500;
   padding-top: 10px;
 }
+li button {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  padding-top: 10px;
+}
 
 #account {
   margin-left: 35px;
+}
+/* login estava com um ponto falho que foi corrigido */
+div #account a {  
+  color: transparent;
 }
 
 .account {
@@ -338,7 +350,6 @@ input[type="submit"] {
   text-decoration: none;
   cursor: pointer;
 }
-
 /* FORMULÁRIO CADASTRO */
 #container {
   width: 235px;
@@ -470,7 +481,7 @@ tbody tr:nth-child(even) {
   right: 3vw;
   top: 85vh;
   transition: transform 0.5s ease;
-  height: 40px;
+  height:rgb(173, 110, 110);
   width: 40px;
 }
 
@@ -507,29 +518,43 @@ tbody tr:nth-child(even) {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);  /* de preferencia vai sumir */
-  background: #fff;
-  width: 450px;
-  height: 220px;
-  z-index:2;
-  text-align:center;
-  padding:20px;
-  box-sizing:border-box;
-  }
+  transform: translate(-50%, -50%) scale(0); /* de preferencia vai sumir */
+  background: #739E73;
+  /* tamanho do rgba(110, 190, 123, 0.7) */
+  width: 309px;
+  height: 400px;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 30px 0 30px 0;
+}
+
+.popup .content h1 {   
+  color: #acefac;
+  font-weight: 800;
+  font-size: 50px;
+}
+
+.popup .content p {  
+  font-weight: bold;
+}
 
 .popup .close-btn {
-  position:absolute;
-  right:20px; 
-  top:20px;
-  width:30px;
-  height:30px;
-  background:#222;
-  color:#fff;
-  font-size:25px;
-  font-weight:600;
-  line-height:30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  /* cor do "X" */
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
   text-align: center;
   border-radius: 50%;
+  cursor: pointer;
 }
 .popup.active .overlay {
   display: block;
@@ -537,7 +562,7 @@ tbody tr:nth-child(even) {
 .popup.active .content {
   /* animação pequena */
   transition: all 300ms ease-in-out;
-  transform: translate(-50%, -50%) scale(1);  /* para aparecer na tela */
+  transform: translate(-50%, -50%) scale(1); /* para aparecer na tela */
 }
 
 /* REMOVER O SCROLL HORIZONTAL */
@@ -593,7 +618,7 @@ tbody tr:nth-child(even) {
     border: none;
     padding: 0; /* Remove padding */
     top: 0; /* Garante que o menu fique no topo da área disponível */
-    margin-top: 68px !important;
+    margin-top: 70px !important;
     width: 110vw;
   }
 
@@ -615,6 +640,7 @@ tbody tr:nth-child(even) {
     margin-left: 0; /* Reseta a margem no desktop */
     display: flex; /* Exibe os botões de login/logout em linha */
   }
+  
 
   .account {
     margin-left: 10px; /* Reduzi o espaçamento entre os itens de conta */

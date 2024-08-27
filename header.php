@@ -12,8 +12,8 @@
                         href="login.php"><?php echo 'OLÁ, (USER)'; ?></a></button>
             </li>
             <li><button class="dropdown-item" type="button"><a href="produto.php">PRODUTOS</a></button></li>
-            <li><button class="dropdown-item" type="button"><a href="">CONTATO</a></button></li>
-            <li><button class="dropdown-item" onclick="togglePopup()"><a>SOBRE</a></button></li>
+            <li><button class="dropdown-item" type="button"><a href="#footer-logo">CONTATO</a></button></li>
+            <li><button class="dropdown-item" onclick="togglePopup()">SOBRE</button></li>
             <div id="account">
                 <a href="login.php">
                     <li class="account" id="login">LOGIN</li>
@@ -30,10 +30,10 @@
     </div>
 
     <aside class="aside_whats">
-        <a href="https://wa.me/19999989819"><img src="multimidia/images/whats.png" alt="WhatsApp"></a>
+        <a href="https://wa.me/19999989819" target="blank"><img src="multimidia/images/whats.png" alt="WhatsApp"></a>
     </aside>
     <aside class="aside_gmail">
-        <a href="#"><img src="multimidia/images/gmail.png" alt="Gmail"></a>
+        <a href="mailto:embalagensedesign@gmail.com" target="blank"><img src="multimidia/images/gmail.png" alt="Gmail"></a>
     </aside>
 </nav>
 <div class="popup" id="popup-1">
@@ -41,7 +41,7 @@
     <div class="content">
         <div class="close-btn" onclick="togglePopup()">&times;
         </div>
-        <h1>Title</h1>
+        <h1>Sobre</h1><br>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aspernatur laborum rem sed laudantium
             excepturi veritatis voluptatum architecto, dolore quaerat totam officiis nisi animi accusantium alias
             inventore nulla atque debitis.</p>
