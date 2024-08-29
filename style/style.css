@@ -232,6 +232,7 @@ main #carouselExampleControls {
 
 /* RODAPE */
 footer {
+  height: 10vh;
   background-color: #2f6427;
   margin-top: 15vh;
   padding-inline: 25px;
@@ -738,6 +739,6 @@ tbody tr:nth-child(even) {
     transform: rotateX(360deg);
   }
   aside img {
-    margin-top: 25px;
+    margin-top: px;
   }
 }
