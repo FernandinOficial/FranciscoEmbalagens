@@ -232,7 +232,7 @@ main #carouselExampleControls {
 
 /* RODAPE */
 footer {
-  height: 10vh;
+  height: 60vh;
   background-color: #2f6427;
   margin-top: 15vh;
   padding-inline: 25px;
@@ -612,7 +612,7 @@ tbody tr:nth-child(even) {
   }
 
   footer {
-    height: 38vh;
+    height: 53vh;
   }
   main #carouselExampleControls {
     top: 5vh;
