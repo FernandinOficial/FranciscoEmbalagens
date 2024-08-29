@@ -57,7 +57,7 @@ nav {
   position: absolute;
   margin-top: -25px;
   left: 75%;
-  max-width: 100%;
+  width: 80px;
   height: auto;
 }
 
@@ -71,7 +71,7 @@ nav {
   top: 100%;
   /* move a ul para logo abaixo do botão */
   left: 0;
-  /* alinhar à esquerda */
+  /* alinhar a esquerda */
   border-radius: 0 0 15px 0 !important;
   margin-top: 7px !important;
   /* Movido para baixo */
@@ -158,7 +158,7 @@ aside {
 aside img {
   position: absolute;
   /* Permite o posicionamento exato */
-  margin-top: 3px;
+  margin-top: 10px;
   margin-right: 5px;
   right: 3%;
   /* Alinha a imagem à direita do aside */
@@ -177,7 +177,9 @@ main {
   margin-top: 40px;
   z-index: -1;
 }
-
+main #carouselExampleControls {
+  top: 1.5vh;
+}
 .carrossel {
   box-shadow: 2px 2px 4px black;
   overflow: hidden;
@@ -322,6 +324,7 @@ input {
 }
 input[type="submit"] {
   padding-left: 0px;
+  padding-right: 0px;
 }
 .inputs label {
   font-size: 15px;
@@ -602,23 +605,28 @@ tbody tr:nth-child(even) {
 
   #logo img {
     position: absolute;
+    width: 150px;
     top: 35px;
-    right: 50%;
-    left: 90%;
+    left: 45%;
+    right: 55%;
     z-index: 100;
+  }
+
+  main #carouselExampleControls {
+    top: 5vh;
   }
   ul.dropdown-menu {
     display: flex; /* Alinha os itens horizontalmente */
     justify-content: initial;
     position: relative; /* Torna o dropdown menu relativo para evitar sumiço */
     margin: 0; /* Remove margens */
-    background-color: #739e73 !important; /* Define a cor de fundo verde */
+    background-color: #2f6427 !important; /* Define a cor de fundo verde */
     border-radius: 0 !important; /* Remove bordas arredondadas */
     box-shadow: none; /* Remove a sombra */
     border: none;
     padding: 0; /* Remove padding */
     top: 0; /* Garante que o menu fique no topo da área disponível */
-    margin-top: 70px !important;
+    margin-top: 128px !important;
     width: 110vw;
   }
 
@@ -629,11 +637,20 @@ tbody tr:nth-child(even) {
   }
 
   ul.dropdown-menu li a {
-    color: #000; /* Altera a cor do texto */
+    color: #acefac; /* Altera a cor do texto */
     font-size: 14px; /* Reduzi o tamanho da fonte */
     font-weight: 500; /* Reduzi o peso da fonte */
     padding: 5px 10px; /* Reduzi o padding ao redor dos links */
     text-transform: none; /* Retirei o texto em maiúsculas */
+  }
+  ul.dropdown-menu li button{ /*alterar o sobre*/
+    color: #acefac;
+  }
+  ul.dropdown-menu li button:hover{ /*alterar o sobre*/
+    color: #acefac;
+  }
+  ul.dropdown-menu li button.dropdown-item:hover {
+    background-color: transparent;
   }
 
   #account {
@@ -717,5 +734,8 @@ tbody tr:nth-child(even) {
 
   .aside img:hover {
     transform: rotateX(360deg);
+  }
+  aside img {
+    margin-top: 40px;
   }
 }

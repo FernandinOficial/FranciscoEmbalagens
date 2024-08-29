@@ -25,15 +25,12 @@
         </ul>
     </div>
     <div id="logo">
-        <a href="index.php"><img src="multimidia/images/icon/franciscoLogo_81x47.png"
+        <a href="index.php"><img src="multimidia/images/icon/franciscoLogo_200px.png"
                 alt="Logo Francisco Embalagens"></a>
     </div>
 
     <aside class="aside_whats">
         <a href="https://wa.me/19999989819" target="blank"><img src="multimidia/images/whats.png" alt="WhatsApp"></a>
-    </aside>
-    <aside class="aside_gmail">
-        <a href="mailto:embalagensedesign@gmail.com" target="blank"><img src="multimidia/images/gmail.png" alt="Gmail"></a>
     </aside>
 </nav>
 <div class="popup" id="popup-1">
