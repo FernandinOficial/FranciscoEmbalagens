@@ -232,15 +232,13 @@ main #carouselExampleControls {
 
 /* RODAPE */
 footer {
-  height: 380px;
   background-color: #2f6427;
   margin-top: 15vh;
   padding-inline: 25px;
 }
 
 #footer-logo img {
-  width: 200px;
-  height: 120px;
+  width: 150px;
   display: block;
   margin: 0 auto;
   padding-top: 10px;
@@ -596,7 +594,7 @@ tbody tr:nth-child(even) {
 @media (min-width: 650px) {
   nav {
     width: 100vw;
-    height: 100px; /* Reduzi a altura da nav no desktop */
+    height: 200px; /* Reduzi a altura da nav no desktop */
   }
 
   #btn-dropdown {
@@ -605,19 +603,22 @@ tbody tr:nth-child(even) {
 
   #logo img {
     position: absolute;
-    width: 150px;
+    width: 200px;
     top: 35px;
     left: 45%;
     right: 55%;
     z-index: 100;
   }
 
+  footer {
+    height: 38vh;
+  }
   main #carouselExampleControls {
     top: 5vh;
   }
   ul.dropdown-menu {
     display: flex; /* Alinha os itens horizontalmente */
-    justify-content: initial;
+    justify-content: center;
     position: relative; /* Torna o dropdown menu relativo para evitar sumiço */
     margin: 0; /* Remove margens */
     background-color: #2f6427 !important; /* Define a cor de fundo verde */
@@ -638,13 +639,14 @@ tbody tr:nth-child(even) {
 
   ul.dropdown-menu li a {
     color: #acefac; /* Altera a cor do texto */
-    font-size: 14px; /* Reduzi o tamanho da fonte */
+    font-size: 18px; /* Reduzi o tamanho da fonte */
     font-weight: 500; /* Reduzi o peso da fonte */
     padding: 5px 10px; /* Reduzi o padding ao redor dos links */
     text-transform: none; /* Retirei o texto em maiúsculas */
   }
   ul.dropdown-menu li button{ /*alterar o sobre*/
     color: #acefac;
+    font-size: 18px;
   }
   ul.dropdown-menu li button:hover{ /*alterar o sobre*/
     color: #acefac;
@@ -663,7 +665,7 @@ tbody tr:nth-child(even) {
     margin-left: 10px; /* Reduzi o espaçamento entre os itens de conta */
     background-color: transparent; /* Remove o fundo */
     color: #000; /* Altera a cor do texto */
-    font-size: 12px; /* Reduzi o tamanho da fonte */
+    font-size: 14px; /* Reduzi o tamanho da fonte */
     font-weight: normal; /* Normaliza o peso da fonte */
   }
 
@@ -736,6 +738,6 @@ tbody tr:nth-child(even) {
     transform: rotateX(360deg);
   }
   aside img {
-    margin-top: 40px;
+    margin-top: 25px;
   }
 }
