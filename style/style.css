@@ -627,7 +627,7 @@ tbody tr:nth-child(even) {
     padding: 0; /* Remove padding */
     top: 0; /* Garante que o menu fique no topo da área disponível */
     margin-top: 128px !important;
-    width: 110vw;
+    width: 101vw;
   }
 
   ul.dropdown-menu li {
