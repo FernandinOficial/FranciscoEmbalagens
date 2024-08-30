@@ -232,7 +232,7 @@ main #carouselExampleControls {
 
 /* RODAPE */
 footer {
-  height: 60vh;
+  height: 52vh;
   background-color: #2f6427;
   margin-top: 15vh;
   padding-inline: 25px;
@@ -533,7 +533,7 @@ tbody tr:nth-child(even) {
 }
 
 .popup .content h1 {   
-  color: #acefac;
+  color: #d8f0d8;
   font-weight: 800;
   font-size: 50px;
 }
@@ -612,7 +612,7 @@ tbody tr:nth-child(even) {
   }
 
   footer {
-    height: 53vh;
+    height: 48vh;
   }
   /* alterar o distanciamento do carousel */
   main #carouselExampleControls { 
@@ -743,5 +743,7 @@ tbody tr:nth-child(even) {
   /* para o popup ir para baixo */
   .popup .content {
     top: 65%;
+    width: 400px;
+    height: 350px;
   }
 }

@@ -39,9 +39,9 @@
         <div class="close-btn" onclick="togglePopup()">&times;
         </div>
         <h1>Sobre</h1><br>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aspernatur laborum rem sed laudantium
-            excepturi veritatis voluptatum architecto, dolore quaerat totam officiis nisi animi accusantium alias
-            inventore nulla atque debitis.</p>
+        <p>Empresa atuando na área de produção de sacolas em embalagens na cidade de Itapira, SP. 
+            Desde meados de 2015 trazendo qualidade impecável aos nossos produtos e prezando o melhor atendimento aos nossos clientes. 
+            Em caso de trabalho, contate-nos! </p>
     </div>
 </div>
 <aside id="home">
