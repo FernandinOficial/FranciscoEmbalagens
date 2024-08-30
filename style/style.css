@@ -614,8 +614,9 @@ tbody tr:nth-child(even) {
   footer {
     height: 53vh;
   }
-  main #carouselExampleControls {
-    top: 5vh;
+  /* alterar o distanciamento do carousel */
+  main #carouselExampleControls { 
+    top: 3vh;
   }
   ul.dropdown-menu {
     display: flex; /* Alinha os itens horizontalmente */
@@ -737,8 +738,5 @@ tbody tr:nth-child(even) {
 
   .aside img:hover {
     transform: rotateX(360deg);
-  }
-  aside img {
-    margin-top: px;
   }
 }
