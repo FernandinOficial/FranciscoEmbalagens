@@ -733,4 +733,9 @@ tbody tr:nth-child(even) {
   #invertido{
     flex-direction:row;
   }
+  .text_center {
+    display: flex !important;
+    top: 50% !important;
+    bottom: 50% !important;
+  }
 }
