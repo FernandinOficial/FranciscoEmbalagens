@@ -54,9 +54,9 @@
                 <div class="carousel-item">
                     <img class="d-block w-100" src="multimidia/marketing/mk/2-2.png" alt="Second slide">
                 </div>
-                <div class="carousel-item">
+                <!-- <div class="carousel-item">
                     <video class="d-block w-100" src="multimidia/marketing/mk/videoMKT.mp4" type="video/mp4" autoplay muted loop></video>
-                </div>
+                </div> -->
                 <div class="carousel-item">
                     <img class="d-block w-100" src="multimidia/marketing/mk/3-3.png" alt="Third slide">
                 </div>
@@ -70,7 +70,9 @@
                 <span class="visually-hidden">Next</span>
             </a>
         </div>
+        <!-- FIM DO CAROUSEL -->
 
+        <!-- MOSTRUÁRIO -->
         <div id="itens">
             <img id="left" class="imgs-itens" src="multimidia/marketing/mk/sacolasImagem1_380px.png"
                 alt="Sacolas Personalizadas">
@@ -96,6 +98,36 @@
                     para seu cotidiano.</p>
             </div>
         </div>
+        <!-- FIM MOSTRUÁRIO -->
+        <hr>
+        <!-- MOSTRUÁRIO -->
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-12 d-flex justify-content-center" id="invertido">
+                    <div id="" class="">
+                        <h4>DESIGNS ÚNICOS</h4>
+                        <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e designs únicos.</p>
+                    </div>
+                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="">
+                </div>
+                <div class="col col-md-12 d-flex justify-content-center">
+                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="">
+                    <div id="" class="">
+                        <h4>DESIGNS ÚNICOS</h4>
+                        <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e designs únicos.</p>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col col-md-12 d-flex justify-content-center" id="invertido">
+                    <div id="" class="">
+                        <h4>DESIGNS ÚNICOS</h4>
+                        <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e designs únicos.</p>
+                    </div>
+                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- FIM MOSTRUÁRIO -->
     </main>
     <?php
     require_once 'footer.php';

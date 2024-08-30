@@ -39,11 +39,8 @@
         <div class="close-btn" onclick="togglePopup()">&times;
         </div>
         <h1>Sobre</h1><br>
-        <p>Empresa atuando na área de produção de sacolas e embalagens na cidade de Itapira, SP. 
-            Desde meados de 2015 trazendo qualidade impecável aos nossos produtos e prezando o melhor atendimento aos nossos clientes. 
-            Em caso de trabalho, contate-nos! </p>
+        <p>Empresa atuando na área de produção de sacolas e embalagens na cidade de Itapira, SP.
+             Desde meados de 2015, trazemos qualidade impecável aos nossos produtos e prezamos pelo melhor atendimento aos nossos clientes. 
+             Em caso de interesse em nossos serviços, entre em contato conosco! </p>
     </div>
 </div>
-<aside id="home">
-    <a class="home" href="index.php"><img src="multimidia/images/home_35px.png" alt="Home"></a>
-</aside>
