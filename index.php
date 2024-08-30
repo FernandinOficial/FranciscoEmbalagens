@@ -55,7 +55,7 @@
                     <img class="d-block w-100" src="multimidia/marketing/mk/2-2.png" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <video class="d-block w-100" src="multimidia/marketing/mk/videoMKT.mp4" autoplay muted loop></video>
+                    <video class="d-block w-100" src="multimidia/marketing/mk/videoMKT.mp4" type="video/mp4" autoplay muted loop></video>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="multimidia/marketing/mk/3-3.png" alt="Third slide">
