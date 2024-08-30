@@ -508,7 +508,7 @@ tbody tr:nth-child(even) {
 /* TELA POPUP */
 .popup.overlay {
   position: fixed;
-  top: 0px;
+  top: 10vh;
   left: 0px;
   width: 100vw;
   height: 100vh;
@@ -738,5 +738,10 @@ tbody tr:nth-child(even) {
 
   .aside img:hover {
     transform: rotateX(360deg);
+  }
+
+  /* para o popup ir para baixo */
+  .popup .content {
+    top: 65%;
   }
 }
