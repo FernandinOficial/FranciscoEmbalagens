@@ -324,7 +324,7 @@ footer {
 
 .contato-fluid {
   display: flex;
-  padding-right: 20px;  
+  padding-right: 20px;
   /* alterar distanciamento */
 }
 
@@ -693,6 +693,11 @@ tbody tr:nth-child(even) {
   main #carouselExampleControls {
     top: -20px;
     margin-bottom: 30px;
+  }
+
+  #video-mkt {
+    height: 530px;
+    object-fit: cover;
   }
 
   ul.dropdown-menu {

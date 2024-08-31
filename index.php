@@ -45,22 +45,37 @@
     require_once 'header.php';
     ?>
     <main>
-        <!-- CARROSSEL bootstrap -->
+        <!-- CAROUSEL bootstrap -->
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
+            <!-- Botões Inferiores do Carousel -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+
+            <!-- Bannerss/Imagens/Vídeos -->
             <div class="carousel-inner">
+                <!-- Primeiro Banner -->
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="multimidia/marketing/mk/1-1.png" alt="First slide">
                 </div>
+                <!-- Segundo Banner -->
+                <div class="carousel-item">
+                    <video class="d-block w-100" src="multimidia/marketing/mk/videoMarketing-1.mp4" type="video/mp4" autoplay muted loop id="video-mkt"></video>
+                </div>
+                <!-- Terceiro Banner -->
                 <div class="carousel-item">
                     <img class="d-block w-100" src="multimidia/marketing/mk/2-2.png" alt="Second slide">
                 </div>
-                <!-- <div class="carousel-item">
-                    <video class="d-block w-100" src="multimidia/marketing/mk/videoMKT.mp4" type="video/mp4" autoplay muted loop></video>
-                </div> -->
+                <!-- Quarto Banner -->
                 <div class="carousel-item">
                     <img class="d-block w-100" src="multimidia/marketing/mk/3-3.png" alt="Third slide">
                 </div>
             </div>
+
+            <!-- Controles laterais (seta) -->
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -70,7 +85,7 @@
                 <span class="visually-hidden">Next</span>
             </a>
         </div>
-        
+
         <!-- MOSTRUÁRIO DESKTOP -->
         <div class="container" id="most-desk">
             <div class="row">
