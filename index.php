@@ -70,36 +70,7 @@
                 <span class="visually-hidden">Next</span>
             </a>
         </div>
-        <!-- FIM DO CAROUSEL -->
-
-        <!-- MOSTRUÁRIO -->
-        <!-- <div id="itens">
-            <img id="left" class="imgs-itens" src="multimidia/marketing/mk/sacolasImagem1_380px.png"
-                alt="Sacolas Personalizadas">
-            <div id="texto_right" class="texto_1">
-                <h4>DESIGNS ÚNICOS</h4>
-                <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e designs únicos.</p>
-            </div>
-
-            <img id="right" class="imgs-itens" src="multimidia/marketing/mk/sacolasImagem2_350px.png"
-                alt="Anos de Serviço">
-            <div id="texto_left" class="texto_2">
-                <h4>ANOS DE SERVIÇO</h4>
-                <p>Há mais de cinco anos, nos dedicamos a satisfazer nossos clientes com produtos e serviços de alta
-                    qualidade.</p>
-            </div>
-
-            <img id="left" class="imgs-itens" src="multimidia/marketing/mk/sacolasImagem3_350px.png"
-                alt="Estilos e Compromisso ambiental">
-            <div id="texto_right" class="texto_3">
-                <h4>ESTILO E COMPROMISSO AMBIENTAL</h4>
-                <p>Sacolas lindas e sustentáveis para levar onde e quando quiser. Estilo e responsabilidade ambiental
-                    unidos
-                    para seu cotidiano.</p>
-            </div>
-        </div> -->
-        <!-- FIM MOSTRUÁRIO -->
-
+        
         <!-- MOSTRUÁRIO DESKTOP -->
         <div class="container" id="most-desk">
             <div class="row">

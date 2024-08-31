@@ -183,6 +183,7 @@ main {
 
 main #carouselExampleControls {
   top: -20px;
+  margin-bottom: 30px;
 }
 
 .carrossel {
@@ -677,6 +678,7 @@ main > #most-mob {
     /* alterar o distanciamento do carousel */
     main #carouselExampleControls {
       top: -20px;
+      margin-bottom: 30px;
     }
 
     ul.dropdown-menu {
@@ -761,69 +763,12 @@ main > #most-mob {
     }
 
     .carousel-item img {
-      height: 600px !important;
+      height: 530px !important;
       width: 100%;
       object-fit: cover;
       /* Faz com que a imagem cubra o contêiner sem distorcer */
       object-position: center;
       /* Centraliza a imagem dentro do contêiner */
-    }
-
-    #right {
-      float: right !important;
-      margin-right: 50px;
-    }
-
-    #left {
-      float: left !important;
-      margin-left: 50px;
-    }
-
-    /* bloco de texto de baixo das imagens */
-    #texto_right {
-      margin-left: 0px;
-      width: 700px;
-      height: 250px;
-    }
-
-    #texto_left {
-      margin-right: 30px;
-      width: 700px;
-      height: 250px;
-    }
-
-    .texto_1 {
-      position: absolute !important;
-      margin-top: 120px !important;
-      margin-left: 600px !important;
-    }
-
-    .texto_2 {
-      position: absolute !important;
-      margin-top: 550px !important;
-      margin-left: 50px !important;
-    }
-
-    .texto_3 {
-      position: absolute !important;
-      margin-top: 1010px !important;
-      margin-left: 600px !important;
-    }
-
-    #texto_right h4,
-    #texto_left h4 {
-      font-size: 45px;
-    }
-
-    #texto_right p,
-    #texto_left p {
-      margin-top: 20px;
-      font-size: 25px;
-      width: 500px;
-    }
-
-    #itens img {
-      width: 450px;
     }
 
     /* IMAGEM NO CANTO DA TELA */
