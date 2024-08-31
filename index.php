@@ -107,7 +107,8 @@
                 <div class="col-12 d-flex justify-content-between align-items-center" id="invertido">
                     <div class="container_texto text-center me-3">
                         <h4 class="texto-titulo">DESIGNS ÚNICOS</h4>
-                        <p class="texto-menor">Sacolas personalizadas no melhor estilo <br>que você deseja, com qualidade e <br>designs únicos.</p>
+                        <p class="texto-menor">Sacolas personalizadas no melhor estilo <br>que você deseja, com
+                            qualidade e <br>designs únicos.</p>
                     </div>
                     <img src="multimidia/marketing/mk/sacolasImagem1_380px.png" alt="" class="img-fluid">
                 </div>
@@ -117,7 +118,8 @@
                     <img src="multimidia/marketing/mk/sacolasImagem2_350px.png" alt="" class="img-fluid me-3">
                     <div class="container_texto text-center">
                         <h4 class="texto-titulo">ANOS DE SERVIÇO</h4>
-                        <p class="texto-menor">Há mais de cinco anos, nos dedicamos a <br>satisfazer nossos clientes com produtos e <br>serviços de alta qualidade.</p>
+                        <p class="texto-menor">Há mais de cinco anos, nos dedicamos a <br>satisfazer nossos clientes com
+                            produtos e <br>serviços de alta qualidade.</p>
                     </div>
                 </div>
 
@@ -125,7 +127,8 @@
                 <div class="col-12 d-flex justify-content-between align-items-center" id="invertido">
                     <div class="container_texto text-center me-3">
                         <h4 class="texto-titulo">ESTILO E COMPROMISSO <br> AMBIENTAL</h4>
-                        <p class="texto-menor">Sacolas lindas e sustentáveis para levar <br>onde e quando quiser. Estilo e <br>responsabilidade ambiental unidos para <br>seu cotidiano.</p>
+                        <p class="texto-menor">Sacolas lindas e sustentáveis para levar <br>onde e quando quiser. Estilo
+                            e <br>responsabilidade ambiental unidos para <br>seu cotidiano.</p>
                     </div>
                     <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="" class="img-fluid">
                 </div>
@@ -133,38 +136,45 @@
         </div>
         <!-- FIM MOSTRUÁRIO DESKTOP -->
 
-         <!-- MOSTRUÁRIO MOBILE -->
+        <!-- MOSTRUÁRIO MOBILE -->
         <div class="container" id="most-mob">
             <div class="row">
                 <!-- Primeiro bloco -->
-                <div class="col-12 d-flex justify-content-between align-items-center" id="invertido">
-                    <div class="container_texto text-center me-3">
+                <div class="col-12 text-center mb-4">
+                    <img src="multimidia/marketing/mk/sacolasImagem1_380px.png" alt=""
+                        class="img-fluid mx-auto d-block">
+                    <div class="container_texto text-center mt-3">
                         <h4 class="texto-titulo">DESIGNS ÚNICOS</h4>
-                        <p class="texto-menor">Sacolas personalizadas no melhor estilo <br>que você deseja, com qualidade e <br>designs únicos.</p>
+                        <p class="texto-menor">Sacolas personalizadas no melhor estilo <br>que você deseja, com
+                            qualidade e <br>designs únicos.</p>
                     </div>
-                    <img src="multimidia/marketing/mk/sacolasImagem1_380px.png" alt="" class="img-fluid">
                 </div>
 
                 <!-- Segundo bloco -->
-                <div class="col-12 d-flex justify-content-between align-items-center" id="teste">
-                    <img src="multimidia/marketing/mk/sacolasImagem2_350px.png" alt="" class="img-fluid me-3">
-                    <div class="container_texto text-center">
+                <div class="col-12 text-center mb-4">
+                    <img src="multimidia/marketing/mk/sacolasImagem2_350px.png" alt=""
+                        class="img-fluid mx-auto d-block">
+                    <div class="container_texto text-center mt-3">
                         <h4 class="texto-titulo">ANOS DE SERVIÇO</h4>
-                        <p class="texto-menor">Há mais de cinco anos, nos dedicamos a <br>satisfazer nossos clientes com produtos e <br>serviços de alta qualidade.</p>
+                        <p class="texto-menor">Há mais de cinco anos, nos dedicamos a <br>satisfazer nossos clientes com
+                            produtos e <br>serviços de alta qualidade.</p>
                     </div>
                 </div>
 
                 <!-- Terceiro bloco -->
-                <div class="col-12 d-flex justify-content-between align-items-center" id="invertido">
-                    <div class="container_texto text-center me-3">
+                <div class="col-12 text-center">
+                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt=""
+                        class="img-fluid mx-auto d-block">
+                    <div class="container_texto text-center mt-3">
                         <h4 class="texto-titulo">ESTILO E COMPROMISSO <br> AMBIENTAL</h4>
-                        <p class="texto-menor">Sacolas lindas e sustentáveis para levar <br>onde e quando quiser. Estilo e <br>responsabilidade ambiental unidos para <br>seu cotidiano.</p>
+                        <p class="texto-menor">Sacolas lindas e sustentáveis para levar <br>onde e quando quiser. Estilo
+                            e <br>responsabilidade ambiental unidos para <br>seu cotidiano.</p>
                     </div>
-                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
         <!-- FIM MOSTRUÁRIO MOBILE -->
+
     </main>
     <?php
     require_once 'footer.php';

@@ -298,7 +298,7 @@ main > #most-mob {
 
   /* RODAPE */
   footer {
-    height: 52vh;
+    height: 60vh;
     background-color: #2f6427;
     margin-top: 15vh;
     padding-inline: 25px;
@@ -671,7 +671,7 @@ main > #most-mob {
     }
 
     footer {
-      height: 48vh;
+      height: 58vh;
     }
 
     /* alterar o distanciamento do carousel */
