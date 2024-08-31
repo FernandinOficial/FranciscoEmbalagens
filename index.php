@@ -99,7 +99,7 @@
             </div>
         </div> -->
         <!-- FIM MOSTRUÁRIO -->
-        <hr>
+
         <!-- MOSTRUÁRIO DESKTOP -->
         <div class="container" id="most-desk">
             <div class="row">
