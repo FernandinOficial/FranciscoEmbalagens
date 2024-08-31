@@ -301,22 +301,22 @@ main #carouselExampleControls {
 
 /* RODAPE */
 footer {
-  height: 63vh;
-  background-color: #2f6427;
-  margin-top: 15vh;
-  padding-inline: 25px;
+  background-color: #2f6427 !important;
+  margin-top: 80px;
+}
+
+#footer-logo {
+  text-align: center;
 }
 
 #footer-logo img {
-  width: 150px;
-  display: block;
-  margin: 0 auto;
-  padding-top: 10px;
+  width: 150px !important;
+  margin-top: 10px;
 }
 
 #contato {
   color: #ACEFAC;
-  margin-top: 30px;
+  margin-bottom: -5px;
 }
 
 .contato-container img {
@@ -347,12 +347,13 @@ footer {
   color: #acefac;
 }
 
+
 .copy {
   display: flex;
   justify-content: flex-end;
-  margin-top: 25px;
   font-weight: bold;
-  font-size: 20px;
+  margin-bottom: -5px;
+  font-size: 18px;
   color: #acefac;
 }
 
@@ -697,14 +698,26 @@ tbody tr:nth-child(even) {
     z-index: 100;
   }
 
-  /* FOOTER */
+  /* FOOTER RESPONSIVO */
   footer {
-    height: 62vh;
+    background-color: #2f6427 !important;
+  }
+
+  #footer-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -5px;
+  }
+
+  #footer-logo img {
+    width: 150px !important;
+    margin-top: 10px;
   }
 
   #contato {
-    margin-top: 50px;
+    margin-top: 10px;
   }
+
   .contato-fluid {
     display: flex;
     /* alinhar verticalmente o texto */
@@ -712,9 +725,11 @@ tbody tr:nth-child(even) {
     text-align: center;
     margin-top: 10px;
   }
+
   .contato-container img {
     width: 50px;
   }
+
   .contato-fluid>p {
     /* alterar distanciamento */
     margin-left: 30px;
@@ -729,6 +744,8 @@ tbody tr:nth-child(even) {
   .contato-container p {
     font-size: 20px;
     color: #acefac;
+  }
+  #copy {
   }
 
   /* alterar o distanciamento do carousel */
@@ -835,7 +852,7 @@ tbody tr:nth-child(even) {
   /* IMAGEM NO CANTO DA TELA */
   .aside_whats img {
     position: fixed;
-    width: 4vw;
+    width: 4.5vw;
     right: 3vw;
     top: 82vh;
     transition: transform 0.5s ease;

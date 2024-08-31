@@ -32,6 +32,7 @@
     <aside class="aside_whats">
         <a href="https://wa.me/19999989819" target="blank"><img src="multimidia/images/whats.png" alt="WhatsApp"></a>
     </aside>
+
 </nav>
 <div class="popup" id="popup-1">
     <div class="overlay"></div>
@@ -40,7 +41,7 @@
         </div>
         <h1>Sobre</h1><br>
         <p>Empresa atuando na área de produção de sacolas e embalagens na cidade de Itapira, SP.
-             Desde meados de 2015, trazemos qualidade impecável aos nossos produtos e prezamos pelo melhor atendimento aos nossos clientes. 
-             Em caso de interesse em nossos serviços, entre em contato conosco! </p>
+            Desde meados de 2015, trazemos qualidade impecável aos nossos produtos e prezamos pelo melhor atendimento aos nossos clientes.
+            Em caso de interesse em nossos serviços, entre em contato conosco! </p>
     </div>
 </div>
