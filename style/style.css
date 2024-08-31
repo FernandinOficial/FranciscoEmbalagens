@@ -236,9 +236,23 @@ main #carouselExampleControls {
   margin-right: auto;
   margin-top: 50px;
 }
-.row > div {
+
+/* A partir do momento em que o MOBILE quebra vai surgir o DESKTOP */
+@media (min-width: 768px){
+main > #most-mob {
+  display: none !important;
+}
+
+}
+.row>div {
   margin-bottom: 10vh;
 }
+
+.row>div>img {
+  width: 400px;
+  border-radius: 30px;
+}
+
 #invertido {
   flex-direction: row-reverse;
 }
@@ -247,571 +261,598 @@ main #carouselExampleControls {
   font-size: 40px;
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  line-height: 1.6;
 }
+
 .texto-menor {
   font-size: 25px;
   font-family: "Inter", sans-serif;
   font-weight: 700;
 }
 
-/* RODAPE */
-footer {
-  height: 52vh;
-  background-color: #2f6427;
-  margin-top: 15vh;
-  padding-inline: 25px;
-}
-
-#footer-logo img {
-  width: 150px;
-  display: block;
-  margin: 0 auto;
-  padding-top: 10px;
-}
-
-.contato div img {
-  width: 40px;
-}
-
-.footer-img {
-  float: left;
-}
-
-.contato p {
-  font-size: 20px;
-  color: #acefac;
-}
-
-.copy {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 25px;
-  font-weight: bold;
-}
-
-/* FORMULÁRIO LOGIN */
-#container {
-  width: 235px;
-  height: 380px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #739e73;
-  border-radius: 30px;
-  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
-  height: fit-content;
-  margin-top: 75px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#form_login {
-  padding: 25px;
-}
-
-.title_user {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.title_user img {
-  height: 60px;
-  width: 60px;
-}
-
-.title_user h2 {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  font-weight: 900;
-}
-
-.img_icons img {
-  height: 38px;
-  width: 38px;
-  background-color: #fff;
-  padding: 4px;
-  border-radius: 30px;
-}
-
-.inputs input {
-  height: 36px;
-  width: 199px;
-  border-radius: 30px;
-  border: none;
-}
-
-input {
-  padding-left: 35px;
-  padding-right: 15px;
-}
-
-input[type="submit"] {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.inputs label {
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.inputs i {
-  margin-left: 10px;
-  position: absolute;
-  margin-top: 10px;
-  opacity: 0.5;
-}
-
-#input_submit {
-  height: 36px;
-  width: 200px;
-  border-radius: 30px;
-  border: none;
-  background-color: #2f6427;
-  color: #acefac;
-  font-weight: bold;
-}
-
-#a_login {
-  color: #acefac;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* FORMULÁRIO CADASTRO */
-#container {
-  width: 235px;
-  height: 380px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #739e73;
-  border-radius: 30px;
-  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
-  height: fit-content;
-  margin-top: 75px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#form_cadastro {
-  padding: 25px;
-}
-
-.title_cadastro {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.title_cadastro img {
-  height: 60px;
-  width: 60px;
-}
-
-.title_cadastro h2 {
-  margin-top: 10px;
-  margin-bottom: -10px;
-  font-weight: 900;
-}
-
-.img_cadastro img {
-  height: 38px;
-  width: 38px;
-  background-color: #fff;
-  padding: 4px;
-  border-radius: 30px;
-}
-
-.inputs_cadastro input {
-  height: 36px;
-  width: 199px;
-  border-radius: 30px;
-  border: none;
-}
-
-.inputs_cadastro label {
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.inputs_cadastro i {
-  margin-left: 10px;
-  position: absolute;
-  margin-top: 10px;
-  opacity: 0.5;
-}
-
-#cadastro_submit {
-  height: 36px;
-  width: 200px;
-  border-radius: 30px;
-  border: none;
-  background-color: #2f6427;
-  color: #acefac;
-  font-weight: bold;
-}
-
-#a_cadastro {
-  color: #acefac;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* PRODUTO */
-table {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-  box-sizing: border-box;
-  width: 85vw;
-  border-collapse: collapse;
-  font-size: 18px;
-  border: 1px solid rgb(16, 194, 31);
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #343a40;
-  line-height: 1;
-}
-
-th,
-td {
-  padding: 16px 25px;
-  text-align: center;
-  border: 1px solid black;
-}
-
-th {
-  background-color: #2f6427;
-  color: #acefac;
-  width: 25%;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: #b2cbb2;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #739e73;
-}
-
-#contato h3 {
-  font-weight: bold;
-  color: white;
-}
-
-/* IMAGEM NO CANTO DA TELA */
-.aside_whats img {
-  position: fixed;
-  width: 12vw;
-  right: 3vw;
-  top: 85vh;
-  transition: transform 0.5s ease;
-  height: rgb(173, 110, 110);
-  width: 40px;
-}
-
-.aside_whats img:hover {
-  transform: rotateX(360deg);
-}
-
-.aside_gmail img {
-  position: fixed;
-  width: 12vw;
-  right: 3vw;
-  top: 75vh;
-  transition: transform 0.5s ease;
-  height: 40px;
-  width: 40px;
-}
-
-.aside_gmail img:hover {
-  transform: rotateX(360deg);
-}
-
-/* TELA POPUP */
-.popup.overlay {
-  position: fixed;
-  top: 10vh;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 100;
-  display: none;
-}
-
-.popup .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  /* de preferencia vai sumir */
-  background: #739E73;
-  /* tamanho do rgba(110, 190, 123, 0.7) */
-  width: 309px;
-  height: 400px;
-  z-index: 2;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 30px 0 30px 0;
-}
-
-.popup .content h1 {
-  color: #d8f0d8;
-  font-weight: 800;
-  font-size: 50px;
-}
-
-.popup .content p {
-  font-weight: bold;
-}
-
-.popup .close-btn {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  width: 30px;
-  height: 30px;
-  background: #222;
-  /* cor do "X" */
-  color: #fff;
-  font-size: 25px;
-  font-weight: 600;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.popup.active .overlay {
-  display: block;
-}
-
-.popup.active .content {
-  /* animação pequena */
-  transition: all 300ms ease-in-out;
-  transform: translate(-50%, -50%) scale(1);
-  /* para aparecer na tela */
-}
-
-/* REMOVER O SCROLL HORIZONTAL */
-::-webkit-scrollbar {
-  display: none;
-}
-
-/* DESKTOP */
-@media (min-width: 650px) {
-  nav {
-    width: 100vw;
-    height: 200px;
-    /* Reduzi a altura da nav no desktop */
+/* Estilo quando a largura do parágrafo quebrar no ponto menor que 768px exatamente */
+@media (max-width: 767px) {
+  main #most-desk {
+    display: none !important;
+  }
+  .row .d-flex {
+    display: inline-block !important;
   }
 
-  #btn-dropdown {
-    display: none;
-    /* Remove o botão dropdown no desktop */
-  }
-
-  #logo img {
-    position: absolute;
-    width: 200px;
-    top: 35px;
-    left: 45%;
-    right: 55%;
-    z-index: 100;
-  }
-
-  footer {
-    height: 48vh;
-  }
-
-  /* alterar o distanciamento do carousel */
-  main #carouselExampleControls {
-    top: -20px;
-  }
-
-  ul.dropdown-menu {
-    display: flex;
-    /* Alinha os itens horizontalmente */
-    justify-content: center;
-    position: relative;
-    /* Torna o dropdown menu relativo para evitar sumiço */
-    margin: 0;
-    /* Remove margens */
-    background-color: #2f6427 !important;
-    /* Define a cor de fundo verde */
-    border-radius: 0 !important;
-    /* Remove bordas arredondadas */
-    box-shadow: none;
-    /* Remove a sombra */
-    border: none;
-    padding: 0;
-    /* Remove padding */
-    top: 0;
-    /* Garante que o menu fique no topo da área disponível */
-    margin-top: 128px !important;
-    width: 101vw;
-  }
-
-  ul.dropdown-menu li {
-    display: inline-block;
-    /* Exibe os itens em linha */
-    margin: 0 10px;
-    /* Reduzi o espaçamento entre os itens */
-    background-color: transparent;
-    /* Remove o fundo dos itens */
-  }
-
-  ul.dropdown-menu li a {
-    color: #acefac;
-    /* Altera a cor do texto */
-    font-size: 18px;
-    /* Reduzi o tamanho da fonte */
-    font-weight: 500;
-    /* Reduzi o peso da fonte */
-    padding: 5px 10px;
-    /* Reduzi o padding ao redor dos links */
-    text-transform: none;
-    /* Retirei o texto em maiúsculas */
-  }
-
-  ul.dropdown-menu li button {
-    /*alterar o sobre*/
-    color: #acefac;
-    font-size: 18px;
-  }
-
-  ul.dropdown-menu li button:hover {
-    /*alterar o sobre*/
-    color: #acefac;
-  }
-
-  ul.dropdown-menu li button.dropdown-item:hover {
-    background-color: transparent;
-  }
-
-  #account {
-    margin-left: 0;
-    /* Reseta a margem no desktop */
-    display: flex;
-    /* Exibe os botões de login/logout em linha */
-  }
-
-
-  .account {
-    margin-left: 10px;
-    /* Reduzi o espaçamento entre os itens de conta */
-    background-color: transparent;
-    /* Remove o fundo */
-    color: #000;
-    /* Altera a cor do texto */
-    font-size: 14px;
-    /* Reduzi o tamanho da fonte */
-    font-weight: normal;
-    /* Normaliza o peso da fonte */
-  }
-
-  .carousel-item img {
-    height: 600px !important;
-    width: 100%;
-    object-fit: cover;
-    /* Faz com que a imagem cubra o contêiner sem distorcer */
-    object-position: center;
-    /* Centraliza a imagem dentro do contêiner */
-  }
-
-  #right {
-    float: right !important;
-    margin-right: 50px;
-  }
-
-  #left {
-    float: left !important;
-    margin-left: 50px;
-  }
-
-  /* bloco de texto de baixo das imagens */
-  #texto_right {
-    margin-left: 0px;
-    width: 700px;
-    height: 250px;
-  }
-
-  #texto_left {
-    margin-right: 30px;
-    width: 700px;
-    height: 250px;
-  }
-
-  .texto_1 {
-    position: absolute !important;
-    margin-top: 120px !important;
-    margin-left: 600px !important;
-  }
-
-  .texto_2 {
-    position: absolute !important;
-    margin-top: 550px !important;
-    margin-left: 50px !important;
-  }
-
-  .texto_3 {
-    position: absolute !important;
-    margin-top: 1010px !important;
-    margin-left: 600px !important;
-  }
-
-  #texto_right h4,
-  #texto_left h4 {
-    font-size: 45px;
-  }
-
-  #texto_right p,
-  #texto_left p {
-    margin-top: 20px;
-    font-size: 25px;
-    width: 500px;
-  }
-
-  #itens img {
-    width: 450px;
-  }
-
-  /* IMAGEM NO CANTO DA TELA */
-  .aside img {
-    position: fixed;
-    width: 5vw;
-    right: 3vw;
-    top: 83vh;
-    transition: transform 0.5s ease;
-  }
-
-  .aside img:hover {
-    transform: rotateX(360deg);
-  }
-
-  /* para o popup ir para baixo */
-  .popup .content {
-    top: 65%;
-    width: 400px;
-    height: 350px;
+  .row>.d-flex>.row {
+    right: 50% !important;
+    left: 50% !important;
   }
 
   #invertido {
-    flex-direction: row;
+    flex-direction: row-reverse !important;
   }
 
-  .text_center {
-    display: flex !important;
-    top: 50% !important;
-    bottom: 50% !important;
+  .texto-titulo {
+    font-size: 32px;
+  }
+
+  .texto-menor {
+    font-size: 18px;
   }
 }
+
+  /* RODAPE */
+  footer {
+    height: 52vh;
+    background-color: #2f6427;
+    margin-top: 15vh;
+    padding-inline: 25px;
+  }
+
+  #footer-logo img {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+
+  .contato div img {
+    width: 40px;
+  }
+
+  .footer-img {
+    float: left;
+  }
+
+  .contato p {
+    font-size: 20px;
+    color: #acefac;
+  }
+
+  .copy {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+    font-weight: bold;
+  }
+
+  /* FORMULÁRIO LOGIN */
+  #container {
+    width: 235px;
+    height: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #739e73;
+    border-radius: 30px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    height: fit-content;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #form_login {
+    padding: 25px;
+  }
+
+  .title_user {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title_user img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .title_user h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: 900;
+  }
+
+  .img_icons img {
+    height: 38px;
+    width: 38px;
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 30px;
+  }
+
+  .inputs input {
+    height: 36px;
+    width: 199px;
+    border-radius: 30px;
+    border: none;
+  }
+
+  input {
+    padding-left: 35px;
+    padding-right: 15px;
+  }
+
+  input[type="submit"] {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .inputs label {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .inputs i {
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 10px;
+    opacity: 0.5;
+  }
+
+  #input_submit {
+    height: 36px;
+    width: 200px;
+    border-radius: 30px;
+    border: none;
+    background-color: #2f6427;
+    color: #acefac;
+    font-weight: bold;
+  }
+
+  #a_login {
+    color: #acefac;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* FORMULÁRIO CADASTRO */
+  #container {
+    width: 235px;
+    height: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #739e73;
+    border-radius: 30px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    height: fit-content;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #form_cadastro {
+    padding: 25px;
+  }
+
+  .title_cadastro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title_cadastro img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .title_cadastro h2 {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    font-weight: 900;
+  }
+
+  .img_cadastro img {
+    height: 38px;
+    width: 38px;
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 30px;
+  }
+
+  .inputs_cadastro input {
+    height: 36px;
+    width: 199px;
+    border-radius: 30px;
+    border: none;
+  }
+
+  .inputs_cadastro label {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .inputs_cadastro i {
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 10px;
+    opacity: 0.5;
+  }
+
+  #cadastro_submit {
+    height: 36px;
+    width: 200px;
+    border-radius: 30px;
+    border: none;
+    background-color: #2f6427;
+    color: #acefac;
+    font-weight: bold;
+  }
+
+  #a_cadastro {
+    color: #acefac;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* PRODUTO */
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    box-sizing: border-box;
+    width: 85vw;
+    border-collapse: collapse;
+    font-size: 18px;
+    border: 1px solid rgb(16, 194, 31);
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #343a40;
+    line-height: 1;
+  }
+
+  th,
+  td {
+    padding: 16px 25px;
+    text-align: center;
+    border: 1px solid black;
+  }
+
+  th {
+    background-color: #2f6427;
+    color: #acefac;
+    width: 25%;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #b2cbb2;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #739e73;
+  }
+
+  #contato h3 {
+    font-weight: bold;
+    color: white;
+  }
+
+  /* IMAGEM NO CANTO DA TELA */
+  .aside_whats img {
+    position: fixed;
+    width: 12vw;
+    right: 3vw;
+    top: 85vh;
+    transition: transform 0.5s ease;
+    height: rgb(173, 110, 110);
+    width: 40px;
+  }
+
+  .aside_whats img:hover {
+    transform: rotateX(360deg);
+  }
+
+  .aside_gmail img {
+    position: fixed;
+    width: 12vw;
+    right: 3vw;
+    top: 75vh;
+    transition: transform 0.5s ease;
+    height: 40px;
+    width: 40px;
+  }
+
+  .aside_gmail img:hover {
+    transform: rotateX(360deg);
+  }
+
+  /* TELA POPUP */
+  .popup.overlay {
+    position: fixed;
+    top: 10vh;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    display: none;
+  }
+
+  .popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    /* de preferencia vai sumir */
+    background: #739E73;
+    /* tamanho do rgba(110, 190, 123, 0.7) */
+    width: 309px;
+    height: 400px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 30px 0 30px 0;
+  }
+
+  .popup .content h1 {
+    color: #d8f0d8;
+    font-weight: 800;
+    font-size: 50px;
+  }
+
+  .popup .content p {
+    font-weight: bold;
+  }
+
+  .popup .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    /* cor do "X" */
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .popup.active .overlay {
+    display: block;
+  }
+
+  .popup.active .content {
+    /* animação pequena */
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+    /* para aparecer na tela */
+  }
+
+  /* REMOVER O SCROLL HORIZONTAL */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* DESKTOP */
+  @media (min-width: 650px) {
+    nav {
+      width: 100vw;
+      height: 200px;
+      /* Reduzi a altura da nav no desktop */
+    }
+
+    #btn-dropdown {
+      display: none;
+      /* Remove o botão dropdown no desktop */
+    }
+
+    #logo img {
+      position: absolute;
+      width: 200px;
+      top: 35px;
+      left: 45%;
+      right: 55%;
+      z-index: 100;
+    }
+
+    footer {
+      height: 48vh;
+    }
+
+    /* alterar o distanciamento do carousel */
+    main #carouselExampleControls {
+      top: -20px;
+    }
+
+    ul.dropdown-menu {
+      display: flex;
+      /* Alinha os itens horizontalmente */
+      justify-content: center;
+      position: relative;
+      /* Torna o dropdown menu relativo para evitar sumiço */
+      margin: 0;
+      /* Remove margens */
+      background-color: #2f6427 !important;
+      /* Define a cor de fundo verde */
+      border-radius: 0 !important;
+      /* Remove bordas arredondadas */
+      box-shadow: none;
+      /* Remove a sombra */
+      border: none;
+      padding: 0;
+      /* Remove padding */
+      top: 0;
+      /* Garante que o menu fique no topo da área disponível */
+      margin-top: 128px !important;
+      width: 101vw;
+    }
+
+    ul.dropdown-menu li {
+      display: inline-block;
+      /* Exibe os itens em linha */
+      margin: 0 10px;
+      /* Reduzi o espaçamento entre os itens */
+      background-color: transparent;
+      /* Remove o fundo dos itens */
+    }
+
+    ul.dropdown-menu li a {
+      color: #acefac;
+      /* Altera a cor do texto */
+      font-size: 18px;
+      /* Reduzi o tamanho da fonte */
+      font-weight: 500;
+      /* Reduzi o peso da fonte */
+      padding: 5px 10px;
+      /* Reduzi o padding ao redor dos links */
+      text-transform: none;
+      /* Retirei o texto em maiúsculas */
+    }
+
+    ul.dropdown-menu li button {
+      /*alterar o sobre*/
+      color: #acefac;
+      font-size: 18px;
+    }
+
+    ul.dropdown-menu li button:hover {
+      /*alterar o sobre*/
+      color: #acefac;
+    }
+
+    ul.dropdown-menu li button.dropdown-item:hover {
+      background-color: transparent;
+    }
+
+    #account {
+      margin-left: 0;
+      /* Reseta a margem no desktop */
+      display: flex;
+      /* Exibe os botões de login/logout em linha */
+    }
+
+
+    .account {
+      margin-left: 10px;
+      /* Reduzi o espaçamento entre os itens de conta */
+      background-color: transparent;
+      /* Remove o fundo */
+      color: #000;
+      /* Altera a cor do texto */
+      font-size: 14px;
+      /* Reduzi o tamanho da fonte */
+      font-weight: normal;
+      /* Normaliza o peso da fonte */
+    }
+
+    .carousel-item img {
+      height: 600px !important;
+      width: 100%;
+      object-fit: cover;
+      /* Faz com que a imagem cubra o contêiner sem distorcer */
+      object-position: center;
+      /* Centraliza a imagem dentro do contêiner */
+    }
+
+    #right {
+      float: right !important;
+      margin-right: 50px;
+    }
+
+    #left {
+      float: left !important;
+      margin-left: 50px;
+    }
+
+    /* bloco de texto de baixo das imagens */
+    #texto_right {
+      margin-left: 0px;
+      width: 700px;
+      height: 250px;
+    }
+
+    #texto_left {
+      margin-right: 30px;
+      width: 700px;
+      height: 250px;
+    }
+
+    .texto_1 {
+      position: absolute !important;
+      margin-top: 120px !important;
+      margin-left: 600px !important;
+    }
+
+    .texto_2 {
+      position: absolute !important;
+      margin-top: 550px !important;
+      margin-left: 50px !important;
+    }
+
+    .texto_3 {
+      position: absolute !important;
+      margin-top: 1010px !important;
+      margin-left: 600px !important;
+    }
+
+    #texto_right h4,
+    #texto_left h4 {
+      font-size: 45px;
+    }
+
+    #texto_right p,
+    #texto_left p {
+      margin-top: 20px;
+      font-size: 25px;
+      width: 500px;
+    }
+
+    #itens img {
+      width: 450px;
+    }
+
+    /* IMAGEM NO CANTO DA TELA */
+    .aside img {
+      position: fixed;
+      width: 5vw;
+      right: 3vw;
+      top: 83vh;
+      transition: transform 0.5s ease;
+    }
+
+    .aside img:hover {
+      transform: rotateX(360deg);
+    }
+
+    /* para o popup ir para baixo */
+    .popup .content {
+      top: 65%;
+      width: 400px;
+      height: 350px;
+    }
+
+    #invertido {
+      flex-direction: row;
+    }
+
+    .text_center {
+      display: flex !important;
+      top: 50% !important;
+      bottom: 50% !important;
+    }
+  }
