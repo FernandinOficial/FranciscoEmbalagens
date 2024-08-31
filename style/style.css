@@ -301,7 +301,7 @@ main #carouselExampleControls {
 
 /* RODAPE */
 footer {
-  height: 40vh;
+  height: 63vh;
   background-color: #2f6427;
   margin-top: 15vh;
   padding-inline: 25px;
@@ -316,16 +316,26 @@ footer {
 
 #contato {
   color: #ACEFAC;
+  margin-top: 30px;
 }
 
 .contato-container img {
-  width: 40px;
+  width: 30px;
 }
 
 .contato-fluid {
   display: flex;
-  padding-right: 20px;
+  /* alinhar verticalmente o texto */
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.contato-fluid>p {
   /* alterar distanciamento */
+  margin-left: 20px;
+  /* alinha no centro da imagem */
+  margin-top: 15px;
 }
 
 .footer-img {
@@ -333,7 +343,7 @@ footer {
 }
 
 .contato-container p {
-  font-size: 20px;
+  font-size: 16px;
   color: #acefac;
 }
 
@@ -685,8 +695,38 @@ tbody tr:nth-child(even) {
     z-index: 100;
   }
 
+  /* FOOTER */
   footer {
-    height: 48vh;
+    height: 62vh;
+  }
+
+  #contato {
+    margin-top: 50px;
+  }
+  .contato-fluid {
+    display: flex;
+    /* alinhar verticalmente o texto */
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .contato-container img {
+    width: 50px;
+  }
+  .contato-fluid>p {
+    /* alterar distanciamento */
+    margin-left: 30px;
+    /* alinha no centro da imagem */
+    margin-top: 15px;
+  }
+
+  .footer-img {
+    float: left;
+  }
+
+  .contato-container p {
+    font-size: 20px;
+    color: #acefac;
   }
 
   /* alterar o distanciamento do carousel */
