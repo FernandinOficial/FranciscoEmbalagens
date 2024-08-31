@@ -31,7 +31,7 @@
     include_once 'includes/header.php';
     ?>
     <main id="container">
-        <form action="index.php" method="post" id="form_login">
+        <form action="../index.php" method="post" id="form_login">
             <div class="title_user">
                 <img src="../multimidia/images/usuario.png" alt="Logo de usuário">
                 <h2>LOGIN</h2>
@@ -40,11 +40,11 @@
             <div class="inputs">
                 <label for="email">E-mail</label><br>
                 <i class="fa-solid fa-envelope"></i>
-                <input type="email" id="email" name="email"><br><br>
+                <input type="email" id="email" name="email" required><br><br>
 
                 <label for="password">Senha</label><br>
                 <i class="fa-solid fa-key"></i>
-                <input type="password" id="password" name="password"><br>
+                <input type="password" id="password" name="password" required><br>
                 <a href="password/recuperar_senha.php" id="a_login" style="font-size: 13px;">Esqueceu sua senha?</a>
                 <br><br>
                 <input type="submit" value="Entrar" id="input_submit">
@@ -53,7 +53,7 @@
             <div class="img_icons">
                 <a href="#"><img src="../multimidia/images/google.png" alt="Ícone do google"></a>
                 <a href="#"><img src="../multimidia/images/facebook.png" alt="Ícone do facebook"></a>
-            </div><br><br>
+            </div><br>
 
             <a href="cadastro.php" id="a_login">Não possui uma conta?</a>
         </form>

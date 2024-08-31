@@ -9,9 +9,9 @@
         </button>
         <ul class="dropdown-menu">
             <li><button class="dropdown-item" type="button"><a
-                        href="auth/login.php"><?php echo 'OLÁ, (USER)'; ?></a></button>
+                        href="../auth/login.php"><?php echo 'OLÁ, (USER)'; ?></a></button>
             </li>
-            <li><button class="dropdown-item" type="button"><a href="../produto.php">PRODUTOS</a></button></li>
+            <li><button class="dropdown-item" type="button"><a href="../produtos.php">PRODUTOS</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="#footer-logo">CONTATO</a></button></li>
             <li><button class="dropdown-item" onclick="togglePopup()">SOBRE</button></li>
             <div id="account">

@@ -31,7 +31,7 @@
     require_once 'includes/header.php';
     ?>
     <main id="container">
-        <form action="index.php" method="post" id="form_cadastro">
+        <form action="../index.php" method="post" id="form_cadastro">
             <div class="title_cadastro">
                 <img src="../multimidia/images/usuario.png" alt="Logo de usuário">
                 <h2>CADASTRO</h2>
@@ -40,7 +40,7 @@
             <div class="inputs_cadastro">
                 <label for="name">Nome</label><br>
                 <i class="fa-solid fa-user"></i>
-                <input type="text" id="name" name="name"><br><br>
+                <input type="text" id="name" name="name" required><br><br>
 
                 <label for="lastname">Sobrenome</label><br>
                 <i class="fa-solid fa-user"></i>
@@ -48,11 +48,11 @@
 
                 <label for="email">E-mail</label><br>
                 <i class="fa-solid fa-envelope"></i>
-                <input type="email" id="email" name="email"><br><br>
+                <input type="email" id="email" name="email" required><br><br>
 
                 <label for="password">Senha</label><br>
                 <i class="fa-solid fa-key"></i>
-                <input type="password" id="password" name="password"><br><br><br>
+                <input type="password" id="password" name="password" required><br><br><br>
 
                 <input type="submit" name="Cadastrar" id="cadastro_submit">
             </div><br>
@@ -60,7 +60,7 @@
             <div class="img_cadastro">
                 <a href="#"><img src="../multimidia/images/google.png" alt="Ícone do google"></a>
                 <a href="#"><img src="../multimidia/images/facebook.png" alt="Ícone do facebook"></a>
-            </div><br><br>
+            </div><br>
 
             <a href="login.php" id="a_cadastro">Já possui uma conta?</a>
         </form>

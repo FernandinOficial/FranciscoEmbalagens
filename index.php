@@ -42,7 +42,7 @@
 
 <body>
     <?php
-    require_once 'header.php';
+    require_once 'includes/header.php';
     ?>
     <main>
         <!-- CAROUSEL bootstrap -->
@@ -163,5 +163,5 @@
 
     </main>
     <?php
-    require_once 'footer.php';
+    require_once 'includes/footer.php';
     ?>

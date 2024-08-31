@@ -543,6 +543,7 @@ table {
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #343a40;
+  background-color: #E0FFB9;
   line-height: 1;
 }
 
@@ -690,7 +691,8 @@ tbody tr:nth-child(even) {
     position: absolute;
     width: 200px;
     top: 35px;
-    left: 45%;
+    /* centralizar a logo */
+    left: 42%;
     right: 55%;
     z-index: 100;
   }
