@@ -1,5 +1,5 @@
 <!-- Footer para alterar por na class do footer bg-success -->
-<footer class="text-white" style="background-color: #2f6427;">
+<footer class="text-white" style="background-color: #2f6427;margin-top: 30px;">
     <!-- Footer logo -->
     <div id="footer-logo" class="text-center">
                     <a href="#">
