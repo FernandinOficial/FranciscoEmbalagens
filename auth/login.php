@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Francisco Embalagens</title>
-    <link rel="shortcut icon" href="multimidia/images/cadeado.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/style.css" type="text/css">
+    <link rel="shortcut icon" href="../multimidia/images/cadeado.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/style.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -28,12 +28,12 @@
 
 <body>
     <?php
-    include_once 'header.php';
+    include_once 'includes/header.php';
     ?>
     <main id="container">
         <form action="index.php" method="post" id="form_login">
             <div class="title_user">
-                <img src="multimidia/images/usuario.png" alt="Logo de usuário">
+                <img src="../multimidia/images/usuario.png" alt="Logo de usuário">
                 <h2>LOGIN</h2>
             </div>
 
@@ -44,19 +44,20 @@
 
                 <label for="password">Senha</label><br>
                 <i class="fa-solid fa-key"></i>
-                <input type="password" id="password" name="password"><br><br><br>
-
+                <input type="password" id="password" name="password"><br>
+                <a href="password/recuperar_senha.php" id="a_login" style="font-size: 13px;">Esqueceu sua senha?</a>
+                <br><br>
                 <input type="submit" value="Entrar" id="input_submit">
             </div><br>
 
             <div class="img_icons">
-                <a href="#"><img src="multimidia/images/google.png" alt="Ícone do google"></a>
-                <a href="#"><img src="multimidia/images/facebook.png" alt="Ícone do facebook"></a>
+                <a href="#"><img src="../multimidia/images/google.png" alt="Ícone do google"></a>
+                <a href="#"><img src="../multimidia/images/facebook.png" alt="Ícone do facebook"></a>
             </div><br><br>
 
             <a href="cadastro.php" id="a_login">Não possui uma conta?</a>
         </form>
     </main>
     <?php
-    require_once 'footer.php';
+    require_once 'includes/footer.php';
     ?>
