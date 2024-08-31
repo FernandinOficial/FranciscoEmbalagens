@@ -103,62 +103,34 @@
         <!-- MOSTRUÁRIO -->
         <div class="container">
             <div class="row">
-                <div class="col col-md-12 d-flex justify-content-between" id="invertido">
-                    <div id="" class="">
-                        <h4>DESIGNS ÚNICOS</h4>
-                        <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e designs únicos.</p>
+                <!-- Primeiro bloco -->
+                <div class="col-12 d-flex justify-content-between align-items-center" id="invertido">
+                    <div class="container_texto text-center me-3">
+                        <h4 class="texto-titulo">DESIGNS ÚNICOS</h4>
+                        <p class="texto-menor">Sacolas personalizadas no melhor estilo <br>que você deseja, com qualidade e <br>designs únicos.</p>
                     </div>
-                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="">
+                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="" class="img-fluid">
                 </div>
-                <div class="col col-md-12 d-flex justify-content-betweenr">
-                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="">
-                    <div id="" class="">
-                        <h4>DESIGNS ÚNICOS</h4>
-                        <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e designs únicos.</p>
+
+                <!-- Segundo bloco -->
+                <div class="col-12 d-flex justify-content-between align-items-center" id="teste">
+                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="" class="img-fluid me-3">
+                    <div class="container_texto text-center">
+                        <h4 class="texto-titulo">ANOS DE SERVIÇO</h4>
+                        <p class="texto-menor">Há mais de cinco anos, nos dedicamos a <br>satisfazer nossos clientes com produtos e <br>serviços de alta qualidade.</p>
                     </div>
                 </div>
-                <div class="w-100"></div>
-                <div class="col col-md-12 d-flex justify-content-between" id="invertido">
-                    <div id="" class="">
-                        <h4>DESIGNS ÚNICOS</h4>
-                        <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e designs únicos.</p>
+
+                <!-- Terceiro bloco -->
+                <div class="col-12 d-flex justify-content-between align-items-center" id="invertido">
+                    <div class="container_texto text-center me-3">
+                        <h4 class="texto-titulo">ESTILO E COMPROMISSO <br> AMBIENTAL</h4>
+                        <p class="texto-menor">Sacolas lindas e sustentáveis para levar <br>onde e quando quiser. Estilo e <br>responsabilidade ambiental unidos para <br>seu cotidiano.</p>
                     </div>
-                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="">
+                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
-        <!-- FIM MOSTRUÁRIO -->
-        <hr>
-        <!-- MOSTRUÁRIO -->
-        <div class="container">
-            <div class="row">
-                <div class="col col-md-12 d-flex flex-column align-items-center mb-md-0" id="reverse">
-                    <div class="text-center">
-                        <h4>DESIGNS ÚNICOS</h4>
-                        <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e designs únicos.</p>
-                    </div>
-                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="" class="mb-3">
-
-                </div>
-                <div class="col col-md-12 d-flex flex-column align-items-center mb-md-0">
-                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="" class="mb-3">
-                    <div class="text-center">
-                        <h4>DESIGNS ÚNICOS</h4>
-                        <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e designs únicos.</p>
-                    </div>
-                </div>
-                <div class="w-100"></div> <!-- Força a quebra de linha em dispositivos menores -->
-                <div class="col col-md-12 d-flex flex-column align-items-center mb-md-0" id="reverse">
-                    <div class="text-center">
-                        <h4>DESIGNS ÚNICOS</h4>
-                        <p>Sacolas personalizadas no melhor estilo que você deseja, com qualidade e designs únicos.</p>
-                    </div>
-                    <img src="multimidia/marketing/mk/sacolasImagem3_350px.png" alt="" class="mb-3">
-
-                </div>
-            </div>
-        </div>
-
         <!-- FIM MOSTRUÁRIO -->
     </main>
     <?php
