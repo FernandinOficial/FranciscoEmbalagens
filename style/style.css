@@ -315,7 +315,7 @@ footer {
 }
 
 #contato {
-  color: #ACEFAC;
+  color: #FFF;
   margin-bottom: -5px;
 }
 
@@ -354,7 +354,7 @@ footer {
   font-weight: bold;
   margin-bottom: -5px;
   font-size: 18px;
-  color: #acefac;
+  color: #FFF;
 }
 
 /* FORMULÁRIO LOGIN */
@@ -557,7 +557,7 @@ td {
 
 th {
   background-color: #2f6427;
-  color: #acefac;
+  color: #FFF;
   width: 25%;
 }
 
@@ -633,7 +633,7 @@ tbody tr:nth-child(even) {
 }
 
 .popup .content h1 {
-  color: #d8f0d8;
+  color: #FFF;
   font-weight: 800;
   font-size: 50px;
 }
@@ -650,7 +650,7 @@ tbody tr:nth-child(even) {
   height: 30px;
   background: #222;
   /* cor do "X" */
-  color: #fff;
+  color: #FFF;
   font-size: 25px;
   font-weight: 600;
   line-height: 30px;
@@ -693,7 +693,7 @@ tbody tr:nth-child(even) {
     width: 200px;
     top: 35px;
     /* centralizar a logo */
-    left: 42%;
+    left: 45%;
     right: 55%;
     z-index: 100;
   }
@@ -743,9 +743,7 @@ tbody tr:nth-child(even) {
 
   .contato-container p {
     font-size: 20px;
-    color: #acefac;
-  }
-  #copy {
+    color: #FFF;
   }
 
   /* alterar o distanciamento do carousel */
@@ -792,7 +790,7 @@ tbody tr:nth-child(even) {
   }
 
   ul.dropdown-menu li a {
-    color: #acefac;
+    color: #FFF;
     /* Altera a cor do texto */
     font-size: 18px;
     /* Reduzi o tamanho da fonte */
@@ -806,13 +804,13 @@ tbody tr:nth-child(even) {
 
   ul.dropdown-menu li button {
     /*alterar o sobre*/
-    color: #acefac;
+    color: #FFF;
     font-size: 18px;
   }
 
   ul.dropdown-menu li button:hover {
     /*alterar o sobre*/
-    color: #acefac;
+    color: #FFF;
   }
 
   ul.dropdown-menu li button.dropdown-item:hover {

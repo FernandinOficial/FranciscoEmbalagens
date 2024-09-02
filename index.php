@@ -35,7 +35,7 @@
         }
 
         body {
-            background-color: #E0FFB9;
+            background-color: #FFF;
         }
     </style>
 </head>
