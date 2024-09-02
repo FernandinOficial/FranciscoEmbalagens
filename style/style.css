@@ -240,17 +240,16 @@ main #carouselExampleControls {
 
 /* A partir do momento em que o MOBILE quebra vai surgir o DESKTOP */
 @media (min-width: 768px) {
-  main>#most-mob {
+  main > #most-mob {
     display: none !important;
   }
-
 }
 
-.row>div {
+.row > div {
   margin-bottom: 10vh;
 }
 
-.row>div>img {
+.row > div > img {
   width: 400px;
   border-radius: 30px;
 }
@@ -281,7 +280,7 @@ main #carouselExampleControls {
     display: inline-block !important;
   }
 
-  .row>.d-flex>.row {
+  .row > .d-flex > .row {
     right: 50% !important;
     left: 50% !important;
   }
@@ -315,7 +314,7 @@ footer {
 }
 
 #contato {
-  color: #FFF;
+  color: #fff;
   margin-bottom: -5px;
 }
 
@@ -331,7 +330,7 @@ footer {
   margin-top: 10px;
 }
 
-.contato-fluid>p {
+.contato-fluid > p {
   /* alterar distanciamento */
   margin-left: 20px;
   /* alinha no centro da imagem */
@@ -347,14 +346,13 @@ footer {
   color: #acefac;
 }
 
-
 .copy {
   display: flex;
   justify-content: flex-end;
   font-weight: bold;
   margin-bottom: -5px;
   font-size: 18px;
-  color: #FFF;
+  color: #fff;
 }
 
 /* FORMULÁRIO LOGIN */
@@ -544,7 +542,7 @@ table {
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #343a40;
-  background-color: #E0FFB9;
+  background-color: #e0ffb9;
   line-height: 1;
 }
 
@@ -557,7 +555,7 @@ td {
 
 th {
   background-color: #2f6427;
-  color: #FFF;
+  color: #fff;
   width: 25%;
 }
 
@@ -621,7 +619,7 @@ tbody tr:nth-child(even) {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   /* de preferencia vai sumir */
-  background: #739E73;
+  background: #739e73;
   /* tamanho do rgba(110, 190, 123, 0.7) */
   width: 309px;
   height: 400px;
@@ -633,7 +631,7 @@ tbody tr:nth-child(even) {
 }
 
 .popup .content h1 {
-  color: #FFF;
+  color: #fff;
   font-weight: 800;
   font-size: 50px;
 }
@@ -650,7 +648,7 @@ tbody tr:nth-child(even) {
   height: 30px;
   background: #222;
   /* cor do "X" */
-  color: #FFF;
+  color: #fff;
   font-size: 25px;
   font-weight: 600;
   line-height: 30px;
@@ -693,7 +691,7 @@ tbody tr:nth-child(even) {
     width: 200px;
     top: 35px;
     /* centralizar a logo */
-    left: 45%;
+    left: 43%;
     right: 55%;
     z-index: 100;
   }
@@ -730,7 +728,7 @@ tbody tr:nth-child(even) {
     width: 50px;
   }
 
-  .contato-fluid>p {
+  .contato-fluid > p {
     /* alterar distanciamento */
     margin-left: 30px;
     /* alinha no centro da imagem */
@@ -743,7 +741,7 @@ tbody tr:nth-child(even) {
 
   .contato-container p {
     font-size: 20px;
-    color: #FFF;
+    color: #fff;
   }
 
   /* alterar o distanciamento do carousel */
@@ -777,7 +775,7 @@ tbody tr:nth-child(even) {
     top: 0;
     /* Garante que o menu fique no topo da área disponível */
     margin-top: 128px !important;
-    width: 101vw;
+    width: 100vw; /*largura da navbar*/
   }
 
   ul.dropdown-menu li {
@@ -790,7 +788,7 @@ tbody tr:nth-child(even) {
   }
 
   ul.dropdown-menu li a {
-    color: #FFF;
+    color: #fff;
     /* Altera a cor do texto */
     font-size: 18px;
     /* Reduzi o tamanho da fonte */
@@ -804,13 +802,13 @@ tbody tr:nth-child(even) {
 
   ul.dropdown-menu li button {
     /*alterar o sobre*/
-    color: #FFF;
+    color: #fff;
     font-size: 18px;
   }
 
   ul.dropdown-menu li button:hover {
     /*alterar o sobre*/
-    color: #FFF;
+    color: #fff;
   }
 
   ul.dropdown-menu li button.dropdown-item:hover {
@@ -823,7 +821,6 @@ tbody tr:nth-child(even) {
     display: flex;
     /* Exibe os botões de login/logout em linha */
   }
-
 
   .account {
     margin-left: 10px;
