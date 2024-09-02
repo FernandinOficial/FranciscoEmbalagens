@@ -637,6 +637,7 @@ tbody tr:nth-child(even) {
 }
 
 .popup .content p {
+  color: #000;
   font-weight: bold;
 }
 
