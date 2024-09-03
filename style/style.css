@@ -125,7 +125,16 @@ li button {
   font-weight: bold;
   padding-top: 10px;
 }
+/* remover a cor de fundo da navbar ao ser selecionada */
+li button:hover {
+  background-color: transparent !important;
+}
+li button:focus {
+  background-color: transparent !important;
+  color: #FFF !important;
+}
 
+/* LOGIN E LOGOUT */
 #account {
   margin-left: 35px;
 }
