@@ -2,8 +2,9 @@ CREATE DATABASE FranciscoEmbalagens;
 
 USE FranciscoEmbalagens;
 
+-- criando a tabela Cliente
 CREATE TABLE Cliente (
-    id_cli INT AUTO_INCREMENT PRIMARY KEY,
+    id_cli INT AUTO_INCREMENT PRIMARY KEY, -- Declarando id_cli como auto increment e chave primária
     nome_cli VARCHAR(50) NOT NULL,
     sobrenome_cli VARCHAR(50),
     email_cli VARCHAR(100) NOT NULL UNIQUE,
