@@ -343,6 +343,7 @@ footer {
   align-items: center;
   text-align: center;
   margin-top: 10px;
+  color: #FFF;
 }
 
 .contato-fluid > p {
@@ -358,7 +359,7 @@ footer {
 
 .contato-container p {
   font-size: 16px;
-  color: #acefac;
+  color: #FFF;
 }
 
 .copy {
@@ -763,11 +764,12 @@ tbody tr:nth-child(even) {
     width: 50px;
   }
 
-  .contato-fluid > p {
+  .contato-fluid p {
     /* alterar distanciamento */
     margin-left: 30px;
     /* alinha no centro da imagem */
     margin-top: 15px;
+    color: #FFF !important;
   }
 
   .footer-img {
@@ -776,7 +778,6 @@ tbody tr:nth-child(even) {
 
   .contato-container p {
     font-size: 20px;
-    color: #fff;
   }
 
   /* alterar o distanciamento do carousel */
