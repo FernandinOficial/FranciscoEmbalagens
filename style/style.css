@@ -7,6 +7,12 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #343a40;
+  background-color: #e0ffb9;
+  line-height: 1;
+}
 
 /*FONTES*/
 .inter {
@@ -528,22 +534,41 @@ input[type="submit"] {
 }
 
 /* PRODUTO */
+
+/* editar a linha horizontal de produtos */
+.hr_produtos {
+  border: 3px solid #2f6427;
+}
 table {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
-  box-sizing: border-box;
+  margin-top: 50px;
   width: 85vw;
   border-collapse: collapse;
   font-size: 18px;
   border: 1px solid rgb(16, 194, 31);
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #343a40;
-  background-color: #e0ffb9;
-  line-height: 1;
+/* container das fotos da página produtos */
+.container_imgProdutos {
+  display: flex;
+  flex-wrap: wrap; /* comportamento responsivo */
+  justify-content: center;
+  padding: 0; /* Remove qualquer preenchimento interno */
+}
+
+/* Faz as imagens ocuparem o máximo possível dentro de suas colunas */
+.img_produtos {
+  width: 400px !important; /* Limita a largura máxima da imagem */
+  border-radius: 30px;
+  margin: 20px; /* um pouco de margem entre as imagens e fora delas */
+  margin-bottom: 10px; /* diminuir espaçamento  */
+}
+/* alterar resoluçao das imagens quando for computador */
+@media (min-width: 650px) {
+  .img_produtos {
+    width: 500px !important;
+  }
 }
 
 th,
