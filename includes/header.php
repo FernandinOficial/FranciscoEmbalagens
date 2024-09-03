@@ -13,7 +13,7 @@
             </li>
             <li><button class="dropdown-item" type="button"><a href="produtos.php">PRODUTOS</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="#footer-logo">CONTATO</a></button></li>
-            <li><button class="dropdown-item" onclick="togglePopup()">SOBRE</button></li>
+            <li><button class="dropdown-item" type="button"><a onclick="togglePopup()">SOBRE</a></button></li>
             <div id="account">
                 <a href="auth/login.php">
                     <li class="account" id="login">LOGIN</li>

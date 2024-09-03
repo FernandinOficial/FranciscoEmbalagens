@@ -131,7 +131,7 @@ li button:hover {
 }
 li button:focus {
   background-color: transparent !important;
-  color: #FFF !important;
+  color: #000 !important;
 }
 
 /* LOGIN E LOGOUT */
@@ -840,7 +840,10 @@ tbody tr:nth-child(even) {
     color: #fff;
     font-size: 18px;
   }
-
+  li button:focus {
+    background-color: transparent !important;
+    color: #FFF !important;
+  }
   ul.dropdown-menu li button:hover {
     /*alterar o sobre*/
     color: #fff;
