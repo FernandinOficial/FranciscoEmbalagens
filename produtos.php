@@ -31,6 +31,7 @@
     <main>
         <table>
             <h1>Sacolas Kraft</h1>
+            <img src="multimidia/produtos/produtoKraft.png" alt="kraft">
             <tr>
                 <th>Modelos</th>
                 <th>Dimensões</th>
@@ -64,6 +65,7 @@
         <br>
         <table>
             <h1>Sacolas Plásticas</h1>
+            <img src="multimidia/produtos/produtoPlastico.png" alt="plástico">
             <tr>
                 <th>Modelos</th>
                 <th>Dimensões</th>
