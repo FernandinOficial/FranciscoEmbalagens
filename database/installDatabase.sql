@@ -12,18 +12,22 @@ CREATE TABLE Cliente (
     endereco_cli TEXT
 );
 
+-- OPÇÕES PARA TIPO DE PESSOA
+-- pessoa fisica
 CREATE TABLE Pessoa_Fisica (
     id_cli INT PRIMARY KEY,
     cpf_cli VARCHAR(11) NOT NULL UNIQUE,
     FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli)
 );
 
+-- pessoa juridica
 CREATE TABLE Pessoa_Juridica (
     id_cli INT PRIMARY KEY,
     cnpj_cli VARCHAR(14) NOT NULL UNIQUE,
     FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli)
 );
 
+-- criando a tabela Pedido
 CREATE TABLE Pedido (
     id_ped INT AUTO_INCREMENT PRIMARY KEY,
     id_cli INT NOT NULL,
@@ -31,6 +35,7 @@ CREATE TABLE Pedido (
     FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli)
 );
 
+-- criando a tabela Produto
 CREATE TABLE Produto (
     id_prod INT AUTO_INCREMENT PRIMARY KEY,
     modelo_prod VARCHAR(50) NOT NULL,
@@ -38,6 +43,7 @@ CREATE TABLE Produto (
     nome_prod VARCHAR(100) NOT NULL
 );
 
+-- criando a tabela associativa de Item_Pedido
 CREATE TABLE Item_Pedido (
     id_item_pedido INT AUTO_INCREMENT PRIMARY KEY,
     id_ped INT NOT NULL,
@@ -46,6 +52,7 @@ CREATE TABLE Item_Pedido (
     FOREIGN KEY (id_prod) REFERENCES Produto(id_prod)
 );
 
+-- criando a tabela Estoque
 CREATE TABLE Estoque (
     id_estoque INT AUTO_INCREMENT PRIMARY KEY,
     id_prod INT NOT NULL,
