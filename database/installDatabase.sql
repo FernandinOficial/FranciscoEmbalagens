@@ -6,7 +6,6 @@ USE FranciscoEmbalagens;
 CREATE TABLE Cliente (
     id_cli INT AUTO_INCREMENT PRIMARY KEY, -- Declarando id_cli como auto increment e chave primária
     nome_cli VARCHAR(50) NOT NULL,
-    sobrenome_cli VARCHAR(50),
     email_cli VARCHAR(100) NOT NULL UNIQUE,
     senha_cli VARCHAR(255) NOT NULL,
     cpf_cli VARCHAR(11) NOT NULL,
@@ -52,9 +51,11 @@ CREATE TABLE Pedido (
 -- criando a tabela Produto
 CREATE TABLE Produto (
     id_prod INT AUTO_INCREMENT PRIMARY KEY,
-    modelo_prod VARCHAR(50) NOT NULL,
-    dimensao_prod VARCHAR(50) NOT NULL,
-    nome_prod VARCHAR(100) NOT NULL
+    id_for INT AUTO_INCREMENT NOT NULL,
+    desc_prod VARCHAR(255) NOT NULL,
+    valor_prod DECIMAL(10, 2),
+    status_prod VARCHAR(50),
+    FOREIGN KEY (id_for) REFERENCES Fornecedor(id_for)  
 );
 
 -- criando a tabela associativa de Item_Pedido
@@ -62,6 +63,7 @@ CREATE TABLE Item_Pedido (
     id_item_pedido INT AUTO_INCREMENT PRIMARY KEY,
     id_ped INT NOT NULL,
     id_prod INT NOT NULL,
+    valor_prod DECIMAL(10, 2),
     FOREIGN KEY (id_ped) REFERENCES Pedido(id_ped),
     FOREIGN KEY (id_prod) REFERENCES Produto(id_prod)
 );
