@@ -3,10 +3,10 @@ include_once '../auth/includes/db_connect.php';
 
 $erro = '';
 
-// Inserir/Atualizar Produto
+//Inserir/Atualizar Produto
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["desc_prod"], $_POST["valor_prod"])) {
-        // Validando campos obrigatórios
+        //Validando campos obrigatórios
         if (empty($_POST["desc_prod"]) || empty($_POST["valor_prod"]) || empty($_POST["status_prod"])) {
             $erro = "Todos os campos são obrigatórios.";
         } else {
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $valor_prod = $_POST["valor_prod"];
             $status_prod = $_POST["status_prod"];
 
-            // Inserindo ou atualizando no banco de dados
+            //Inserindo ou atualizando no banco de dados
             if ($id_prod == -1) {
                 $stmt = $mysqli->prepare("INSERT INTO `Produto` (`desc_prod`, `valor_prod`, `status_prod`) VALUES (?, ?, ?)");
                 $stmt->bind_param("sss", $desc_prod, $valor_prod, $status_prod);
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Processamento para deletar produto
+//Processamento para deletar produto
 if (isset($_GET["id_prod"]) && is_numeric($_GET["id_prod"]) && isset($_GET["del"])) {
     $id_prod = (int) $_GET["id_prod"];
     $stmt = $mysqli->prepare("DELETE FROM `Produto` WHERE id_prod = ?");
@@ -46,14 +46,14 @@ if (isset($_GET["id_prod"]) && is_numeric($_GET["id_prod"]) && isset($_GET["del"
     exit;
 }
 
-// Buscar produtos para exibição
+//Buscar produtos para exibição
 $produtos = $mysqli->query("SELECT * FROM Produto ORDER BY id_prod DESC");
 
 if (!$produtos) {
     $erro = "Erro ao buscar produtos: " . $mysqli->error;
 }
 
-// Preenchendo os valores para edição
+//Preenchendo os valores para edição
 $desc_prod = isset($_POST["desc_prod"]) ? $_POST["desc_prod"] : "";
 $valor_prod = isset($_POST["valor_prod"]) ? $_POST["valor_prod"] : "";
 $status_prod = isset($_POST["status_prod"]) ? $_POST["status_prod"] : "";
@@ -133,7 +133,7 @@ $id_prod = isset($_POST["id_prod"]) ? $_POST["id_prod"] : -1;
                         </form>
                         <!-- Botão de deletar -->
                         <a href="produto.php?id_prod=<?= $produto['id_prod'] ?>&del=1"
-                            onclick="return confirm('Tem certeza que deseja excluir este produto?')">Excluir</a>
+                            onclick="return confirm('Tem certeza que deseja desabilitar este produto?')">Desabilitar</a>
                     </td>
                 </tr>
             <?php endwhile; ?>
