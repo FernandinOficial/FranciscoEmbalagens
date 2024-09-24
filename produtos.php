@@ -21,9 +21,30 @@
             background-color: #FFF;
         }
     </style>
+    <script defer src="script/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const isLoggedIn = <?php echo isset($_SESSION['logado']) && $_SESSION['logado'] ? 'true' : 'false'; ?>;
+            if (isLoggedIn) {
+                const login = document.getElementById("login");
+                if (login) {
+                    login.remove();
+                }
+            }
+        });
+    </script>
 </head>
 
 <body>
+    <?php
+    session_start();
+    
+    if (isset($_SESSION['logado']) && $_SESSION['logado']) {
+        echo '<script>login.remove()</script>';
+    } else {
+    }
+
+    ?>
     <?php
     require_once "includes/header.php";
     ?>

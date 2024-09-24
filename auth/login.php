@@ -28,23 +28,60 @@
 
 <body>
     <?php
+    include_once 'includes/db_connect.php'; // Incluindo a conexão com o banco
+    session_start();
+    // Verifica se o formulário foi enviado
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+
+        // Verifica se os campos estão preenchidos
+        if (empty($email)) {
+            echo "<p>E-mail é obrigatório.</p>";
+        } elseif (empty($password)) {
+            echo "<p>Senha é obrigatória.</p>";
+        } else {
+            // Prepara a consulta
+            $stmt = $mysqli->prepare("SELECT * FROM `Usuario` WHERE email_usu = ? AND senha_usu = ?");
+            $stmt->bind_param('ss', $email, $password);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            // Verifica se o usuário existe
+            if ($result->num_rows > 0) {
+                echo "<p>Login bem-sucedido!</p>";
+                echo '<script>window.location.href = "../index.php";</script>';
+                $_SESSION['logado'] = true; //mostrar no index que esta logado
+                exit;
+            } else {
+                echo "<p>E-mail ou senha incorretos.</p>";
+            }
+        }
+    }
+    ?>
+    <?php
     include_once 'includes/header.php';
     ?>
     <main id="container">
-        <form action="../index.php" method="post" id="form_login">
+        <form action="<?= $_SERVER["PHP_SELF"] ?>" method="post" id="form_login">
             <div class="title_user">
                 <img src="../multimidia/images/usuario.png" alt="Logo de usuário">
                 <h2>LOGIN</h2>
             </div>
 
             <div class="inputs">
+                <!-- COMEÇO FORM -->
+                <!-- EMAIL -->
                 <label for="email">E-mail</label><br>
                 <i class="fa-solid fa-envelope"></i>
-                <input type="email" id="email" name="email" required><br><br>
+                <input type="email" id="email" name="email"><br><br>
 
+                <!-- SENHA -->
                 <label for="password">Senha</label><br>
                 <i class="fa-solid fa-key"></i>
-                <input type="password" id="password" name="password" required><br>
+                <input type="password" id="password" name="password"><br>
+                <!-- FIM FORM -->
+
                 <a href="password/recuperar_senha.php" id="a_login" style="font-size: 13px;">Esqueceu sua senha?</a>
                 <br><br>
                 <input type="submit" value="Entrar" id="input_submit">

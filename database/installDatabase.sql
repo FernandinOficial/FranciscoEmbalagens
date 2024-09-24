@@ -1,3 +1,4 @@
+-- SQLBook: Code
 CREATE DATABASE FranciscoEmbalagens;
 
 USE FranciscoEmbalagens;
@@ -12,18 +13,18 @@ CREATE TABLE Cliente (
     rua VARCHAR(255),
     numero VARCHAR(10),
     bairro VARCHAR(100),
-    cidade VARCHAR(100),
+    cidade VARCHAR(100)
 );
 
-CREATE TABLE Servico (
-    id_serv INT AUTO_INCREMENT PRIMARY KEY,
-    id_cli INT NOT NULL,
-    desc_serv VARCHAR(255),
-    valor_serv DECIMAL(10, 2),
-    data_serv DATE,
-    prazo_serv DATE,
-    FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli)
-);
+-- CREATE TABLE Servico (
+--     id_serv INT AUTO_INCREMENT PRIMARY KEY,
+--     id_cli INT NOT NULL,
+--     desc_serv VARCHAR(255),
+--     valor_serv DECIMAL(10, 2),
+--     data_serv DATE,
+--     prazo_serv DATE,
+--     FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli)
+-- );
 
 -- -- OPÇÕES PARA TIPO DE PESSOA
 -- -- pessoa fisica
@@ -41,32 +42,33 @@ CREATE TABLE Servico (
 -- );
 
 -- criando a tabela Pedido
-CREATE TABLE Pedido (
-    id_ped INT AUTO_INCREMENT PRIMARY KEY,
-    id_cli INT NOT NULL,
-    data_ped DATE NOT NULL,
-    FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli)
-);
+-- CREATE TABLE Pedido (
+--     id_ped INT AUTO_INCREMENT PRIMARY KEY,
+--     id_cli INT NOT NULL,
+--     data_ped DATE NOT NULL,
+--     FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli)
+-- );
 
 -- criando a tabela Produto
+USE FranciscoEmbalagens;
 CREATE TABLE Produto (
     id_prod INT AUTO_INCREMENT PRIMARY KEY,
-    id_for INT AUTO_INCREMENT NOT NULL,
+    id_for INT NOT NULL,
     desc_prod VARCHAR(255) NOT NULL,
     valor_prod DECIMAL(10, 2),
-    status_prod VARCHAR(50),
+    status_prod VARCHAR(50) NOT NULL DEFAULT 'ativo',
     FOREIGN KEY (id_for) REFERENCES Fornecedor(id_for)  
 );
 
 -- criando a tabela associativa de Item_Pedido
-CREATE TABLE Item_Pedido (
-    id_item_pedido INT AUTO_INCREMENT PRIMARY KEY,
-    id_ped INT NOT NULL,
-    id_prod INT NOT NULL,
-    valor_prod DECIMAL(10, 2),
-    FOREIGN KEY (id_ped) REFERENCES Pedido(id_ped),
-    FOREIGN KEY (id_prod) REFERENCES Produto(id_prod)
-);
+-- CREATE TABLE Item_Pedido (
+--     id_item_pedido INT AUTO_INCREMENT PRIMARY KEY,
+--     id_ped INT NOT NULL,
+--     id_prod INT NOT NULL,
+--     valor_prod DECIMAL(10, 2),
+--     FOREIGN KEY (id_ped) REFERENCES Pedido(id_ped),
+--     FOREIGN KEY (id_prod) REFERENCES Produto(id_prod)
+-- );
 
 CREATE TABLE Fornecedor (
     id_for INT AUTO_INCREMENT PRIMARY KEY,

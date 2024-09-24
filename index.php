@@ -42,6 +42,10 @@
 
 <body>
     <?php
+        session_start(); // inicia a sessão de logado
+    ?>
+
+    <?php
     require_once 'includes/header.php';
     ?>
     <main>
@@ -49,10 +53,14 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
             <!-- Botões Inferiores do Carousel -->
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
             </div>
 
             <!-- Bannerss/Imagens/Vídeos -->
@@ -63,7 +71,8 @@
                 </div>
                 <!-- Segundo Banner -->
                 <div class="carousel-item">
-                    <video class="d-block w-100" src="multimidia/marketing/mk/videoMarketing-1.mp4" type="video/mp4" autoplay muted loop id="video-mkt"></video>
+                    <video class="d-block w-100" src="multimidia/marketing/mk/videoMarketing-1.mp4" type="video/mp4"
+                        autoplay muted loop id="video-mkt"></video>
                 </div>
                 <!-- Terceiro Banner -->
                 <div class="carousel-item">
