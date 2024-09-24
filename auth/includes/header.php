@@ -6,22 +6,24 @@
             const isLoggedIn = <?php echo isset($_SESSION['logado']) && $_SESSION['logado'] ? 'true' : 'false'; ?>;
             if (isLoggedIn) {
                 const login = document.getElementById("login");
+                const logout = document.getElementById("logout");
+
                 if (login) {
                     login.remove();
                 }
+            }else{
+                logout.remove();
             }
         });
     </script>
 </head>
 <nav>
     <?php
+        $nome = isset($_SESSION['nome']) ? $_SESSION['nome'] : 'NENHUM';  //definindo o nome do usuario em caso de nulo
 
-    if (isset($_SESSION['logado']) && $_SESSION['logado']) {
-        echo 'logado'; // O usuário está logado
-        echo '<script>login.remove()</script>';
-    } else {
-        echo 'não logado'; // O usuário não está logado
-    }
+        if (isset($_SESSION['logado']) && $_SESSION['logado']) {
+            echo '<script>login.remove()</script>';
+        }
 
     ?>
     <!-- Bootstrap implementado-->
@@ -30,19 +32,31 @@
             <img src="../multimidia/images/navButton_39x45.png" alt="Botão de Navegação">
         </button>
         <ul class="dropdown-menu">
-            <li><button class="dropdown-item" type="button"><a
-                        href="../auth/login.php"><?php echo 'OLÁ, (USER)'; ?></a></button>
+        <li><button class="dropdown-item" type="button"><a style="padding-left: 35px;" 
+                        href="auth/login.php"><?php  
+                                                if ($nome == "NENHUM"){
+                                                    echo 'HOME';
+                                                }else{
+                                                    echo '<a style="margin-left: -70px;">Olá, ', $nome,'</a>';
+                                                } 
+                                              ?></a></button>
             </li>
-            <li><button class="dropdown-item" type="button"><a href="../produtos.php">PRODUTOS</a></button></li>
-            <li><button class="dropdown-item" type="button"><a href="#footer-logo">CONTATO</a></button></li>
+            <li><button class="dropdown-item" type="button"><a href="produtos.php">PRODUTOS</a></button></li>
+            <li><button class="dropdown-item" type="button"><a style="padding-left: 20px;"  href="#footer-logo">CONTATO</a></button></li>
             <li><button class="dropdown-item" type="button"><a onclick="togglePopup()">SOBRE</a></button></li>
             <div id="account">
-                <a href="login.php">
+                <a href="auth/login.php" id="login-account">
                     <li class="account" id="login">LOGIN</li>
                 </a>
-                <a href="../index.php">
+                <a href="includes/logout.php">
                     <li class="account" id="logout">LOGOUT</li>
                 </a>
+                <?php
+                    echo '
+                    <a href="crud/index.html" id="crud-account">
+                        <li class="account" id="crud">CRUD</li>
+                    </a>'
+                ?>
             </div>
         </ul>
     </div>

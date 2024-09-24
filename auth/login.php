@@ -27,38 +27,44 @@
 </head>
 
 <body>
-    <?php
-    include_once 'includes/db_connect.php'; // Incluindo a conexão com o banco
-    session_start();
-    // Verifica se o formulário foi enviado
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $email = $_POST["email"];
-        $password = $_POST["password"];
+<?php
+include_once 'includes/db_connect.php'; // Incluindo a conexão com o banco
+session_start();
 
-        // Verifica se os campos estão preenchidos
-        if (empty($email)) {
-            echo "<p>E-mail é obrigatório.</p>";
-        } elseif (empty($password)) {
-            echo "<p>Senha é obrigatória.</p>";
+// Verifica se o formulário foi enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    // Verifica se os campos estão preenchidos
+    if (empty($email)) {
+        echo "<p>E-mail é obrigatório.</p>";
+    } elseif (empty($password)) {
+        echo "<p>Senha é obrigatória.</p>";
+    } else {
+        // Prepara a consulta
+        $stmt = $mysqli->prepare("SELECT nome_usu FROM `Usuario` WHERE email_usu = ? AND senha_usu = ?");
+        $stmt->bind_param('ss', $email, $password);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        // Verifica se o usuário existe
+        if ($result->num_rows > 0) {
+            // Busca os dados do usuário
+            $user = $result->fetch_assoc(); // Armazena os dados do usuário
+            $_SESSION['logado'] = true; // Marcar como logado
+            $_SESSION['nome'] = $user['nome_usu']; // Armazena o nome do usuário na sessão
+            
+            // Redireciona após o login
+            echo '<script>window.location.href = "../index.php";</script>';
+            exit;
         } else {
-            // Prepara a consulta
-            $stmt = $mysqli->prepare("SELECT * FROM `Usuario` WHERE email_usu = ? AND senha_usu = ?");
-            $stmt->bind_param('ss', $email, $password);
-            $stmt->execute();
-            $result = $stmt->get_result();
-
-            // Verifica se o usuário existe
-            if ($result->num_rows > 0) {
-                echo "<p>Login bem-sucedido!</p>";
-                echo '<script>window.location.href = "../index.php";</script>';
-                $_SESSION['logado'] = true; //mostrar no index que esta logado
-                exit;
-            } else {
-                echo "<p>E-mail ou senha incorretos.</p>";
-            }
+            echo "<p>E-mail ou senha incorretos.</p>";
         }
     }
-    ?>
+}
+?>
+
     <?php
     include_once 'includes/header.php';
     ?>
