@@ -134,6 +134,7 @@ li button:focus {
   color: #000 !important;
 }
 
+
 /* LOGIN E LOGOUT */
 #account {
   margin-left: 35px;
@@ -343,7 +344,7 @@ footer {
   align-items: center;
   text-align: center;
   margin-top: 10px;
-  color: #FFF;
+  color: #fff;
 }
 
 .contato-fluid > p {
@@ -359,7 +360,7 @@ footer {
 
 .contato-container p {
   font-size: 16px;
-  color: #FFF;
+  color: #fff;
 }
 
 .copy {
@@ -748,6 +749,18 @@ tbody tr:nth-child(even) {
     margin-top: 10px;
   }
 
+  /* NAV */
+  #home-nav {
+    padding-left: 35px;
+  }
+  #nome-nav{
+    margin-left: -70px;
+  }
+  #contato-nav {
+    padding-left: 20px;
+  }
+
+
   #contato {
     margin-top: 10px;
   }
@@ -769,7 +782,7 @@ tbody tr:nth-child(even) {
     margin-left: 30px;
     /* alinha no centro da imagem */
     margin-top: 15px;
-    color: #FFF !important;
+    color: #fff !important;
   }
 
   .footer-img {
@@ -843,7 +856,7 @@ tbody tr:nth-child(even) {
   }
   li button:focus {
     background-color: transparent !important;
-    color: #FFF !important;
+    color: #fff !important;
   }
   ul.dropdown-menu li button:hover {
     /*alterar o sobre*/

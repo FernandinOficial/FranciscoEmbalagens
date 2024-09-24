@@ -32,17 +32,17 @@
             <img src="../multimidia/images/navButton_39x45.png" alt="Botão de Navegação">
         </button>
         <ul class="dropdown-menu">
-        <li><button class="dropdown-item" type="button"><a style="padding-left: 35px;" 
+        <li><button class="dropdown-item" type="button"><a id="home-nav"
                         href="auth/login.php"><?php  
                                                 if ($nome == "NENHUM"){
                                                     echo 'HOME';
                                                 }else{
-                                                    echo '<a style="margin-left: -70px;">Olá, ', $nome,'</a>';
+                                                    echo '<a id="nome-nav">Olá, ', $nome,'</a>';
                                                 } 
                                               ?></a></button>
             </li>
             <li><button class="dropdown-item" type="button"><a href="produtos.php">PRODUTOS</a></button></li>
-            <li><button class="dropdown-item" type="button"><a style="padding-left: 20px;"  href="#footer-logo">CONTATO</a></button></li>
+            <li><button class="dropdown-item" type="button"><a id="contato-nav" href="#footer-logo">CONTATO</a></button></li>
             <li><button class="dropdown-item" type="button"><a onclick="togglePopup()">SOBRE</a></button></li>
             <div id="account">
                 <a href="auth/login.php" id="login-account">
