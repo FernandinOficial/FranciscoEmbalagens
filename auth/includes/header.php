@@ -45,7 +45,7 @@
             <li><button class="dropdown-item" type="button"><a id="contato-nav" href="#footer-logo">CONTATO</a></button></li>
             <li><button class="dropdown-item" type="button"><a onclick="togglePopup()">SOBRE</a></button></li>
             <div id="account">
-                <a href="auth/login.php" id="login-account">
+                <a href="login.php" id="login-account">
                     <li class="account" id="login">LOGIN</li>
                 </a>
                 <a href="includes/logout.php">
