@@ -135,7 +135,6 @@ $clientes = $mysqli->query("SELECT * FROM Cliente ORDER BY id_cli DESC");
                 <th>Número</th>
                 <th>Bairro</th>
                 <th>Cidade</th>
-                <th>Ações</th>
             </tr>
         </thead>
         <tbody>

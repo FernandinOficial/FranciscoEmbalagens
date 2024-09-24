@@ -52,7 +52,7 @@
                 </a>
                 <?php
                     echo '
-                    <a href="crud/index.html" id="crud-account">
+                    <a href="crud" id="crud-account">
                         <li class="account" id="crud">CRUD</li>
                     </a>'
                 ?>
