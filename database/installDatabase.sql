@@ -3,87 +3,126 @@ CREATE DATABASE FranciscoEmbalagens;
 
 USE FranciscoEmbalagens;
 
--- criando a tabela Cliente
-CREATE TABLE Cliente (
-    id_cli INT AUTO_INCREMENT PRIMARY KEY, -- Declarando id_cli como auto increment e chave primária
-    nome_cli VARCHAR(50) NOT NULL,
-    email_cli VARCHAR(100) NOT NULL UNIQUE,
-    senha_cli VARCHAR(255) NOT NULL,
-    cpf_cli VARCHAR(11) NOT NULL,
-    rua VARCHAR(255),
-    numero VARCHAR(10),
-    bairro VARCHAR(100),
-    cidade VARCHAR(100)
-);
-
--- CREATE TABLE Servico (
---     id_serv INT AUTO_INCREMENT PRIMARY KEY,
---     id_cli INT NOT NULL,
---     desc_serv VARCHAR(255),
---     valor_serv DECIMAL(10, 2),
---     data_serv DATE,
---     prazo_serv DATE,
---     FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli)
--- );
-
--- -- OPÇÕES PARA TIPO DE PESSOA
--- -- pessoa fisica
--- CREATE TABLE Pessoa_Fisica (
---     id_cli INT PRIMARY KEY,
---     cpf_cli VARCHAR(11) NOT NULL UNIQUE,
---     FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli)
--- );
-
--- -- pessoa juridica
--- CREATE TABLE Pessoa_Juridica (
---     id_cli INT PRIMARY KEY,
---     cnpj_cli VARCHAR(14) NOT NULL UNIQUE,
---     FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli)
--- );
-
--- criando a tabela Pedido
--- CREATE TABLE Pedido (
---     id_ped INT AUTO_INCREMENT PRIMARY KEY,
---     id_cli INT NOT NULL,
---     data_ped DATE NOT NULL,
---     FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli)
--- );
-
--- criando a tabela Produto
-USE FranciscoEmbalagens;
-CREATE TABLE Produto (
-    id_prod INT AUTO_INCREMENT PRIMARY KEY,
-    id_for INT NOT NULL,
-    desc_prod VARCHAR(255) NOT NULL,
-    valor_prod DECIMAL(10, 2),
-    status_prod VARCHAR(50) NOT NULL DEFAULT 'ativo',
-    FOREIGN KEY (id_for) REFERENCES Fornecedor(id_for)  
-);
-
--- criando a tabela associativa de Item_Pedido
--- CREATE TABLE Item_Pedido (
---     id_item_pedido INT AUTO_INCREMENT PRIMARY KEY,
---     id_ped INT NOT NULL,
---     id_prod INT NOT NULL,
---     valor_prod DECIMAL(10, 2),
---     FOREIGN KEY (id_ped) REFERENCES Pedido(id_ped),
---     FOREIGN KEY (id_prod) REFERENCES Produto(id_prod)
--- );
-
-CREATE TABLE Fornecedor (
-    id_for INT AUTO_INCREMENT PRIMARY KEY,
-    nome_for VARCHAR(50) NOT NULL,
-    cnpj VARCHAR(18) NOT NULL UNIQUE,
-    rua VARCHAR(255),
-    numero VARCHAR(10),
-    bairro VARCHAR(100),
-    cidade VARCHAR(100),
-    email_for VARCHAR(255) NOT NULL UNIQUE
-);
-
+-- Criando a tabela de Usuário
 CREATE TABLE Usuario (
     id_usu INT AUTO_INCREMENT PRIMARY KEY,
-    nome_usu VARCHAR(50),
-    email_usu VARCHAR(255) NOT NULL UNIQUE,
+    cpf_usu VARCHAR(11) NOT NULL,
+    email_usu VARCHAR(255) NOT NULL,
+    nome_usu VARCHAR(255) NOT NULL,
     senha_usu VARCHAR(255) NOT NULL
+);
+
+-- Criando a tabela de Fornecedor
+CREATE TABLE Fornecedor (
+    id_for INT AUTO_INCREMENT PRIMARY KEY,
+    nome_for VARCHAR(255) NOT NULL,
+    email_for VARCHAR(255),
+    documento_for VARCHAR(50),
+    data_cadastro DATE,
+    bairro_for VARCHAR(255),
+    cidade_for VARCHAR(255),
+    cep_for VARCHAR(9),
+    celular_for VARCHAR(15)
+);
+
+-- Criando a tabela de Cliente
+CREATE TABLE Cliente (
+    id_cli INT AUTO_INCREMENT PRIMARY KEY,
+    nome_cli VARCHAR(255) NOT NULL,
+    nome_social VARCHAR(255),
+    documento_cli VARCHAR(50),
+    tipo_documento_cli VARCHAR(20),
+    data_nascimento_cli DATE,
+    data_cadastro_cli DATE,
+    email_cli VARCHAR(255),
+    rua_cli VARCHAR(255),
+    bairro_cli VARCHAR(255),
+    cidade_cli VARCHAR(255),
+    cep_cli VARCHAR(9),
+    telefone_cli VARCHAR(15),
+    uf_cli VARCHAR(2)
+);
+
+-- Criando a tabela de Produto
+CREATE TABLE Produto (
+    id_prod INT AUTO_INCREMENT PRIMARY KEY,
+    nome_prod VARCHAR(255) NOT NULL,
+    marca_prod VARCHAR(100),
+    desc_prod VARCHAR(255),
+    preco_compra_prod DECIMAL(10,2),
+    preco_venda_prod DECIMAL(10,2),
+    estoque_minimo_prod INT,
+    status_prod VARCHAR(20)
+);
+
+-- Criando a tabela de Serviço
+CREATE TABLE Servico (
+    id_serv INT AUTO_INCREMENT PRIMARY KEY,
+    nome_serv VARCHAR(255) NOT NULL,
+    descricao_serv VARCHAR(255),
+    preco_serv DECIMAL(10,2),
+    prazo_serv INT
+);
+
+-- Criando a tabela de Ordem de Serviço
+CREATE TABLE Ordem_Servico (
+    id_ordem_servico INT AUTO_INCREMENT PRIMARY KEY,
+    data_ordem_servico DATE NOT NULL,
+    id_cli INT,
+    id_usu INT,
+    FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli),
+    FOREIGN KEY (id_usu) REFERENCES Usuario(id_usu)
+);
+
+-- Criando a tabela de Itens da Ordem de Serviço
+CREATE TABLE Itens_os (
+    id_ordem INT,
+    id_serv INT,
+    preco_itens_os DECIMAL(10,2),
+    PRIMARY KEY (id_ordem, id_serv),
+    FOREIGN KEY (id_ordem) REFERENCES Ordem_Servico(id_ordem),
+    FOREIGN KEY (id_serv) REFERENCES Servico(id_serv)
+);
+
+-- Criando a tabela de Compra
+CREATE TABLE Compra (
+    id_compra INT AUTO_INCREMENT PRIMARY KEY,
+    data_compra DATE NOT NULL,
+    id_for INT,
+    id_usu INT,
+    previsao_entrega_compra DATE,
+    FOREIGN KEY (id_for) REFERENCES Fornecedor(id_for),
+    FOREIGN KEY (id_usu) REFERENCES Usuario(id_usu)
+);
+
+-- Criando a tabela de Itens da Compra
+CREATE TABLE Itens_Compra (
+    id_compra INT,
+    id_prod INT,
+    preco DECIMAL(10,2),
+    PRIMARY KEY (id_compra, id_prod),
+    FOREIGN KEY (id_compra) REFERENCES Compra(id_compra),
+    FOREIGN KEY (id_prod) REFERENCES Produto(id_prod)
+);
+
+-- Criando a tabela de Pedido
+CREATE TABLE Pedido (
+    id_ped INT AUTO_INCREMENT PRIMARY KEY,
+    data_ped DATE NOT NULL,
+    endereco_entrega_ped VARCHAR(255),
+    entregar_ped BOOLEAN,
+    id_cli INT,
+    id_usu INT,
+    FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli),
+    FOREIGN KEY (id_usu) REFERENCES Usuario(id_usu)
+);
+
+-- Criando a tabela de Itens do Pedido
+CREATE TABLE Itens_Pedido (
+    id_ped INT,
+    id_prod INT,
+    preco_itens_ped DECIMAL(10,2),
+    PRIMARY KEY (id_ped, id_prod),
+    FOREIGN KEY (id_ped) REFERENCES Pedido(id_ped),
+    FOREIGN KEY (id_prod) REFERENCES Produto(id_prod)
 );
