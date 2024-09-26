@@ -1,4 +1,6 @@
 -- SQLBook: Code
+-- Active: 1727386002368@@127.0.0.1@3306@phpmyadmin
+-- SQLBook: Code
 CREATE DATABASE FranciscoEmbalagens;
 
 USE FranciscoEmbalagens;
@@ -76,11 +78,10 @@ CREATE TABLE Ordem_Servico (
 
 -- Criando a tabela de Itens da Ordem de Serviço
 CREATE TABLE Itens_os (
-    id_ordem INT,
+    id_ordem_servico INT,
     id_serv INT,
     preco_itens_os DECIMAL(10,2),
-    PRIMARY KEY (id_ordem, id_serv),
-    FOREIGN KEY (id_ordem) REFERENCES Ordem_Servico(id_ordem),
+    FOREIGN KEY (id_ordem_servico) REFERENCES Ordem_Servico(id_ordem_servico),
     FOREIGN KEY (id_serv) REFERENCES Servico(id_serv)
 );
 
@@ -126,3 +127,9 @@ CREATE TABLE Itens_Pedido (
     FOREIGN KEY (id_ped) REFERENCES Pedido(id_ped),
     FOREIGN KEY (id_prod) REFERENCES Produto(id_prod)
 );
+
+INSERT INTO Usuario (nome_usu, email_usu, senha_usu) VALUES ('francisco', 'francisco@gmail.com', '123');
+
+-- O TINYINT tem a capacidade de armazenar pequenos números inteiros dentro do banco de dados.
+ALTER TABLE Fornecedor ADD COLUMN ativo TINYINT(1) DEFAULT 1;
+ALTER TABLE Cliente ADD COLUMN ativo TINYINT(1) DEFAULT 1;

@@ -14,9 +14,11 @@
 </head>
 
 <body>
-  <button><a href="fornecedor.php">FORNECEDOR</a></button>
-  <button><a href="produto.php">PRODUTO</a></button>
-  <button><a href="cliente.php">CLIENTE</a></button>
+  <?php
+  include_once 'includes/header.php';
+  session_start();
+  ?>
+
 </body>
 
 </html>

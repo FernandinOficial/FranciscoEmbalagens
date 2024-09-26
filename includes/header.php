@@ -52,8 +52,8 @@
                 </a>
                 <?php
                     echo '
-                    <a href="crud" id="crud-account">
-                        <li class="account" id="crud">CRUD</li>
+                    <a href="admin" id="crud-account">
+                        <li class="account" id="crud">ADMIN</li>
                     </a>'
                 ?>
             </div>
