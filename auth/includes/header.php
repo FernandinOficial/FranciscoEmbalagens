@@ -7,12 +7,14 @@
             if (isLoggedIn) {
                 const login = document.getElementById("login");
                 const logout = document.getElementById("logout");
+                const admin = document.getElementById("crud");
 
                 if (login) {
                     login.remove();
                 }
             }else{
                 logout.remove();
+                admin.remove();
             }
         });
     </script>
@@ -20,11 +22,6 @@
 <nav>
     <?php
         $nome = isset($_SESSION['nome']) ? $_SESSION['nome'] : 'NENHUM';  //definindo o nome do usuario em caso de nulo
-
-        if (isset($_SESSION['logado']) && $_SESSION['logado']) {
-            echo '<script>login.remove()</script>';
-        }
-
     ?>
     <!-- Bootstrap implementado-->
     <div class="dropdown">
@@ -54,7 +51,7 @@
                 <?php
                     echo '
                     <a href="crud/index.html" id="crud-account">
-                        <li class="account" id="crud">CRUD</li>
+                        <li id="crud" class="account" id="crud">ADMIN</li>
                     </a>'
                 ?>
             </div>

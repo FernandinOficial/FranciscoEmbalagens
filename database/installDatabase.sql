@@ -1,6 +1,7 @@
 -- SQLBook: Code
--- Active: 1727386002368@@127.0.0.1@3306@phpmyadmin
+-- Active: 1727393074004@@127.0.0.1@3306@phpmyadmin
 -- SQLBook: Code
+
 CREATE DATABASE FranciscoEmbalagens;
 
 USE FranciscoEmbalagens;
@@ -36,7 +37,7 @@ CREATE TABLE Cliente (
     tipo_documento_cli VARCHAR(20),
     data_nascimento_cli DATE,
     data_cadastro_cli DATE,
-    email_cli VARCHAR(255),
+    email_cli VARCHAR(255) NOT NULL,
     rua_cli VARCHAR(255),
     bairro_cli VARCHAR(255),
     cidade_cli VARCHAR(255),
@@ -133,3 +134,4 @@ INSERT INTO Usuario (nome_usu, email_usu, senha_usu) VALUES ('francisco', 'franc
 -- O TINYINT tem a capacidade de armazenar pequenos números inteiros dentro do banco de dados.
 ALTER TABLE Fornecedor ADD COLUMN ativo TINYINT(1) DEFAULT 1;
 ALTER TABLE Cliente ADD COLUMN ativo TINYINT(1) DEFAULT 1;
+SELECT * FROM 

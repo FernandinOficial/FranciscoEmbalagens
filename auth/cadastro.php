@@ -28,6 +28,7 @@
 
 <body>
     <?php
+    include_once 'includes/db_connect.php';
     require_once 'includes/header.php';
     ?>
     <main id="container">
@@ -63,7 +64,6 @@
             </div><br>
 
             <a href="login.php" id="a_cadastro">Já possui uma conta?</a>
-        </form>
         </form>
     </main>
     <?php
