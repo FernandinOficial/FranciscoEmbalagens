@@ -1,137 +1,134 @@
+-- Active: 1727726254369@@localhost@3306
 -- SQLBook: Code
--- Active: 1727393074004@@127.0.0.1@3306@phpmyadmin
--- SQLBook: Code
-
 CREATE DATABASE FranciscoEmbalagens;
 
-USE FranciscoEmbalagens;
-
--- Criando a tabela de Usuário
-CREATE TABLE Usuario (
-    id_usu INT AUTO_INCREMENT PRIMARY KEY,
-    cpf_usu VARCHAR(11) NOT NULL,
-    email_usu VARCHAR(255) NOT NULL,
-    nome_usu VARCHAR(255) NOT NULL,
-    senha_usu VARCHAR(255) NOT NULL
+-- Tabela Cliente
+CREATE TABLE FranciscoEmbalagens.Cliente (
+    id_cli INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    data_cadastro_cli DATETIME,
+    nome_cli VARCHAR(100) NOT NULL,
+    nome_social VARCHAR(100),
+    email_cli VARCHAR(100) NOT NULL,
+    telefone_cli VARCHAR(20),
+    celular_cli VARCHAR(20),
+    data_nascimento DATE,
+    tipo_do_documento_cli VARCHAR(50) NOT NULL,
+    documento_cli VARCHAR(50) NOT NULL,
+    uf VARCHAR(2) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    bairro VARCHAR(100) NOT NULL,
+    rua VARCHAR(100) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    complemento VARCHAR(100),
+    cep VARCHAR(10),
+    status_cli VARCHAR(20) NOT NULL
 );
 
--- Criando a tabela de Fornecedor
-CREATE TABLE Fornecedor (
-    id_for INT AUTO_INCREMENT PRIMARY KEY,
-    nome_for VARCHAR(255) NOT NULL,
-    email_for VARCHAR(255),
-    documento_for VARCHAR(50),
-    data_cadastro DATE,
-    bairro_for VARCHAR(255),
-    cidade_for VARCHAR(255),
-    cep_for VARCHAR(9),
-    celular_for VARCHAR(15)
+-- Tabela Usuario
+CREATE TABLE FranciscoEmbalagens.Usuario (
+    id_usu INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome_usu VARCHAR(100) NOT NULL,
+    email_usu VARCHAR(100) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    CPF VARCHAR(14) NOT NULL
 );
 
--- Criando a tabela de Cliente
-CREATE TABLE Cliente (
-    id_cli INT AUTO_INCREMENT PRIMARY KEY,
-    nome_cli VARCHAR(255) NOT NULL,
-    nome_social VARCHAR(255),
-    documento_cli VARCHAR(50),
-    tipo_documento_cli VARCHAR(20),
-    data_nascimento_cli DATE,
-    data_cadastro_cli DATE,
-    email_cli VARCHAR(255) NOT NULL,
-    rua_cli VARCHAR(255),
-    bairro_cli VARCHAR(255),
-    cidade_cli VARCHAR(255),
-    cep_cli VARCHAR(9),
-    telefone_cli VARCHAR(15),
-    uf_cli VARCHAR(2)
+-- Tabela Fornecedor
+CREATE TABLE FranciscoEmbalagens.Fornecedor (
+    id_for INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    data_cadastro_for DATETIME,
+    nome_for VARCHAR(100) NOT NULL,
+    email_for VARCHAR(100) NOT NULL,
+    telefone_for VARCHAR(20),
+    celular_for VARCHAR(20),
+    tipo_do_documento_for VARCHAR(50) NOT NULL,
+    documento_for VARCHAR(50) NOT NULL,
+    uf VARCHAR(2) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    bairro VARCHAR(100) NOT NULL,
+    rua VARCHAR(100) NOT NULL,
+    cep VARCHAR(10) NOT NULL,
+    status_for VARCHAR(20) NOT NULL
 );
 
--- Criando a tabela de Produto
-CREATE TABLE Produto (
-    id_prod INT AUTO_INCREMENT PRIMARY KEY,
-    nome_prod VARCHAR(255) NOT NULL,
-    marca_prod VARCHAR(100),
+-- Tabela Produto
+CREATE TABLE FranciscoEmbalagens.Produto (
+    id_prod INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome_prod VARCHAR(100) NOT NULL,
     desc_prod VARCHAR(255),
-    preco_compra_prod DECIMAL(10,2),
-    preco_venda_prod DECIMAL(10,2),
-    estoque_minimo_prod INT,
-    status_prod VARCHAR(20)
+    marca VARCHAR(100) NOT NULL,
+    preco_compra DECIMAL(10,2) NOT NULL,
+    preco_venda DECIMAL(10,2) NOT NULL,
+    estoque_minimo INT NOT NULL,
+    status_prod VARCHAR(20) NOT NULL
 );
 
--- Criando a tabela de Serviço
-CREATE TABLE Servico (
-    id_serv INT AUTO_INCREMENT PRIMARY KEY,
-    nome_serv VARCHAR(255) NOT NULL,
-    descricao_serv VARCHAR(255),
+-- Tabela Servico
+CREATE TABLE FranciscoEmbalagens.Servico (
+    id_serv INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome_serv VARCHAR(100) NOT NULL,
+    desc_serv VARCHAR(255),
+    prazo_serv DATETIME NOT NULL,
     preco_serv DECIMAL(10,2),
-    prazo_serv INT
+    status_serv VARCHAR(20) NOT NULL
 );
 
--- Criando a tabela de Ordem de Serviço
-CREATE TABLE Ordem_Servico (
-    id_ordem_servico INT AUTO_INCREMENT PRIMARY KEY,
-    data_ordem_servico DATE NOT NULL,
+-- Tabela Items_os
+CREATE TABLE FranciscoEmbalagens.Items_os (
+    id_ordem INT,
+    id_serv INT,
+    preco_items_os DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (id_serv) REFERENCES Servico(id_serv)
+);
+
+-- Tabela Ordem_servico
+CREATE TABLE FranciscoEmbalagens.Ordem_servico (
+    id_ordem INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     id_cli INT,
     id_usu INT,
+    data_ordem_servico DATETIME NOT NULL,
     FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli),
     FOREIGN KEY (id_usu) REFERENCES Usuario(id_usu)
 );
 
--- Criando a tabela de Itens da Ordem de Serviço
-CREATE TABLE Itens_os (
-    id_ordem_servico INT,
-    id_serv INT,
-    preco_itens_os DECIMAL(10,2),
-    FOREIGN KEY (id_ordem_servico) REFERENCES Ordem_Servico(id_ordem_servico),
-    FOREIGN KEY (id_serv) REFERENCES Servico(id_serv)
-);
-
--- Criando a tabela de Compra
-CREATE TABLE Compra (
-    id_compra INT AUTO_INCREMENT PRIMARY KEY,
-    data_compra DATE NOT NULL,
+-- Tabela Compra
+CREATE TABLE FranciscoEmbalagens.Compra (
+    id_compra INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    data_compra DATETIME NOT NULL,
     id_for INT,
     id_usu INT,
-    previsao_entrega_compra DATE,
+    prev_entrega DATETIME NOT NULL,
+    data_entrega_efetiva DATETIME NOT NULL,
     FOREIGN KEY (id_for) REFERENCES Fornecedor(id_for),
     FOREIGN KEY (id_usu) REFERENCES Usuario(id_usu)
 );
 
--- Criando a tabela de Itens da Compra
-CREATE TABLE Itens_Compra (
+-- Tabela Items_compra
+CREATE TABLE FranciscoEmbalagens.Items_compra (
     id_compra INT,
     id_prod INT,
-    preco DECIMAL(10,2),
-    PRIMARY KEY (id_compra, id_prod),
+    preco_items_compra DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (id_compra) REFERENCES Compra(id_compra),
     FOREIGN KEY (id_prod) REFERENCES Produto(id_prod)
 );
 
--- Criando a tabela de Pedido
-CREATE TABLE Pedido (
-    id_ped INT AUTO_INCREMENT PRIMARY KEY,
-    data_ped DATE NOT NULL,
-    endereco_entrega_ped VARCHAR(255),
-    entregar_ped BOOLEAN,
+-- Tabela Pedido
+CREATE TABLE FranciscoEmbalagens.Pedido (
+    id_ped INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    data_ped DATETIME NOT NULL,
     id_cli INT,
     id_usu INT,
+    endereco_entrega VARCHAR(255) NOT NULL,
+    data_entrega_ped DATETIME NOT NULL,
     FOREIGN KEY (id_cli) REFERENCES Cliente(id_cli),
     FOREIGN KEY (id_usu) REFERENCES Usuario(id_usu)
 );
 
--- Criando a tabela de Itens do Pedido
-CREATE TABLE Itens_Pedido (
+-- Tabela Items_pedido
+CREATE TABLE FranciscoEmbalagens.Items_pedido (
     id_ped INT,
     id_prod INT,
-    preco_itens_ped DECIMAL(10,2),
-    PRIMARY KEY (id_ped, id_prod),
+    preco_vendido DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (id_ped) REFERENCES Pedido(id_ped),
     FOREIGN KEY (id_prod) REFERENCES Produto(id_prod)
 );
-
-INSERT INTO Usuario (nome_usu, email_usu, senha_usu) VALUES ('francisco', 'francisco@gmail.com', '123');
-
--- O TINYINT tem a capacidade de armazenar pequenos números inteiros dentro do banco de dados.
-ALTER TABLE Fornecedor ADD COLUMN ativo TINYINT(1) DEFAULT 1;
-ALTER TABLE Cliente ADD COLUMN ativo TINYINT(1) DEFAULT 1;
-SELECT * FROM 
