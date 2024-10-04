@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<p>Senha é obrigatória.</p>";
     } else {
         // Prepara a consulta
-        $stmt = $mysqli->prepare("SELECT nome_usu FROM `Usuario` WHERE email_usu = ? AND senha_usu = ?");
+        $stmt = $mysqli->prepare("SELECT nome_usu FROM `Usuario` WHERE email_usu = ? AND senha = ?");
         $stmt->bind_param('ss', $email, $password);
         $stmt->execute();
         $result = $stmt->get_result();

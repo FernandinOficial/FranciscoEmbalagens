@@ -27,10 +27,24 @@ CREATE TABLE FranciscoEmbalagens.Cliente (
 -- Tabela Usuario
 CREATE TABLE FranciscoEmbalagens.Usuario (
     id_usu INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    data_cadastro_usu DATETIME,
     nome_usu VARCHAR(100) NOT NULL,
+    nome_social VARCHAR(100),
     email_usu VARCHAR(100) NOT NULL,
-    senha VARCHAR(255) NOT NULL,
-    CPF VARCHAR(14) NOT NULL
+    telefone_usu VARCHAR(20),
+    celular_usu VARCHAR(20),
+    data_nascimento DATE,
+    tipo_do_documento_usu VARCHAR(50) NOT NULL,
+    documento_usu VARCHAR(50) NOT NULL,
+    uf VARCHAR(2) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    bairro VARCHAR(100) NOT NULL,
+    rua VARCHAR(100) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    complemento VARCHAR(100),
+    cep VARCHAR(10),
+    status_usu VARCHAR(20) NOT NULL,
+    senha VARCHAR(255) NOT NULL
 );
 
 -- Tabela Fornecedor
