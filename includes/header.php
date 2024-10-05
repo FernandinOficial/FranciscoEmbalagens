@@ -7,15 +7,18 @@
                 const login = document.getElementById("login");
                 const logout = document.getElementById("logout");
                 const adminCrud = document.getElementById("adminCrud");
+                const register = document.getElementById("register");
 
                 if (login) {
                     login.remove();
+
                 }
                 
             }else{
                 logout.remove();
                 console.log("remove admin");
                 adminCrud.remove();
+                register.remove();
             }
         });
     </script>
@@ -45,6 +48,9 @@
             <div id="account">
                 <a href="auth/login.php" id="login-account">
                     <li class="account" id="login">LOGIN</li>
+                </a>
+                <a href="auth/cadastro.php" id="login-account">
+                    <li class="account" id="register" style="color: #38c938;">CADASTRAR</li>
                 </a>
                 <a href="includes/logout.php">
                     <li class="account" id="logout">LOGOUT</li>

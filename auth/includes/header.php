@@ -34,7 +34,7 @@
                         if ($nome == "NENHUM") {
                             echo '<a href="../index.php">HOME</a>';
                         } else {
-                            echo '<a href="auth/login.php" id="nome-nav">Olá, ', $nome, '</a>';
+                            echo '<a href="login.php" id="nome-nav">Olá, ', $nome, '</a>';
                         }
                         ?></a></button>
                 </a></button>
@@ -47,10 +47,10 @@
                 <a href="login.php" id="login-account">
                     <li class="account" id="login">LOGIN</li>
                 </a>
-                <a href="includes/logout.php">
+                <a href="../includes/logout.php">
                     <li class="account" id="logout">LOGOUT</li>
                 </a>
-                <a href="crud/index.html" id="crud-account">
+                <a href="../admin/index.php" id="crud-account">
                     <li class="account" id="adminCrud">ADMIN</li>
                 </a>
             </div>

@@ -1,3 +1,6 @@
+<?php 
+include_once 'includes/auth.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -59,11 +62,10 @@
             </div><br>
 
             <div class="img_cadastro">
+                Register With:
                 <a href="#"><img src="../multimidia/images/google.png" alt="Ícone do google"></a>
                 <a href="#"><img src="../multimidia/images/facebook.png" alt="Ícone do facebook"></a>
             </div><br>
-
-            <a href="login.php" id="a_cadastro">Já possui uma conta?</a>
         </form>
     </main>
     <?php

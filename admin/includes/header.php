@@ -14,7 +14,7 @@
             <li><button class="dropdown-item" type="button"><a href="fornecedor.php">Fornecedor</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="itens_compra.php">Itens Compra</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="itens_os.php">Itens da OS</a></button></li>
-            <li><button class="dropdown-item" type="button"><a href="ordem_servico.php">Ordem de Serviço</a></button>
+            <li><button class="dropdown-item" type="button"><a href="ordem_servico.php">Ordem Serviço</a></button>
             </li>
             <li><button class="dropdown-item" type="button"><a href="produto.php">Produtos</a></button></li>
             <li><button class="dropdown-item" type="button"><a href="servico.php">Serviço</a></button></li>

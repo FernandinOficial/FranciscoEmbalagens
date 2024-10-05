@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+     
+if (isset($_SESSION['logado'])){
+    header('Location:../index.php');
+    exit;
+  }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -29,7 +37,6 @@
 <body>
 <?php
 include_once 'includes/db_connect.php'; // Incluindo a conexão com o banco
-session_start();
 
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -94,6 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div><br>
 
             <div class="img_icons">
+                Login With:
                 <a href="#"><img src="../multimidia/images/google.png" alt="Ícone do google"></a>
                 <a href="#"><img src="../multimidia/images/facebook.png" alt="Ícone do facebook"></a>
             </div><br>

@@ -1,3 +1,7 @@
+<?php 
+$_SESSION['logado'] = false;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
