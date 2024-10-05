@@ -1,11 +1,11 @@
 <?php
-include_once 'auth.php';  //verificar se esta logado
+include_once 'auth.php';  //Verificar se está logado
 include_once '../auth/includes/db_connect.php';
 
 $erro = '';
 $success = '';
 
-// Inserir/Atualizar Serviço
+//Inserir/Atualizar Serviço
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["nome_serv"], $_POST["preco_serv"], $_POST["prazo_serv"])) {
         if (empty($_POST["nome_serv"]) || empty($_POST["preco_serv"]) || empty($_POST["prazo_serv"])) {
@@ -17,18 +17,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $preco_serv = $_POST["preco_serv"];
             $prazo_serv = $_POST["prazo_serv"];
 
+            //Formatando prazo_serv para DATETIME
+            $prazo_serv = date('Y-m-d H:i:s', strtotime("+$prazo_serv days"));
+
             if ($id_serv == -1) { // Inserir novo serviço
-                $stmt = $mysqli->prepare("INSERT INTO Servico (nome_serv, descricao_serv, preco_serv, prazo_serv) VALUES (?, ?, ?, ?)");
-                $stmt->bind_param("ssdi", $nome_serv, $descricao_serv, $preco_serv, $prazo_serv);
+                $stmt = $mysqli->prepare("INSERT INTO Servico (nome_serv, desc_serv, preco_serv, prazo_serv, status_serv) VALUES (?, ?, ?, ?, 'ativo')");
+                $stmt->bind_param("ssds", $nome_serv, $descricao_serv, $preco_serv, $prazo_serv);
 
                 if ($stmt->execute()) {
                     $success = "Serviço cadastrado com sucesso.";
                 } else {
                     $erro = "Erro ao cadastrar serviço: " . $stmt->error;
                 }
-            } else { // Atualizar serviço existente
-                $stmt = $mysqli->prepare("UPDATE Servico SET nome_serv = ?, descricao_serv = ?, preco_serv = ?, prazo_serv = ? WHERE id_serv = ?");
-                $stmt->bind_param("ssdii", $nome_serv, $descricao_serv, $preco_serv, $prazo_serv, $id_serv);
+            } else { //Atualizar serviço existente
+                $stmt = $mysqli->prepare("UPDATE Servico SET nome_serv = ?, desc_serv = ?, preco_serv = ?, prazo_serv = ? WHERE id_serv = ?");
+                $stmt->bind_param("ssdsi", $nome_serv, $descricao_serv, $preco_serv, $prazo_serv, $id_serv);
 
                 if ($stmt->execute()) {
                     $success = "Serviço atualizado com sucesso.";
@@ -42,10 +45,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Desabilitar Serviço
+//Desabilitar Serviço
 if (isset($_GET["id_serv"]) && is_numeric($_GET["id_serv"]) && isset($_GET["del"])) {
     $id_serv = (int) $_GET["id_serv"];
-    $stmt = $mysqli->prepare("UPDATE Servico SET ativo = 0 WHERE id_serv = ?"); // Supondo que há uma coluna 'ativo' na tabela
+    $stmt = $mysqli->prepare("UPDATE Servico SET status_serv = 'desabilitado' WHERE id_serv = ?"); //Atualizando para 'desabilitado'
     $stmt->bind_param('i', $id_serv);
     if ($stmt->execute()) {
         $success = "Serviço desabilitado com sucesso.";
@@ -54,8 +57,8 @@ if (isset($_GET["id_serv"]) && is_numeric($_GET["id_serv"]) && isset($_GET["del"
     }
 }
 
-// Listar Serviços
-$result = $mysqli->query("SELECT * FROM Servico"); // Todos os serviços
+//Listar Serviços
+$result = $mysqli->query("SELECT * FROM Servico WHERE status_serv = 'ativo'"); // Somente serviços ativos
 ?>
 
 <!DOCTYPE html>
@@ -64,19 +67,17 @@ $result = $mysqli->query("SELECT * FROM Servico"); // Todos os serviços
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD de Serviços</title>
+    <title>Serviços | Francisco Embalagens</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
-    <?php
-    include_once 'includes/header.php';
-    ?>
+    <?php include_once 'includes/header.php'; ?>
     <h1>Cadastro de Serviços</h1>
 
     <?php if (!empty($erro)): ?>
@@ -131,11 +132,12 @@ $result = $mysqli->query("SELECT * FROM Servico"); // Todos os serviços
                 <tr>
                     <td><?= htmlspecialchars($servico['id_serv']) ?></td>
                     <td><?= htmlspecialchars($servico['nome_serv']) ?></td>
-                    <td><?= htmlspecialchars($servico['descricao_serv']) ?></td>
+                    <td><?= htmlspecialchars($servico['desc_serv']) ?></td>
                     <td><?= htmlspecialchars($servico['preco_serv']) ?></td>
                     <td><?= htmlspecialchars($servico['prazo_serv']) ?></td>
                     <td>
-                        <a href="servico.php?id_serv=<?= $servico['id_serv'] ?>&del=1"onclick="return confirm('Tem certeza que deseja desabilitar este serviço?')">Desabilitar</a>
+                        <a href="servico.php?id_serv=<?= $servico['id_serv'] ?>&del=1"
+                            onclick="return confirm('Tem certeza que deseja desabilitar este serviço?')">Desabilitar</a>
                     </td>
                 </tr>
             <?php endwhile; ?>

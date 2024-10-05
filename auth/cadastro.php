@@ -46,13 +46,61 @@ include_once 'includes/auth.php';
                 <i class="fa-solid fa-user"></i>
                 <input type="text" id="name" name="name" required><br><br>
 
-                <label for="lastname">Sobrenome</label><br>
+                <label for="lastname">Nome Social</label><br>
                 <i class="fa-solid fa-user"></i>
                 <input type="text" id="lastname" name="lastname"><br><br>
 
                 <label for="email">E-mail</label><br>
                 <i class="fa-solid fa-envelope"></i>
                 <input type="email" id="email" name="email" required><br><br>
+
+                <label for="">Telefone</label><br>
+                <i></i>
+                <input type="text" placeholder="(00) 1234-5678"><br><br>
+
+                <label for="">Celular</label><br>
+                <i></i>
+                <input type="text" placeholder="(00) 12345-6789"><br><br>
+                
+                <label for="">Data de Nascimento</label><br>
+                <i></i>
+                <input type="date"><br><br>
+
+                <label for="">Tipo do Documento</label><br>
+                <i></i>
+                <input type="text" required><br><br>
+
+                <label for="">Documento</label><br>
+                <i></i>
+                <input type="text" required><br><br>
+
+                <label for="">CEP</label><br>
+                <i></i>
+                <input type="text" placeholder="00000-000"><br><br>
+                
+                <label for="">Rua</label><br>
+                <i></i>
+                <input type="text" required><br><br>
+
+                <label for="">Número</label><br>
+                <i></i>
+                <input type="text" required><br><br>
+
+                <label for="">Bairro</label><br>
+                <i></i>
+                <input type="text" required><br><br>
+
+                <label for="">Cidade</label><br>
+                <i></i>
+                <input type="text" required><br><br>
+
+                <label for="">UF</label><br>
+                <i></i>
+                <input type="text" required><br><br>
+
+                <label for="">Complemento</label><br>
+                <i></i>
+                <input type="text"><br><br>
 
                 <label for="password">Senha</label><br>
                 <i class="fa-solid fa-key"></i>

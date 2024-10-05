@@ -1,5 +1,5 @@
 <?php
-include_once 'auth.php';  //verificar se esta logado
+include_once 'auth.php';  // verificar se está logado
 include_once '../auth/includes/db_connect.php';
 
 $erro = '';
@@ -7,22 +7,21 @@ $success = '';
 
 // Inserir/Atualizar Produto
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["nome_prod"], $_POST["preco_compra_prod"], $_POST["preco_venda_prod"], $_POST["estoque_minimo_prod"], $_POST["status_prod"])) {
-        if (empty($_POST["nome_prod"]) || empty($_POST["preco_compra_prod"]) || empty($_POST["preco_venda_prod"]) || empty($_POST["estoque_minimo_prod"]) || empty($_POST["status_prod"])) {
+    if (isset($_POST["nome_prod"], $_POST["preco_venda_prod"], $_POST["estoque_minimo_prod"], $_POST["status_prod"])) {
+        if (empty($_POST["nome_prod"]) || empty($_POST["preco_venda_prod"]) || empty($_POST["estoque_minimo_prod"]) || empty($_POST["status_prod"])) {
             $erro = "Todos os campos são obrigatórios.";
         } else {
             $id_prod = isset($_POST["id_prod"]) ? $_POST["id_prod"] : -1;
             $nome_prod = $_POST["nome_prod"];
-            $marca_prod = $_POST["marca_prod"];
+            $marca = $_POST["marca"];
             $desc_prod = $_POST["desc_prod"];
-            $preco_compra_prod = $_POST["preco_compra_prod"];
             $preco_venda_prod = $_POST["preco_venda_prod"];
             $estoque_minimo_prod = $_POST["estoque_minimo_prod"];
             $status_prod = $_POST["status_prod"];
 
             if ($id_prod == -1) { // Inserir novo produto
-                $stmt = $mysqli->prepare("INSERT INTO Produto (nome_prod, marca_prod, desc_prod, preco_compra_prod, preco_venda_prod, estoque_minimo_prod, status_prod) VALUES (?, ?, ?, ?, ?, ?, ?)");
-                $stmt->bind_param("ssssdis", $nome_prod, $marca_prod, $desc_prod, $preco_compra_prod, $preco_venda_prod, $estoque_minimo_prod, $status_prod);
+                $stmt = $mysqli->prepare("INSERT INTO Produto (nome_prod, marca, desc_prod, preco_venda, estoque_minimo, status_prod) VALUES (?, ?, ?, ?, ?, ?)");
+                $stmt->bind_param("sssdis", $nome_prod, $marca, $desc_prod, $preco_venda_prod, $estoque_minimo_prod, $status_prod);
 
                 if ($stmt->execute()) {
                     $success = "Produto cadastrado com sucesso.";
@@ -30,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $erro = "Erro ao cadastrar produto: " . $stmt->error;
                 }
             } else { // Atualizar produto existente
-                $stmt = $mysqli->prepare("UPDATE Produto SET nome_prod = ?, marca_prod = ?, desc_prod = ?, preco_compra_prod = ?, preco_venda_prod = ?, estoque_minimo_prod = ?, status_prod = ? WHERE id_prod = ?");
-                $stmt->bind_param("ssssdisi", $nome_prod, $marca_prod, $desc_prod, $preco_compra_prod, $preco_venda_prod, $estoque_minimo_prod, $status_prod, $id_prod);
+                $stmt = $mysqli->prepare("UPDATE Produto SET nome_prod = ?, marca = ?, desc_prod = ?, preco_venda = ?, estoque_minimo = ?, status_prod = ? WHERE id_prod = ?");
+                $stmt->bind_param("sssdisi", $nome_prod, $marca, $desc_prod, $preco_venda_prod, $estoque_minimo_prod, $status_prod, $id_prod);
 
                 if ($stmt->execute()) {
                     $success = "Produto atualizado com sucesso.";
@@ -67,12 +66,12 @@ $result = $mysqli->query("SELECT * FROM Produto WHERE status_prod != 'Desabilita
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD de Produtos</title>
+    <title>Produtos | Francisco Embalagens</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/style.css">
 </head>
 
@@ -98,18 +97,13 @@ $result = $mysqli->query("SELECT * FROM Produto WHERE status_prod != 'Desabilita
         <input type="text" name="nome_prod"
             value="<?= isset($_POST['nome_prod']) ? htmlspecialchars($_POST['nome_prod']) : '' ?>" required><br><br>
 
-        <label for="marca_prod">Marca:</label><br>
-        <input type="text" name="marca_prod"
-            value="<?= isset($_POST['marca_prod']) ? htmlspecialchars($_POST['marca_prod']) : '' ?>"><br><br>
+        <label for="marca">Marca:</label><br>
+        <input type="text" name="marca"
+            value="<?= isset($_POST['marca']) ? htmlspecialchars($_POST['marca']) : '' ?>"><br><br>
 
         <label for="desc_prod">Descrição:</label><br>
         <input type="text" name="desc_prod"
             value="<?= isset($_POST['desc_prod']) ? htmlspecialchars($_POST['desc_prod']) : '' ?>"><br><br>
-
-        <label for="preco_compra_prod">Preço de Compra:</label><br>
-        <input type="number" step="0.01" name="preco_compra_prod"
-            value="<?= isset($_POST['preco_compra_prod']) ? htmlspecialchars($_POST['preco_compra_prod']) : '' ?>"
-            required><br><br>
 
         <label for="preco_venda_prod">Preço de Venda:</label><br>
         <input type="number" step="0.01" name="preco_venda_prod"
@@ -140,7 +134,6 @@ $result = $mysqli->query("SELECT * FROM Produto WHERE status_prod != 'Desabilita
                 <th>Nome</th>
                 <th>Marca</th>
                 <th>Descrição</th>
-                <th>Preço de Compra</th>
                 <th>Preço de Venda</th>
                 <th>Estoque Mínimo</th>
                 <th>Status</th>
@@ -152,11 +145,10 @@ $result = $mysqli->query("SELECT * FROM Produto WHERE status_prod != 'Desabilita
                 <tr>
                     <td><?= htmlspecialchars($produto['id_prod']) ?></td>
                     <td><?= htmlspecialchars($produto['nome_prod']) ?></td>
-                    <td><?= htmlspecialchars($produto['marca_prod']) ?></td>
+                    <td><?= htmlspecialchars($produto['marca']) ?></td>
                     <td><?= htmlspecialchars($produto['desc_prod']) ?></td>
-                    <td><?= htmlspecialchars($produto['preco_compra_prod']) ?></td>
-                    <td><?= htmlspecialchars($produto['preco_venda_prod']) ?></td>
-                    <td><?= htmlspecialchars($produto['estoque_minimo_prod']) ?></td>
+                    <td><?= htmlspecialchars($produto['preco_venda']) ?></td>
+                    <td><?= htmlspecialchars($produto['estoque_minimo']) ?></td>
                     <td><?= htmlspecialchars($produto['status_prod']) ?></td>
                     <td>
                         <a href="produto.php?id_prod=<?= $produto['id_prod'] ?>&del=1"
