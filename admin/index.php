@@ -1,3 +1,6 @@
+<?php
+include_once 'auth.php';  //verificar se esta logado
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,14 +15,8 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../style/style.css" />
 </head>
+<?php
 
-<body>
-  <?php
+include_once 'includes/header.php';
 
-    include_once 'includes/header.php';
-    session_start();
-  ?>
-
-</body>
-
-</html>
+?>

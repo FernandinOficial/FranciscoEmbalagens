@@ -7,21 +7,21 @@
             if (isLoggedIn) {
                 const login = document.getElementById("login");
                 const logout = document.getElementById("logout");
-                const admin = document.getElementById("crud");
+                const adminCrud = document.getElementById("adminCrud");
 
                 if (login) {
                     login.remove();
                 }
-            }else{
+            } else {
                 logout.remove();
-                admin.remove();
+                adminCrud.remove();
             }
         });
     </script>
 </head>
 <nav>
     <?php
-        $nome = isset($_SESSION['nome']) ? $_SESSION['nome'] : 'NENHUM';  //definindo o nome do usuario em caso de nulo
+    $nome = isset($_SESSION['nome']) ? $_SESSION['nome'] : 'NENHUM';  //definindo o nome do usuario em caso de nulo
     ?>
     <!-- Bootstrap implementado-->
     <div class="dropdown">
@@ -29,17 +29,19 @@
             <img src="../multimidia/images/navButton_39x45.png" alt="Botão de Navegação">
         </button>
         <ul class="dropdown-menu">
-        <li><button class="dropdown-item" type="button"><a id="home-nav"
-                        href="auth/login.php"><?php  
-                                                if ($nome == "NENHUM"){
-                                                    echo 'HOME';
-                                                }else{
-                                                    echo '<a id="nome-nav">Olá, ', $nome,'</a>';
-                                                } 
-                                              ?></a></button>
+            <li><button class="dropdown-item" type="button"><a id="home-nav">
+                        <?php
+                        if ($nome == "NENHUM") {
+                            echo '<a href="../index.php">HOME</a>';
+                        } else {
+                            echo '<a href="auth/login.php" id="nome-nav">Olá, ', $nome, '</a>';
+                        }
+                        ?></a></button>
+                </a></button>
             </li>
-            <li><button class="dropdown-item" type="button"><a href="produtos.php">PRODUTOS</a></button></li>
-            <li><button class="dropdown-item" type="button"><a id="contato-nav" href="#footer-logo">CONTATO</a></button></li>
+            <li><button class="dropdown-item" type="button"><a href="../produtos.php">PRODUTOS</a></button></li>
+            <li><button class="dropdown-item" type="button"><a id="contato-nav" href="#footer-logo">CONTATO</a></button>
+            </li>
             <li><button class="dropdown-item" type="button"><a onclick="togglePopup()">SOBRE</a></button></li>
             <div id="account">
                 <a href="login.php" id="login-account">
@@ -48,12 +50,9 @@
                 <a href="includes/logout.php">
                     <li class="account" id="logout">LOGOUT</li>
                 </a>
-                <?php
-                    echo '
-                    <a href="crud/index.html" id="crud-account">
-                        <li id="crud" class="account" id="crud">ADMIN</li>
-                    </a>'
-                ?>
+                <a href="crud/index.html" id="crud-account">
+                    <li class="account" id="adminCrud">ADMIN</li>
+                </a>
             </div>
         </ul>
     </div>

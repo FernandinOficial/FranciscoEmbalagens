@@ -6,7 +6,7 @@
             if (isLoggedIn) {
                 const login = document.getElementById("login");
                 const logout = document.getElementById("logout");
-                const admin = document.getElementById("crud");
+                const adminCrud = document.getElementById("adminCrud");
 
                 if (login) {
                     login.remove();
@@ -14,8 +14,8 @@
                 
             }else{
                 logout.remove();
-                console.log("admin");
-                admin.remove();
+                console.log("remove admin");
+                adminCrud.remove();
             }
         });
     </script>
@@ -31,11 +31,11 @@
         </button>
         <ul class="dropdown-menu">
             <li><button class="dropdown-item" type="button"><a id="home-nav"
-                        href="auth/login.php"><?php  
+                                            ><?php  
                                                 if ($nome == "NENHUM"){
-                                                    echo 'HOME';
+                                                    echo '<a href="index.php">HOME</a>';
                                                 }else{
-                                                    echo '<a id="nome-nav">Olá, ', $nome,'</a>';
+                                                    echo '<a href="auth/login.php" id="nome-nav">Olá, ', $nome,'</a>';
                                                 } 
                                               ?></a></button>
             </li>
@@ -50,7 +50,7 @@
                     <li class="account" id="logout">LOGOUT</li>
                 </a>
                 <a href="admin">
-                    <li class="account" id="crud">ADMIN</li>
+                    <li class="account" id="adminCrud">ADMIN</li>
                 </a>
             </div>
         </ul>

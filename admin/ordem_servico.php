@@ -1,4 +1,5 @@
 <?php
+include_once 'auth.php';  //verificar se esta logado
 include_once '../auth/includes/db_connect.php';
 
 $erro = '';
