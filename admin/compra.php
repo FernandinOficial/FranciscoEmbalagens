@@ -131,7 +131,7 @@ $result = $mysqli->query("SELECT c.*, f.nome_for, u.nome_usu FROM Compra c LEFT 
             required><br><br>
 
         <label for="preco_compra">Preço da Compra:</label><br>
-        <input type="number" step="0.01" name="preco_compra"
+        <input type="number" step="0.01" name="preco_compra" min="0.01"
             value="<?= isset($_POST['preco_compra']) ? htmlspecialchars($_POST['preco_compra']) : '' ?>"
             required><br><br>
 

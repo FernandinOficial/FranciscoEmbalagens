@@ -101,15 +101,25 @@ $result = $mysqli->query("SELECT * FROM Cliente WHERE status_cli = 'ativo'");
         <input type="text" name="nome_cli"
             value="<?= isset($_POST['nome_cli']) ? htmlspecialchars($_POST['nome_cli']) : '' ?>" required><br><br>
 
+        <label for="tipo_do_documento_cli">Tipo de Documento:</label><br>
+        <select name="tipo_do_documento_cli">
+            <optgroup label="Documento">
+                <option value="invalido">SELECIONE</option>
+                <option value="cpf">CPF</option>
+                <option value="rg">RG</option>
+                <option value="cnpj">CNPJ</option>
+            </optgroup>
+        </select><br><br>
+
         <label for="documento_cli">Documento:</label><br>
-        <input type="text" name="documento_cli"
+        <input type="optgroup" name="documento_cli"
             value="<?= isset($_POST['documento_cli']) ? htmlspecialchars($_POST['documento_cli']) : '' ?>"
             required><br><br>
 
-        <label for="tipo_do_documento_cli">Tipo de Documento:</label><br>
+        <!-- <label for="tipo_do_documento_cli">Tipo de Documento:</label><br>
         <input type="text" name="tipo_do_documento_cli"
-            value="<?= isset($_POST['tipo_do_documento_cli']) ? htmlspecialchars($_POST['tipo_do_documento_cli']) : '' ?>"
-            required><br><br>
+            value="<?//= isset($_POST['tipo_do_documento_cli']) ? htmlspecialchars($_POST['tipo_do_documento_cli']) : '' ?>"
+            required><br><br> -->
 
         <label for="data_nascimento">Data de Nascimento:</label><br>
         <input type="date" name="data_nascimento"
@@ -117,7 +127,7 @@ $result = $mysqli->query("SELECT * FROM Cliente WHERE status_cli = 'ativo'");
             required><br><br>
 
         <label for="data_cadastro_cli">Data de Cadastro:</label><br>
-        <input type="datetime-local" name="data_cadastro_cli"
+        <input type="date" name="data_cadastro_cli"
             value="<?= isset($_POST['data_cadastro_cli']) ? htmlspecialchars($_POST['data_cadastro_cli']) : '' ?>"
             required><br><br>
 
@@ -147,10 +157,41 @@ $result = $mysqli->query("SELECT * FROM Cliente WHERE status_cli = 'ativo'");
             required><br><br>
 
         <label for="uf">UF:</label><br>
-        <input type="text" name="uf" value="<?= isset($_POST['uf']) ? htmlspecialchars($_POST['uf']) : '' ?>"
-            required><br><br>
+        <!-- <input type="text" name="uf" value="<?//= isset($_POST['uf']) ? htmlspecialchars($_POST['uf']) : '' ?>"
+            required><br><br> -->
 
-        <button type="submit">Salvar</button>
+        <select required>
+            <option value="invalido">SELECIONE</option>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+        </select><br><br>
+
+        <button type="submit">Salvar</button><br>
     </form>
 
     <!-- Listar clientes -->

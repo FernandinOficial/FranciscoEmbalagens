@@ -112,14 +112,54 @@ if (!$fornecedores) {
             value="<?= isset($_POST['email_for']) ? htmlspecialchars($_POST['email_for']) : '' ?>" required><br><br>
 
         <label for="documento_for">Documento:</label><br>
-        <input type="text" name="documento_for"
+        <input type="text" name="documento_for" id="documento_for" placeholder="99.999.999/0001-99" maxlength="18"
             value="<?= isset($_POST['documento_for']) ? htmlspecialchars($_POST['documento_for']) : '' ?>"
             required><br><br>
+
+        <script>
+            document.getElementById('documento_for').addEventListener('input', function (event) {
+                // Chama a função para formatar o CNPJ
+                let valorFormatado = MascaraParaLabel(event.target.value);
+
+                // Atualiza o campo com o valor formatado
+                event.target.value = valorFormatado;
+            });
+
+            function MascaraParaLabel(valorDoTextBox) {
+                // Remove caracteres não numéricos
+                valorDoTextBox = valorDoTextBox.replace(/\D/g, '');
+
+                // Aplica a máscara se o comprimento for menor ou igual a 14 caracteres
+                if (valorDoTextBox.length <= 14) {
+                    // Coloca ponto entre o segundo e o terceiro dígitos
+                    valorDoTextBox = valorDoTextBox.replace(/^(\d{2})(\d)/, "$1.$2");
+
+                    // Coloca ponto entre o quinto e o sexto dígitos
+                    valorDoTextBox = valorDoTextBox.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
+
+                    // Coloca uma barra entre o oitavo e o nono dígitos
+                    valorDoTextBox = valorDoTextBox.replace(/^(\d{2})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3/$4");
+
+                    // Coloca um hífen depois do bloco de quatro dígitos
+                    valorDoTextBox = valorDoTextBox.replace(/^(\d{2})\.(\d{3})\.(\d{3})\/(\d{4})(\d)/, "$1.$2.$3/$4-$5");
+                }
+
+                return valorDoTextBox;
+            }
+
+        </script>
+
+
+
 
         <label for="data_cadastro_for">Data de Cadastro:</label><br>
         <input type="datetime-local" name="data_cadastro_for"
             value="<?= isset($_POST['data_cadastro_for']) ? htmlspecialchars($_POST['data_cadastro_for']) : '' ?>"
             required><br><br>
+
+        <label for="cep_for">CEP:</label><br>
+        <input type="text" name="cep_for"
+            value="<?= isset($_POST['cep_for']) ? htmlspecialchars($_POST['cep_for']) : '' ?>" required><br><br>
 
         <label for="bairro_for">Bairro:</label><br>
         <input type="text" name="bairro_for"
@@ -129,26 +169,57 @@ if (!$fornecedores) {
         <input type="text" name="cidade_for"
             value="<?= isset($_POST['cidade_for']) ? htmlspecialchars($_POST['cidade_for']) : '' ?>" required><br><br>
 
-        <label for="uf_for">UF:</label><br>
-        <input type="text" name="uf_for"
-            value="<?= isset($_POST['uf_for']) ? htmlspecialchars($_POST['uf_for']) : '' ?>" required><br><br>
-
-        <label for="cep_for">CEP:</label><br>
-        <input type="text" name="cep_for"
-            value="<?= isset($_POST['cep_for']) ? htmlspecialchars($_POST['cep_for']) : '' ?>" required><br><br>
-
         <label for="telefone_for">Telefone:</label><br>
-        <input type="text" name="telefone_for"
+        <input type="text" name="telefone_for" maxlength="8"
             value="<?= isset($_POST['telefone_for']) ? htmlspecialchars($_POST['telefone_for']) : '' ?>"><br><br>
 
         <label for="celular_for">Celular:</label><br>
-        <input type="text" name="celular_for"
+        <input type="text" name="celular_for" maxlength="11"
             value="<?= isset($_POST['celular_for']) ? htmlspecialchars($_POST['celular_for']) : '' ?>" required><br><br>
 
         <label for="status_for">Status:</label><br>
         <select name="status_for" required>
             <option value="ativo" <?= (isset($_POST['status_for']) && $_POST['status_for'] == 'ativo') ? 'selected' : '' ?>>Ativo</option>
             <option value="desabilitado" <?= (isset($_POST['status_for']) && $_POST['status_for'] == 'desabilitado') ? 'selected' : '' ?>>Desabilitado</option>
+        </select><br><br>
+
+        <!-- <label for="uf_for">UF:</label><br>
+        <input type="text" name="uf_for"
+            value="<?//= isset($_POST['uf_for']) ? htmlspecialchars($_POST['uf_for']) : '' ?>" required><br><br> -->
+
+        <label for="uf">UF:</label><br>
+        <!-- <input type="text" name="uf" value="<?//= isset($_POST['uf']) ? htmlspecialchars($_POST['uf']) : '' ?>"
+            required><br><br> -->
+
+        <select required>
+            <option value="invalido">SELECIONE</option>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
         </select><br><br>
 
         <button

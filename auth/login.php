@@ -55,12 +55,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
         $result = $stmt->get_result();
 
-        // Verifica se o usuário existe
+        // Verifica se o usuário existe 
         if ($result->num_rows > 0) {
             // Busca os dados do usuário
             $user = $result->fetch_assoc(); // Armazena os dados do usuário
             $_SESSION['logado'] = true; // Marcar como logado
             $_SESSION['nome'] = $user['nome_usu']; // Armazena o nome do usuário na sessão
+            $_SESSION['id'] = $user['id_usu'];
             
             // Redireciona após o login
             echo '<script>window.location.href = "../index.php";</script>';

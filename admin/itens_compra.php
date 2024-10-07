@@ -97,15 +97,15 @@ $result = $mysqli->query("SELECT ic.*, p.nome_prod FROM Items_compra ic LEFT JOI
         <input type="hidden" name="id_item" value="<?= isset($_POST['id_item']) ? $_POST['id_item'] : '' ?>">
 
         <label for="id_compra">ID da Compra:</label><br>
-        <input type="number" name="id_compra"
+        <input type="number" name="id_compra" min="1"
             value="<?= isset($_POST['id_compra']) ? htmlspecialchars($_POST['id_compra']) : '' ?>" required><br><br>
 
         <label for="id_prod">ID do Produto:</label><br>
-        <input type="number" name="id_prod"
+        <input type="number" name="id_prod" min="1"
             value="<?= isset($_POST['id_prod']) ? htmlspecialchars($_POST['id_prod']) : '' ?>" required><br><br>
 
         <label for="preco">Preço:</label><br>
-        <input type="text" name="preco" value="<?= isset($_POST['preco']) ? htmlspecialchars($_POST['preco']) : '' ?>"
+        <input type="number" min="0.01" step="0.01" name="preco" value="<?= isset($_POST['preco']) ? htmlspecialchars($_POST['preco']) : '' ?>"
             required><br><br>
 
         <button type="submit"><?= (isset($_POST['id_item'])) ? 'Salvar' : 'Cadastrar' ?></button>
