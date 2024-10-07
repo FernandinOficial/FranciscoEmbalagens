@@ -7,8 +7,8 @@ $success = '';
 
 // Inserir/Atualizar Fornecedor
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["nome_for"], $_POST["email_for"], $_POST["documento_for"], $_POST["data_cadastro_for"], $_POST["bairro_for"], $_POST["cidade_for"], $_POST["cep_for"], $_POST["celular_for"], $_POST["uf_for"], $_POST["status_for"])) {
-        if (empty($_POST["nome_for"]) || empty($_POST["email_for"]) || empty($_POST["documento_for"]) || empty($_POST["data_cadastro_for"]) || empty($_POST["bairro_for"]) || empty($_POST["cidade_for"]) || empty($_POST["cep_for"]) || empty($_POST["celular_for"]) || empty($_POST["uf_for"]) || empty($_POST["status_for"])) {
+    if (isset($_POST["nome_for"], $_POST["email_for"], $_POST["documento_for"], $_POST["data_cadastro_for"], $_POST["bairro_for"], $_POST["cidade_for"], $_POST["cep_for"], $_POST["celular_for"], $_POST["uf_for"])) {
+        if (empty($_POST["nome_for"]) || empty($_POST["email_for"]) || empty($_POST["documento_for"]) || empty($_POST["data_cadastro_for"]) || empty($_POST["bairro_for"]) || empty($_POST["cidade_for"]) || empty($_POST["cep_for"]) || empty($_POST["celular_for"]) || empty($_POST["uf_for"])) {
             $erro = "Todos os campos obrigatórios devem ser preenchidos.";
         } else {
             $id_for = isset($_POST["id_for"]) ? $_POST["id_for"] : -1;
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $cep_for = $_POST["cep_for"];
             $celular_for = $_POST["celular_for"];
             $uf_for = $_POST["uf_for"];
-            $status_for = $_POST["status_for"];
+            $status_for = 'ativo';  //definir ativo sempre
             $telefone_for = isset($_POST["telefone_for"]) ? $_POST["telefone_for"] : null;
 
             if ($id_for == -1) { // Inserir novo fornecedor
@@ -177,22 +177,14 @@ if (!$fornecedores) {
         <input type="text" name="celular_for" maxlength="11"
             value="<?= isset($_POST['celular_for']) ? htmlspecialchars($_POST['celular_for']) : '' ?>" required><br><br>
 
-        <label for="status_for">Status:</label><br>
-        <select name="status_for" required>
-            <option value="ativo" <?= (isset($_POST['status_for']) && $_POST['status_for'] == 'ativo') ? 'selected' : '' ?>>Ativo</option>
-            <option value="desabilitado" <?= (isset($_POST['status_for']) && $_POST['status_for'] == 'desabilitado') ? 'selected' : '' ?>>Desabilitado</option>
-        </select><br><br>
 
         <!-- <label for="uf_for">UF:</label><br>
-        <input type="text" name="uf_for"
+            <input type="text" name="uf_for"
             value="<?//= isset($_POST['uf_for']) ? htmlspecialchars($_POST['uf_for']) : '' ?>" required><br><br> -->
 
-        <label for="uf">UF:</label><br>
-        <!-- <input type="text" name="uf" value="<?//= isset($_POST['uf']) ? htmlspecialchars($_POST['uf']) : '' ?>"
-            required><br><br> -->
-
-        <select required>
-            <option value="invalido">SELECIONE</option>
+        <label for="uf_for">UF:</label><br>
+        <select name="uf_for" required>
+            <option value="">SELECIONE</option>
             <option value="AC">AC</option>
             <option value="AL">AL</option>
             <option value="AP">AP</option>
