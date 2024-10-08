@@ -1,10 +1,10 @@
-<?php 
-    session_start();
-     
-if (isset($_SESSION['logado'])){
+<?php
+session_start();
+
+if (isset($_SESSION['logado'])) {
     header('Location:../index.php');
     exit;
-  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -35,43 +35,44 @@ if (isset($_SESSION['logado'])){
 </head>
 
 <body>
-<?php
-include_once 'includes/db_connect.php'; // Incluindo a conexão com o banco
+    <?php
+    include_once 'includes/db_connect.php'; // Incluindo a conexão com o banco
+    
+    // Verifica se o formulário foi enviado
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $email = $_POST["email"];
+        $password = $_POST["password"];
 
-// Verifica se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-
-    // Verifica se os campos estão preenchidos
-    if (empty($email)) {
-        echo "<p>E-mail é obrigatório.</p>";
-    } elseif (empty($password)) {
-        echo "<p>Senha é obrigatória.</p>";
-    } else {
-        // Prepara a consulta
-        $stmt = $mysqli->prepare("SELECT nome_usu FROM `Usuario` WHERE email_usu = ? AND senha = ?");
-        $stmt->bind_param('ss', $email, $password);
-        $stmt->execute();
-        $result = $stmt->get_result();
-
-        // Verifica se o usuário existe 
-        if ($result->num_rows > 0) {
-            // Busca os dados do usuário
-            $user = $result->fetch_assoc(); // Armazena os dados do usuário
-            $_SESSION['logado'] = true; // Marcar como logado
-            $_SESSION['nome'] = $user['nome_usu']; // Armazena o nome do usuário na sessão
-            $_SESSION['id'] = $user['id_usu'];
-            
-            // Redireciona após o login
-            echo '<script>window.location.href = "../index.php";</script>';
-            exit;
+        // Verifica se os campos estão preenchidos
+        if (empty($email)) {
+            echo "<p>E-mail é obrigatório.</p>";
+        } elseif (empty($password)) {
+            echo "<p>Senha é obrigatória.</p>";
         } else {
-            echo "<p>E-mail ou senha incorretos.</p>";
+            // Prepara a consulta
+            $stmt = $mysqli->prepare("SELECT id_usu, nome_usu FROM `Usuario` WHERE email_usu = ? AND senha = ?");
+            $stmt->bind_param('ss', $email, $password);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            // Verifica se o usuário existe 
+            if ($result->num_rows > 0) {
+                // Busca os dados do usuário
+                $user = $result->fetch_assoc(); // Armazena os dados do usuário
+                $_SESSION['logado'] = true; // Marcar como logado
+                $_SESSION['nome'] = $user['nome_usu']; // nome do usuário na sessão
+                $_SESSION['id'] = $user['id_usu']; // ID do usuário na sessão
+    
+                // Redireciona após o login
+                echo '<script>window.location.href = "../index.php";</script>';
+                exit;
+            } else {
+                echo "<p>E-mail ou senha incorretos.</p>";
+            }
+
         }
     }
-}
-?>
+    ?>
 
     <?php
     include_once 'includes/header.php';

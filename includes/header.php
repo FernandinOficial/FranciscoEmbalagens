@@ -24,7 +24,8 @@
     </script>
 </head>
 <?php
-    $nome = isset($_SESSION['id']) ? $_SESSION['id'] : 'NENHUM';  //definindo o nome do usuario em caso de nulo
+    $id = $_SESSION['id'];
+    $nome = isset($_SESSION['nome']) ? $_SESSION['nome'] : 'NENHUM';  //definindo o nome do usuario em caso de nulo
 ?>
 <nav>
     <!-- Bootstrap implementado-->

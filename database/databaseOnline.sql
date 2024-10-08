@@ -292,3 +292,5 @@ CREATE TABLE items_pedido (
     -- FOREIGN KEY (id_ped) REFERENCES Pedido(id_ped),
     -- FOREIGN KEY (id_prod) REFERENCES Produto(id_prod)
 );
+
+select * from Cliente;
