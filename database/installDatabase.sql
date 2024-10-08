@@ -1,3 +1,4 @@
+-- SQLBook: Code
 -- Active: 1727726254369@@localhost@3306
 -- SQLBook: Code
 CREATE DATABASE FranciscoEmbalagens;

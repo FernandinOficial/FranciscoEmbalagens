@@ -24,7 +24,6 @@
     </script>
 </head>
 <?php
-    $id = $_SESSION['id'];
     $nome = isset($_SESSION['nome']) ? $_SESSION['nome'] : 'NENHUM';  //definindo o nome do usuario em caso de nulo
 ?>
 <nav>

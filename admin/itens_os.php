@@ -72,6 +72,7 @@ $result = $mysqli->query("SELECT io.*, s.nome_serv FROM Items_os io LEFT JOIN Se
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="style/mainAdmin.css">
 </head>
 
 <body>

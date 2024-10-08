@@ -7,67 +7,41 @@ $success = '';
 
 // Inserir/Atualizar Ordem de Serviço
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["data_ordem_servico"], $_POST["id_cli"], $_POST["id_usu"])) {
-        if (empty($_POST["data_ordem_servico"]) || empty($_POST["id_cli"]) || empty($_POST["id_usu"])) {
-            $erro = "Todos os campos são obrigatórios.";
-        } else {
-            $id_ordem = isset($_POST["id_ordem"]) ? $_POST["id_ordem"] : -1;
-            $data_ordem_servico = $_POST["data_ordem_servico"];
-            $id_cli = $_POST["id_cli"];
-            $id_usu = $_POST["id_usu"];
+    if (!empty($_POST["data_ordem_servico"]) && !empty($_POST["id_cli"]) && isset($_SESSION['id'])) {
+        $id_ordem = isset($_POST["id_ordem"]) ? $_POST["id_ordem"] : -1;
+        $data_ordem_servico = $_POST["data_ordem_servico"];
+        $id_cli = $_POST["id_cli"];
+        $id_usu = $_SESSION["id"];  // Usar o ID da sessão do usuário
 
-            // Inserção
-            if ($id_ordem == -1) {
-                $stmt = $mysqli->prepare("INSERT INTO Ordem_servico (data_ordem_servico, id_cli, id_usu) VALUES (?, ?, ?)");
-
-                if ($stmt === false) {
-                    // Exibe o erro da consulta, caso ocorra
-                    $erro = "Erro ao preparar a consulta: " . $mysqli->error;
-                } else {
-                    $stmt->bind_param("sii", $data_ordem_servico, $id_cli, $id_usu); // "sii" porque temos 1 string e 2 inteiros
-
-                    if ($stmt->execute()) {
-                        $success = "Ordem de serviço cadastrada com sucesso.";
-                    } else {
-                        $erro = "Erro ao cadastrar ordem de serviço: " . $stmt->error;
-                    }
-                }
+        // Inserção
+        if ($id_ordem == -1) {
+            $stmt = $mysqli->prepare("INSERT INTO Ordem_servico (data_ordem_servico, id_cli, id_usu) VALUES (?, ?, ?)");
+            if ($stmt === false) {
+                $erro = "Erro ao preparar a consulta: " . $mysqli->error;
             } else {
-                // Atualização
-                $stmt = $mysqli->prepare("UPDATE Ordem_servico SET data_ordem_servico = ?, id_cli = ?, id_usu = ? WHERE id_ordem = ?");
-
-                if ($stmt === false) {
-                    // Exibe o erro da consulta, caso ocorra
-                    $erro = "Erro ao preparar a consulta: " . $mysqli->error;
+                $stmt->bind_param("sii", $data_ordem_servico, $id_cli, $id_usu);
+                if ($stmt->execute()) {
+                    $success = "Ordem de serviço cadastrada com sucesso.";
                 } else {
-                    $stmt->bind_param("siii", $data_ordem_servico, $id_cli, $id_usu, $id_ordem); // "siii" porque temos 1 string e 3 inteiros
-
-                    if ($stmt->execute()) {
-                        $success = "Ordem de serviço atualizada com sucesso.";
-                    } else {
-                        $erro = "Erro ao atualizar ordem de serviço: " . $stmt->error;
-                    }
+                    $erro = "Erro ao cadastrar ordem de serviço: " . $stmt->error;
+                }
+            }
+        } else {
+            // Atualização
+            $stmt = $mysqli->prepare("UPDATE Ordem_servico SET data_ordem_servico = ?, id_cli = ?, id_usu = ? WHERE id_ordem = ?");
+            if ($stmt === false) {
+                $erro = "Erro ao preparar a consulta: " . $mysqli->error;
+            } else {
+                $stmt->bind_param("siii", $data_ordem_servico, $id_cli, $id_usu, $id_ordem);
+                if ($stmt->execute()) {
+                    $success = "Ordem de serviço atualizada com sucesso.";
+                } else {
+                    $erro = "Erro ao atualizar ordem de serviço: " . $stmt->error;
                 }
             }
         }
     } else {
         $erro = "Todos os campos são obrigatórios.";
-    }
-}
-
-// Desabilitar Ordem de Serviço
-if (isset($_GET["id_ordem"]) && is_numeric($_GET["id_ordem"]) && isset($_GET["del"])) {
-    $id_ordem = (int) $_GET["id_ordem"];
-    $stmt = $mysqli->prepare("UPDATE Ordem_servico SET ativo = 0 WHERE id_ordem = ?");
-    if ($stmt === false) {
-        $erro = "Erro ao preparar a consulta para desabilitar: " . $mysqli->error;
-    } else {
-        $stmt->bind_param('i', $id_ordem);
-        if ($stmt->execute()) {
-            $success = "Ordem de serviço desabilitada com sucesso.";
-        } else {
-            $erro = "Erro ao desabilitar ordem de serviço: " . $stmt->error;
-        }
     }
 }
 
@@ -88,6 +62,7 @@ $result = $mysqli->query("SELECT os.*, c.nome_cli, u.nome_usu FROM Ordem_servico
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="style/mainAdmin.css">
 </head>
 
 <body>
@@ -108,10 +83,7 @@ $result = $mysqli->query("SELECT os.*, c.nome_cli, u.nome_usu FROM Ordem_servico
     <form action="ordem_servico.php" method="POST">
         <input type="hidden" name="id_ordem" value="<?= isset($_POST['id_ordem']) ? $_POST['id_ordem'] : -1 ?>">
 
-        <label for="data_ordem_servico">Data da Ordem de Serviço:</label><br>
-        <input type="datetime-local" name="data_ordem_servico"
-            value="<?= isset($_POST['data_ordem_servico']) ? htmlspecialchars($_POST['data_ordem_servico']) : '' ?>"
-            required><br><br>
+        <input type="hidden" name="data_ordem_servico" value="<?= date('Y-m-d H:i:s') ?>" required>
 
         <label for="id_cli">Cliente:</label><br>
         <select name="id_cli" required>
@@ -126,16 +98,7 @@ $result = $mysqli->query("SELECT os.*, c.nome_cli, u.nome_usu FROM Ordem_servico
         </select><br><br>
 
         <label for="id_usu">Usuário:</label><br>
-        <select name="id_usu" required>
-            <option value="">Selecione um usuário</option>
-            <?php
-            $usuarios = $mysqli->query("SELECT id_usu, nome_usu FROM Usuario");
-            while ($usuario = $usuarios->fetch_assoc()) {
-                $selected = (isset($_POST['id_usu']) && $_POST['id_usu'] == $usuario['id_usu']) ? 'selected' : '';
-                echo "<option value='{$usuario['id_usu']}' $selected>{$usuario['nome_usu']}</option>";
-            }
-            ?>
-        </select><br><br>
+            <input name="id_usu" value="<?php echo $_SESSION['nome'] ?>" disabled><br><br>
 
         <button
             type="submit"><?= (isset($_POST['id_ordem']) && $_POST['id_ordem'] != -1) ? 'Salvar' : 'Cadastrar' ?></button>
@@ -152,7 +115,6 @@ $result = $mysqli->query("SELECT os.*, c.nome_cli, u.nome_usu FROM Ordem_servico
                 <th>Data</th>
                 <th>Cliente</th>
                 <th>Usuário</th>
-                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -162,10 +124,6 @@ $result = $mysqli->query("SELECT os.*, c.nome_cli, u.nome_usu FROM Ordem_servico
                     <td><?= htmlspecialchars($ordem_servico['data_ordem_servico']) ?></td>
                     <td><?= htmlspecialchars($ordem_servico['nome_cli']) ?></td>
                     <td><?= htmlspecialchars($ordem_servico['nome_usu']) ?></td>
-                    <td>
-                        <a href="ordem_servico.php?id_ordem=<?= $ordem_servico['id_ordem'] ?>&del=1"
-                            onclick="return confirm('Tem certeza que deseja desabilitar esta ordem de serviço?')">Desabilitar</a>
-                    </td>
                 </tr>
             <?php endwhile; ?>
         </tbody>

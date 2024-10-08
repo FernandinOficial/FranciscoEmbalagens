@@ -73,6 +73,7 @@ $result = $mysqli->query("SELECT ip.*, p.nome_prod, ped.data_ped FROM Itens_Pedi
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="style/mainAdmin.css">
 </head>
 
 <body>

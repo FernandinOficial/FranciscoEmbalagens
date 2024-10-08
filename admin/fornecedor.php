@@ -2,6 +2,8 @@
 include_once 'auth.php';  // Verifica se está logado
 include_once '../auth/includes/db_connect.php';
 
+date_default_timezone_set('America/Sao_Paulo');  //Brasilia
+
 $erro = '';
 $success = '';
 
@@ -83,6 +85,7 @@ if (!$fornecedores) {
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="style/mainAdmin.css">
 </head>
 
 <body>
@@ -150,12 +153,7 @@ if (!$fornecedores) {
         </script>
 
 
-
-
-        <label for="data_cadastro_for">Data de Cadastro:</label><br>
-        <input type="datetime-local" name="data_cadastro_for"
-            value="<?= isset($_POST['data_cadastro_for']) ? htmlspecialchars($_POST['data_cadastro_for']) : '' ?>"
-            required><br><br>
+        <input type="hidden" name="data_cadastro_for" value="<?= date('Y-m-d H:i:s') ?>" required>
 
         <label for="cep_for">CEP:</label><br>
         <input type="text" name="cep_for"
@@ -177,10 +175,6 @@ if (!$fornecedores) {
         <input type="text" name="celular_for" maxlength="11"
             value="<?= isset($_POST['celular_for']) ? htmlspecialchars($_POST['celular_for']) : '' ?>" required><br><br>
 
-
-        <!-- <label for="uf_for">UF:</label><br>
-            <input type="text" name="uf_for"
-            value="<?//= isset($_POST['uf_for']) ? htmlspecialchars($_POST['uf_for']) : '' ?>" required><br><br> -->
 
         <label for="uf_for">UF:</label><br>
         <select name="uf_for" required>

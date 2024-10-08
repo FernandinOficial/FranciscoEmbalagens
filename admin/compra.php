@@ -80,6 +80,7 @@ $result = $mysqli->query("SELECT c.*, f.nome_for, u.nome_usu FROM Compra c LEFT 
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="style/mainAdmin.css">
 </head>
 
 <body>

@@ -61,7 +61,8 @@ if (isset($_SESSION['logado'])) {
                 $user = $result->fetch_assoc(); // Armazena os dados do usuário
                 $_SESSION['logado'] = true; // Marcar como logado
                 $_SESSION['nome'] = $user['nome_usu']; // nome do usuário na sessão
-                $_SESSION['id'] = $user['id_usu']; // ID do usuário na sessão
+                $id = $user['id_usu']; // ID do usuário na sessão
+                $_SESSION['id'] = $id;
     
                 // Redireciona após o login
                 echo '<script>window.location.href = "../index.php";</script>';
