@@ -160,7 +160,7 @@ $result = $mysqli->query("SELECT * FROM Cliente WHERE status_cli = 'ativo'");
 
     <!-- Listar clientes -->
     <h2>Clientes Ativos</h2>
-    <table class="table table-striped">
+    <table border="1">
         <thead>
             <tr>
                 <th>ID</th>
