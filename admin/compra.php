@@ -1,18 +1,23 @@
 <?php
-include_once 'auth.php';  //Verifica se está logado
+include_once 'auth.php';  // Verifica se está logado
 include_once '../auth/includes/db_connect.php';
+
+date_default_timezone_set('America/Sao_Paulo');  //Brasilia
 
 $erro = '';
 $success = '';
 
-//Inserir/Atualizar Compra
+// Inserir/Atualizar Compra
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["data_compra"], $_POST["id_for"], $_POST["id_usu"], $_POST["prev_entrega"], $_POST["preco_compra"])) {
         if (empty($_POST["data_compra"]) || empty($_POST["id_for"]) || empty($_POST["id_usu"]) || empty($_POST["prev_entrega"]) || empty($_POST["preco_compra"])) {
             $erro = "Todos os campos são obrigatórios.";
         } else {
             $id_compra = isset($_POST["id_compra"]) ? $_POST["id_compra"] : -1;
-            $data_compra = $_POST["data_compra"];
+
+            // Verifique se o campo data_compra foi preenchido
+            $data_compra = $_POST["data_compra"]; // pega a data do formulário ou a data atual
+
             $id_for = $_POST["id_for"];
             $id_usu = $_POST["id_usu"];
             $prev_entrega = $_POST["prev_entrega"];
@@ -28,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 } else {
                     $erro = "Erro ao registrar compra: " . $stmt->error;
                 }
-            } else { //Atualizar compra existente
+            } else { // Atualizar compra existente
                 $stmt = $mysqli->prepare("UPDATE Compra SET data_compra = ?, id_for = ?, id_usu = ?, prev_entrega = ?, data_entrega_efetiva = ?, preco_compra = ? WHERE id_compra = ?");
                 $stmt->bind_param("siisdis", $data_compra, $id_for, $id_usu, $prev_entrega, $data_entrega_efetiva, $preco_compra, $id_compra);
 
@@ -44,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-//Remover Compra
+// Remover Compra
 if (isset($_GET["id_compra"]) && is_numeric($_GET["id_compra"])) {
     $id_compra = (int) $_GET["id_compra"];
 
@@ -57,7 +62,7 @@ if (isset($_GET["id_compra"]) && is_numeric($_GET["id_compra"])) {
     }
 }
 
-//Listar Compras
+// Listar Compras
 $result = $mysqli->query("SELECT c.*, f.nome_for, u.nome_usu FROM Compra c LEFT JOIN Fornecedor f ON c.id_for = f.id_for LEFT JOIN Usuario u ON c.id_usu = u.id_usu");
 
 ?>
@@ -95,9 +100,8 @@ $result = $mysqli->query("SELECT c.*, f.nome_for, u.nome_usu FROM Compra c LEFT 
     <form action="compra.php" method="POST">
         <input type="hidden" name="id_compra" value="<?= isset($_GET['id_compra']) ? $_GET['id_compra'] : -1 ?>">
 
-        <label for="data_compra">Data da Compra:</label><br>
-        <input type="date" name="data_compra"
-            value="<?= isset($_POST['data_compra']) ? htmlspecialchars($_POST['data_compra']) : '' ?>" required><br><br>
+        <!-- Campo para a data da compra -->
+        <input type="hidden" name="data_compra" value="<?= date('Y-m-d H:i:s') ?>">
 
         <label for="id_for">Fornecedor:</label><br>
         <select name="id_for" required>
@@ -127,20 +131,17 @@ $result = $mysqli->query("SELECT c.*, f.nome_for, u.nome_usu FROM Compra c LEFT 
 
         <label for="prev_entrega">Previsão de Entrega:</label><br>
         <input type="date" name="prev_entrega"
-            value="<?= isset($_POST['prev_entrega']) ? htmlspecialchars($_POST['prev_entrega']) : '' ?>"
-            required><br><br>
+            value="<?= isset($_POST['prev_entrega']) ? htmlspecialchars($_POST['prev_entrega']) : '' ?>" required><br><br>
 
         <label for="preco_compra">Preço da Compra:</label><br>
         <input type="number" step="0.01" name="preco_compra" min="0.01"
-            value="<?= isset($_POST['preco_compra']) ? htmlspecialchars($_POST['preco_compra']) : '' ?>"
-            required><br><br>
+            value="<?= isset($_POST['preco_compra']) ? htmlspecialchars($_POST['preco_compra']) : '' ?>" required><br><br>
 
         <label for="data_entrega_efetiva">Data de Entrega Efetiva (opcional):</label><br>
         <input type="date" name="data_entrega_efetiva"
             value="<?= isset($_POST['data_entrega_efetiva']) ? htmlspecialchars($_POST['data_entrega_efetiva']) : '' ?>"><br><br>
 
-        <button
-            type="submit"><?= (isset($_POST['id_compra']) && $_POST['id_compra'] != -1) ? 'Salvar' : 'Cadastrar' ?></button>
+        <button type="submit"><?= (isset($_POST['id_compra']) && $_POST['id_compra'] != -1) ? 'Salvar' : 'Cadastrar' ?></button>
     </form>
 
     <hr>

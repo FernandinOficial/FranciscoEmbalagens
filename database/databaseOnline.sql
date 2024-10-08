@@ -294,3 +294,4 @@ CREATE TABLE items_pedido (
 );
 
 select * from Cliente;
+select * from Compra;
