@@ -12,12 +12,12 @@ if ($mysqli->connect_errno) {
 
 // Inserir/Atualizar Pedido
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["data_ped"], $_POST["endereco_entrega_ped"], $_POST["data_entrega_ped"], $_POST["id_cli"], $_SESSION["id"])) {
-        if (empty($_POST["data_ped"]) || empty($_POST["endereco_entrega_ped"]) || empty($_POST["data_entrega_ped"]) || empty($_POST["id_cli"]) || empty($_SESSION["id"])) {
+    if (isset($_POST["data_ped"], $_POST["endereco_entrega"], $_POST["data_entrega_ped"], $_POST["id_cli"], $_SESSION["id"])) {
+        if (empty($_POST["data_ped"]) || empty($_POST["endereco_entrega"]) || empty($_POST["data_entrega_ped"]) || empty($_POST["id_cli"]) || empty($_SESSION["id"])) {
             $erro = "Todos os campos são obrigatórios.";
         } else {
             $data_ped = $_POST["data_ped"];
-            $endereco_entrega_ped = $_POST["endereco_entrega_ped"];
+            $endereco_entrega = $_POST["endereco_entrega"];
             $data_entrega_ped = $_POST["data_entrega_ped"];
             $id_cli = $_POST["id_cli"];
             $id_usu = $_SESSION["id"];
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($id_ped === null) { // Inserir novo pedido
                 $stmt = $mysqli->prepare("INSERT INTO Pedido (data_ped, endereco_entrega, data_entrega_ped, id_cli, id_usu) VALUES (?, ?, ?, ?, ?)");
-                $stmt->bind_param("ssiii", $data_ped, $endereco_entrega_ped, $data_entrega_ped, $id_cli, $id_usu);
+                $stmt->bind_param("ssiii", $data_ped, $endereco_entrega, $data_entrega_ped, $id_cli, $id_usu);
 
                 if ($stmt->execute()) {
                     $success = "Pedido registrado com sucesso.";
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             } else { // Atualizar pedido existente
                 $stmt = $mysqli->prepare("UPDATE Pedido SET data_ped = ?, endereco_entrega = ?, data_entrega_ped = ?, id_cli = ?, id_usu = ? WHERE id_ped = ?");
-                $stmt->bind_param("ssiiii", $data_ped, $endereco_entrega_ped, $data_entrega_ped, $id_cli, $id_usu, $id_ped);
+                $stmt->bind_param("ssiiii", $data_ped, $endereco_entrega, $data_entrega_ped, $id_cli, $id_usu, $id_ped);
 
                 if ($stmt->execute()) {
                     $success = "Pedido atualizado com sucesso.";
@@ -102,8 +102,8 @@ $result = $mysqli->query("SELECT p.*, c.nome_cli, u.nome_usu FROM Pedido p LEFT 
         <input type="hidden" name="data_ped" value="<?= date('Y-m-d H:i:s') ?>" required>
 
         <label for="endereco_entrega">Endereço de Entrega:</label><br>
-        <input type="text" name="endereco_entrega_ped"
-            value="<?= isset($_POST['endereco_entrega_ped']) ? htmlspecialchars($_POST['endereco_entrega_ped']) : '' ?>"
+        <input type="text" name="endereco_entrega"
+            value="<?= isset($_POST['endereco_entrega']) ? htmlspecialchars($_POST['endereco_entrega']) : '' ?>"
             required><br><br>
 
         <label for="data_entrega_ped">Data de Entrega:</label><br>

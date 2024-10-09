@@ -1,0 +1,18 @@
+form {
+    text-align: center;
+}
+input {
+    width: 200px;
+    padding-left: 10px !important;
+    padding: 5px;
+    font-size: 20px;
+    border: none;
+}
+label {
+    font-size: 18px;
+}
+select{
+    width: 200px;
+    font-size: 18px;
+    border: none;
+}
