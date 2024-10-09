@@ -7,8 +7,8 @@ $success = '';
 
 // Inserir/Atualizar Compra
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["data_compra"], $_POST["id_for"], $_POST["id_usu"], $_POST["prev_entrega"], $_POST["preco_compra"])) {
-        if (empty($_POST["data_compra"]) || empty($_POST["id_for"]) || empty($_POST["id_usu"]) || empty($_POST["prev_entrega"]) || empty($_POST["preco_compra"])) {
+    if (isset($_POST["data_compra"], $_POST["id_for"], $_SESSION['id'], $_POST["prev_entrega"], $_POST["preco_compra"])) {
+        if (empty($_POST["data_compra"]) || empty($_POST["id_for"]) || empty($_SESSION['id']) || empty($_POST["prev_entrega"]) || empty($_POST["preco_compra"])) {
             $erro = "Todos os campos são obrigatórios.";
         } else {
             $id_compra = isset($_POST["id_compra"]) ? $_POST["id_compra"] : -1;
@@ -116,31 +116,55 @@ $result = $mysqli->query("SELECT c.*, f.nome_for, u.nome_usu FROM Compra c LEFT 
         </select><br><br>
 
         <label for="id_usu">Usuário:</label><br>
-        <select name="id_usu" required>
-            <option value="">Selecione um usuário</option>
-            <?php
-            // Listar usuários para o dropdown
-            $usuarios = $mysqli->query("SELECT id_usu, nome_usu FROM Usuario");
-            while ($usuario = $usuarios->fetch_assoc()) {
-                $selected = (isset($_POST['id_usu']) && $_POST['id_usu'] == $usuario['id_usu']) ? 'selected' : '';
-                echo "<option value='{$usuario['id_usu']}' $selected>{$usuario['nome_usu']}</option>";
-            }
-            ?>
-        </select><br><br>
+        <input name="id_usu" type="text" value="<?php echo $_SESSION['nome'] ?>" disabled><br><br>
 
         <label for="prev_entrega">Previsão de Entrega:</label><br>
         <input type="date" name="prev_entrega"
-            value="<?= isset($_POST['prev_entrega']) ? htmlspecialchars($_POST['prev_entrega']) : '' ?>" required><br><br>
+            value="<?= isset($_POST['prev_entrega']) ? htmlspecialchars($_POST['prev_entrega']) : '' ?>"
+            required><br><br>
 
         <label for="preco_compra">Preço da Compra:</label><br>
-        <input type="number" step="0.01" name="preco_compra" min="0.01"
-            value="<?= isset($_POST['preco_compra']) ? htmlspecialchars($_POST['preco_compra']) : '' ?>" required><br><br>
+        <input type="text" id="preco_compra" name="preco_compra" placeholder="R$ 0,00"
+            value="<?= isset($_POST['preco_compra']) ? htmlspecialchars($_POST['preco_compra']) : '' ?>"
+            required><br><br>
+
+        <script>
+            document.getElementById('preco_compra').addEventListener('input', function (e) {
+                // Remove qualquer caractere não numérico
+                let value = e.target.value.replace(/[^0-9]/g, '');
+
+                // Se o valor estiver vazio, não faz nada
+                if (value === '') {
+                    e.target.value = '';
+                    return;
+                }
+
+                // Define a parte decimal (centavos)
+                let decimalPart = value.slice(-2).padStart(2, '0');
+                // Define a parte inteira (reais)
+                let integerPart = value.slice(0, -2);
+
+                // Remove zeros à esquerda da parte inteira
+                integerPart = integerPart.replace(/^0+/, '') || '0'; // Se estiver vazio, torna-se '0'
+
+                // Adiciona separador de milhar
+                integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+                // Formata o valor final
+                let formattedValue = integerPart + ',' + decimalPart;
+
+                // Define o valor formatado no campo
+                e.target.value = 'R$ ' + formattedValue;
+            });
+
+        </script>
 
         <label for="data_entrega_efetiva">Data de Entrega Efetiva (opcional):</label><br>
         <input type="date" name="data_entrega_efetiva"
             value="<?= isset($_POST['data_entrega_efetiva']) ? htmlspecialchars($_POST['data_entrega_efetiva']) : '' ?>"><br><br>
 
-        <button type="submit"><?= (isset($_POST['id_compra']) && $_POST['id_compra'] != -1) ? 'Salvar' : 'Cadastrar' ?></button>
+        <button
+            type="submit"><?= (isset($_POST['id_compra']) && $_POST['id_compra'] != -1) ? 'Salvar' : 'Cadastrar' ?></button>
     </form>
 
     <hr>
