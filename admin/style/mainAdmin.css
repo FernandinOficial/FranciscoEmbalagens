@@ -2,7 +2,7 @@ form {
     text-align: center;
 }
 input {
-    width: 200px;
+    width: 250px;
     padding-left: 10px !important;
     padding: 5px;
     font-size: 20px;
@@ -12,7 +12,8 @@ label {
     font-size: 18px;
 }
 select{
-    width: 200px;
+    width: 250px;
+    padding: 5px;
     font-size: 18px;
     border: none;
 }

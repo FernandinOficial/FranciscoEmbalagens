@@ -2,8 +2,6 @@
 include_once 'auth.php';  // Verifica se está logado
 include_once '../auth/includes/db_connect.php';
 
-date_default_timezone_set('America/Sao_Paulo');  //Brasilia
-
 $erro = '';
 $success = '';
 
