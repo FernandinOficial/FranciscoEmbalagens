@@ -1,0 +1,18 @@
+{
+  "name": "franciscoembalagens",
+  "version": "1.0.0",
+  "description": "* 14-04",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/js/addOs.spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "selenium-webdriver": "^4.25.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.7.3"
+  }
+}
